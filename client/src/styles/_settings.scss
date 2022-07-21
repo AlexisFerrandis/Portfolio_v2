@@ -1,0 +1,67 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	list-style: none;
+	list-style-type: none;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	font-family: "Ubuntu", sans-serif;
+}
+
+// variables
+$af-primary: #0d47a1;
+$af-secondary: #1668c3;
+$af-tertiary: #1e88e5;
+
+$af-blue-00: #bbdefb;
+$af-blue-10: #90caf9;
+$af-blue-20: #64b5f6;
+$af-blue-30: #42a5f5;
+$af-blue-40: #2196f3;
+$af-blue-50: #1976d2;
+$af-blue-60: #1565c0;
+
+$af-gray-00: #f8f9fa;
+$af-gray-10: #e9ecef;
+$af-gray-20: #dee2e6;
+$af-gray-30: #ced4da;
+$af-gray-40: #adb5bd;
+$af-gray-50: #6c757d;
+$af-gray-60: #495057;
+$af-gray-70: #343a40;
+$af-gray-80: #212529;
+$af-gray-90: #0f1113;
+
+$af-red: #f5544d;
+$af-yellow: #fabd2f;
+$af-green: #47d043;
+
+// animations
+$flash-animation: 100ms; // ease in out infinite...
+$short-animation: 200ms;
+$long-animation: 500ms;
+
+// mixins
+@mixin mobile-breakpoint {
+	@media (max-width: 550px) {
+		@content;
+	}
+}
+@mixin tablet-breakpoint {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+@mixin desktop-breakpoint {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
