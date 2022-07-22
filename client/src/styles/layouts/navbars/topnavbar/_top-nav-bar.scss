@@ -1,0 +1,9 @@
+.top-nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	background-color: rgba($af-gray-70, 0.9);
+	color: $af-gray-00;
+	font-size: 13px;
+}
