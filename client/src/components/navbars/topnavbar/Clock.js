@@ -7,7 +7,7 @@ const Clock = () => {
 		setInterval(() => {
 			let options = { hour: "2-digit", minute: "2-digit", month: "short", day: "numeric", weekday: "short" };
 			let timeStamp = new Date();
-			let date = new Date(timeStamp).toLocaleDateString("fr-FR", options).replace(/[,]/g, " - ");
+			let date = new Date(timeStamp).toLocaleDateString(undefined, options).replace(/[,]/g, " - ");
 			setDateTodisplay(date);
 		}, 1000);
 	});

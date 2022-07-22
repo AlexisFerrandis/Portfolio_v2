@@ -1,0 +1,78 @@
+.top-nav-bar__settings {
+	position: relative;
+	cursor: pointer;
+	.settings {
+		display: flex;
+		align-items: center;
+		padding: 2px;
+		border-radius: 3px;
+		background-color: rgba($af-gray-80, 0);
+		transition: $short-animation;
+		&:hover {
+			background-color: rgba($af-gray-80, 0.4);
+		}
+		&:active {
+			background-color: rgba($af-gray-80, 0.5);
+			-webkit-box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.15);
+			box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.15);
+		}
+		.settings-img {
+			width: 18px;
+			height: 18px;
+			margin-left: 5px;
+			text-align: center;
+			user-select: none;
+			line-height: 16px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.batterie-container {
+			transform: rotate(90deg) translateX(-3px);
+			margin-left: 3px;
+		}
+		.network-container {
+			transform: scale(1.05) translateY(-1px);
+		}
+	}
+	// Display settings details
+	.settings-details {
+		position: absolute;
+		top: 40px;
+		right: 10px;
+		width: 200px;
+		height: 220px;
+		animation: window-fade-up 100ms both ease-in-out;
+		cursor: default;
+		user-select: none;
+		.settings-img {
+			display: flex;
+			align-items: center;
+			.details {
+				width: 18px;
+				height: 18px;
+				transform: rotate(90deg);
+				filter: grayscale(1);
+				margin-right: 5px;
+			}
+		}
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			padding: 8px;
+		}
+	}
+}
+
+@keyframes window-fade-up {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

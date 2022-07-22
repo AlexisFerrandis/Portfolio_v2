@@ -1,7 +1,7 @@
 import React from "react";
 
 import Clock from "./Clock";
-import Settings from "./Settings";
+import Settings from "./Settings/Settings";
 
 const TopNavBar = () => {
 	return (
