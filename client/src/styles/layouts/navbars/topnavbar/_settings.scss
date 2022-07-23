@@ -43,7 +43,7 @@
 		top: 40px;
 		right: 10px;
 		width: 200px;
-		height: 220px;
+		height: 210px;
 		animation: window-fade-up 100ms both ease-in-out;
 		cursor: default;
 		user-select: none;
@@ -51,8 +51,8 @@
 			display: flex;
 			align-items: center;
 			.details {
-				width: 18px;
-				height: 18px;
+				width: 19px;
+				height: 19px;
 				transform: rotate(90deg);
 				filter: grayscale(1);
 				margin-right: 5px;
@@ -62,6 +62,11 @@
 			display: flex;
 			justify-content: space-between;
 			padding: 8px;
+		}
+		.sunflower {
+			filter: invert(0.85);
+			width: 17px;
+			height: 17px;
 		}
 	}
 }

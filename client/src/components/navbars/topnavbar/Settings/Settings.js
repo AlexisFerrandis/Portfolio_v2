@@ -31,7 +31,7 @@ const Settings = () => {
 				</div>
 				<Battery />
 			</div>
-			{detailsDisplay && <Details />}
+			{detailsDisplay && <Details closeWindow={handleSettinsModal} />}
 		</>
 	);
 };
