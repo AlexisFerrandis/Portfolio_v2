@@ -1,9 +1,40 @@
 .principal-nav-bar {
+	display: flex;
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+	padding: 7px;
 	transform: translateX(-50%);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	background-color: rgba($af-gray-70, 0.3);
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba($af-gray-70, 0);
+		padding: 5px;
+		margin: 0 1px;
+		width: 42px;
+		height: 42px;
+		cursor: pointer;
+		transition: $short-animation;
+		&:hover {
+			background-color: rgba($af-gray-70, 0.3);
+		}
+		img {
+			width: 32px;
+			height: 32px;
+			object-fit: cover;
+		}
+	}
+	.menu-icon {
+		background-color: rgba($af-gray-90, 0.4);
+		img {
+			width: 24px;
+			height: 24px;
+			object-fit: cover;
+			filter: invert(0.92);
+		}
+	}
 }
