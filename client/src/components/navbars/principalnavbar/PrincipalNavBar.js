@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Window from "../../windows";
 
 //img
 import folder from "./../../../assets/navbars/principalnavbar/folder-yellow.svg";
@@ -11,33 +13,42 @@ import calculator from "./../../../assets/navbars/principalnavbar/calculator.svg
 import menu from "./../../../assets/navbars/principalnavbar/menu-opener.svg";
 
 const PrincipalNavBar = () => {
+	const [openFolder, setOpenFolder] = useState(false);
+
+	const handleFolderOpening = (e) => {
+		setOpenFolder(!openFolder);
+	};
+
 	return (
-		<div className="principal-nav-bar">
-			<div className="principal-nav-bar__icon">
-				<img src={folder} alt="folder" />
+		<>
+			{openFolder && <Window />}
+			<div className="principal-nav-bar">
+				<div className="principal-nav-bar__icon" onClick={handleFolderOpening}>
+					<img src={folder} alt="folder" />
+				</div>
+				<div className="principal-nav-bar__icon">
+					<img src={console} alt="console" />
+				</div>
+				<div className="principal-nav-bar__icon">
+					<img src={facebook} alt="facebook" />
+				</div>
+				<div className="principal-nav-bar__icon">
+					<img src={netflix} alt="netflix" />
+				</div>
+				<div className="principal-nav-bar__icon">
+					<img src={chat} alt="chat" />
+				</div>
+				<div className="principal-nav-bar__icon">
+					<img src={games} alt="video-games" />
+				</div>
+				<div className="principal-nav-bar__icon ">
+					<img src={calculator} alt="calculator" />
+				</div>
+				<div className="principal-nav-bar__icon menu-icon">
+					<img src={menu} alt="menu" />
+				</div>
 			</div>
-			<div className="principal-nav-bar__icon">
-				<img src={console} alt="console" />
-			</div>
-			<div className="principal-nav-bar__icon">
-				<img src={facebook} alt="facebook" />
-			</div>
-			<div className="principal-nav-bar__icon">
-				<img src={netflix} alt="netflix" />
-			</div>
-			<div className="principal-nav-bar__icon">
-				<img src={chat} alt="chat" />
-			</div>
-			<div className="principal-nav-bar__icon">
-				<img src={games} alt="video-games" />
-			</div>
-			<div className="principal-nav-bar__icon ">
-				<img src={calculator} alt="calculator" />
-			</div>
-			<div className="principal-nav-bar__icon menu-icon">
-				<img src={menu} alt="menu" />
-			</div>
-		</div>
+		</>
 	);
 };
 
