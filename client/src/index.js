@@ -10,11 +10,13 @@ import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
-import { setBrightness } from "./actions/globalVariables.actions";
+import { setVolume, setBrightness, setLanguage } from "./actions/globalVariables.actions";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
+store.dispatch(setVolume());
 store.dispatch(setBrightness());
+store.dispatch(setLanguage());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

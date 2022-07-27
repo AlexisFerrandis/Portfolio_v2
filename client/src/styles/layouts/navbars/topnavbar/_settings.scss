@@ -29,6 +29,9 @@
 				object-fit: cover;
 			}
 		}
+		.volume-invert {
+			filter: invert(1.2);
+		}
 		.language-container {
 			padding-top: 1px;
 		}
@@ -66,10 +69,96 @@
 			justify-content: space-between;
 			padding: 8px;
 		}
-		.sunflower {
-			filter: invert(0.85);
-			width: 17px;
-			height: 17px;
+		&__content--setting {
+			background: none;
+			width: 100%;
+			transition: $short-animation;
+			border-radius: 5px;
+			.setting {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				width: 100%;
+				padding: 5px 10px;
+				margin: 5px 0;
+				color: $af-gray-20;
+				img {
+					width: 21px;
+					height: 21px;
+					object-fit: cover;
+				}
+				.volume-invert {
+					filter: invert(1.2);
+				}
+				.volume-to-mute {
+					border-radius: 50%;
+					cursor: pointer;
+					&:hover {
+						background-color: rgba(210, 210, 210, 1);
+					}
+				}
+				.sunflower {
+					filter: invert(0.85);
+					width: 17px;
+					height: 17px;
+				}
+				input[type="range"] {
+					-webkit-appearance: none;
+					margin-left: 8px;
+					height: 6px;
+					background: $af-gray-40;
+					border-radius: 5px;
+					cursor: pointer;
+				}
+				input[type="range"]::-webkit-slider-thumb {
+					-webkit-appearance: none;
+					height: 15px;
+					width: 15px;
+					border-radius: 50%;
+					background: $af-gray-10;
+					cursor: pointer;
+					box-shadow: 0 0 2px 0 #555;
+					transition: background 0.3s ease-in-out;
+				}
+				p {
+					padding: 6px 12px;
+					width: 75px;
+					background-color: $af-gray-60;
+					cursor: pointer;
+					transition: $short-animation;
+					&:hover {
+						filter: brightness(1.2);
+					}
+					&:active {
+						-webkit-box-shadow: inset 3px 3px 2px 3px rgba(0, 0, 0, 0.1);
+						box-shadow: inset 3px 3px 2px 3px rgba(0, 0, 0, 0.1);
+					}
+				}
+				.active-language {
+					filter: brightness(1.4);
+				}
+				.footer-ico {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 26px;
+					width: 26px;
+					background-color: rgba($af-gray-10, 0);
+					border-radius: 50%;
+					filter: invert(0.8);
+					cursor: pointer;
+					transition: $short-animation;
+					&:hover {
+						filter: invert(1);
+						background-color: rgba($af-gray-10, 0.4);
+					}
+					img {
+						height: 18px;
+						width: 18px;
+						border-radius: 0;
+					}
+				}
+			}
 		}
 	}
 }

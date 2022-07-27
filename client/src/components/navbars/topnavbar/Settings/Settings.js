@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 import Battery from "./Battery";
+import Details from "./Details";
+import Volume from "./Volume";
 
 // img
-import volume from "../../../../assets/navbars/topnavbar/audio-volume-high.svg";
-import network from "../../../../assets/navbars/topnavbar/network-wireless-hotspot.svg";
-import Details from "./Details";
+import network from "../../../../assets/navbars/topnavbar/network-wireless.svg";
+import Language from "./Language";
 
 const Settings = () => {
 	const [detailsDisplay, setDetailsDisplay] = useState(false);
@@ -22,13 +23,11 @@ const Settings = () => {
 	return (
 		<>
 			<div className="settings" onClick={handleSettinsModal}>
-				<div className="settings-img language-container">Fr</div>
+				<Language />
 				<div className="settings-img network-container">
 					<img src={network} alt="network-level" />
 				</div>
-				<div className="settings-img">
-					<img src={volume} alt="volume-level" />
-				</div>
+				<Volume />
 				<Battery />
 			</div>
 			{detailsDisplay && <Details closeWindow={handleSettinsModal} />}
