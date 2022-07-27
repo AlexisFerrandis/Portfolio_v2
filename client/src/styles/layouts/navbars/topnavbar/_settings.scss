@@ -29,12 +29,15 @@
 				object-fit: cover;
 			}
 		}
-		.batterie-container {
-			transform: rotate(90deg) translateX(-3px);
-			margin-left: 3px;
+		.language-container {
+			padding-top: 1px;
 		}
 		.network-container {
 			transform: scale(1.05) translateY(-1px);
+		}
+		.batterie-container {
+			transform: rotate(90deg) translateX(-3px);
+			margin-left: 3px;
 		}
 	}
 	// Display settings details

@@ -22,7 +22,7 @@ const Settings = () => {
 	return (
 		<>
 			<div className="settings" onClick={handleSettinsModal}>
-				<div className="settings-img">Fr</div>
+				<div className="settings-img language-container">Fr</div>
 				<div className="settings-img network-container">
 					<img src={network} alt="network-level" />
 				</div>

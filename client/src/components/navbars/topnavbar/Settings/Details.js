@@ -8,8 +8,17 @@ import sunflower from "../../../../assets/navbars/topnavbar/sunflower.svg";
 import gear from "../../../../assets/navbars/topnavbar/gear.svg";
 import github from "../../../../assets/navbars/topnavbar/github.svg";
 import envelope from "../../../../assets/navbars/topnavbar/envelope.svg";
+import { useDispatch, useSelector } from "react-redux";
 
 const Details = ({ closeWindow }) => {
+	const dispatch = useDispatch();
+	const globalVariables = useSelector((state) => state.globalVariablesReducer);
+
+	const handleBrightnessModification = (e) => {
+		dispatch({ type: "SET_BRIGHTNESS", payload: e.target.value });
+		console.log(globalVariables);
+	};
+
 	return (
 		<div className="settings-details window-template">
 			<div className="settings-details__header">
@@ -25,8 +34,8 @@ const Details = ({ closeWindow }) => {
 				</button>
 				<button className="menu-navigation-btn-container">
 					<div className="menu-btn">
-						<img src={sunflower} alt="light-level" className="sunflower" />
-						<input type="range" defaultValue="75" min="0" max="100" id="range" />
+						<img src={sunflower} alt="brightness-level" className="sunflower" />
+						<input type="range" min="0" max="100" id="range" defaultValue={globalVariables.brightness} onChange={handleBrightnessModification} />
 					</div>
 				</button>
 				<button className="menu-navigation-btn-container">

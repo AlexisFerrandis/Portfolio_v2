@@ -4,10 +4,12 @@ import React from "react";
 import desktopWpp from "../../assets/desktop/desktop_wpp.jpg";
 import PrincipalNavBar from "../navbars/principalnavbar/PrincipalNavBar";
 import TopNavBar from "../navbars/topnavbar/TopNavBar";
+import Brightness from "./Brightness";
 
 const index = () => {
 	return (
 		<div id="desktopInterface">
+			<Brightness />
 			<img className="desktop-wpp" src={desktopWpp} alt="desktopWpp" />
 			<TopNavBar />
 			<PrincipalNavBar />
