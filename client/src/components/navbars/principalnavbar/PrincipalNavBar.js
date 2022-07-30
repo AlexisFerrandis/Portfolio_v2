@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Window from "../../windows";
+import FolderExplorer from "../../folder/FolderExplorer";
 
 //img
 import folder from "./../../../assets/navbars/principalnavbar/folder-yellow.svg";
@@ -9,7 +9,6 @@ import facebook from "./../../../assets/navbars/principalnavbar/facebook.svg";
 import netflix from "./../../../assets/navbars/principalnavbar/netflix.svg";
 import chat from "./../../../assets/navbars/principalnavbar/gnome-robots.svg";
 import games from "./../../../assets/navbars/principalnavbar/game-boy.svg";
-import calculator from "./../../../assets/navbars/principalnavbar/calculator.svg";
 import menu from "./../../../assets/navbars/principalnavbar/menu-opener.svg";
 
 const PrincipalNavBar = () => {
@@ -21,7 +20,7 @@ const PrincipalNavBar = () => {
 
 	return (
 		<>
-			{openFolder && <Window />}
+			{openFolder && <FolderExplorer />}
 			<div className="principal-nav-bar">
 				<div className="principal-nav-bar__icon" onClick={handleFolderOpening}>
 					<img src={folder} alt="folder" />
@@ -41,9 +40,7 @@ const PrincipalNavBar = () => {
 				<div className="principal-nav-bar__icon">
 					<img src={games} alt="video-games" />
 				</div>
-				<div className="principal-nav-bar__icon ">
-					<img src={calculator} alt="calculator" />
-				</div>
+
 				<div className="principal-nav-bar__icon menu-icon">
 					<img src={menu} alt="menu" />
 				</div>

@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import CloseWindow from "../../../buttons/CloseWindow";
 import Battery from "./Battery";
 import Volume from "./Volume";
+import Language from "./Language";
 
 // img
+import batteryFull from "../../../../assets/navbars/topnavbar/battery-full.svg";
 import sunflower from "../../../../assets/navbars/topnavbar/sunflower.svg";
 import gear from "../../../../assets/navbars/topnavbar/gear.svg";
 import github from "../../../../assets/navbars/topnavbar/github.svg";
 import envelope from "../../../../assets/navbars/topnavbar/envelope.svg";
-import Language from "./Language";
 
 const Details = ({ closeWindow }) => {
 	const dispatch = useDispatch();
@@ -23,7 +24,14 @@ const Details = ({ closeWindow }) => {
 	return (
 		<div className="settings-details window-template">
 			<div className="settings-details__header">
-				<Battery context="details" />
+				{navigator.userAgent.includes("Firefox") ? (
+					<div className="settings-img">
+						<img src={batteryFull} alt="battery-charging" className="details" />
+						<p>{100}%</p>
+					</div>
+				) : (
+					<Battery context="details" />
+				)}
 				<CloseWindow closeWindow={closeWindow} />
 			</div>
 			<div className="settings-details__content">

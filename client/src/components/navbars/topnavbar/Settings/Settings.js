@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import Battery from "./Battery";
 import Details from "./Details";
 import Volume from "./Volume";
+import Language from "./Language";
 
 // img
 import network from "../../../../assets/navbars/topnavbar/network-wireless.svg";
-import Language from "./Language";
+import batteryFull from "../../../../assets/navbars/topnavbar/battery-full.svg";
 
 const Settings = () => {
 	const [detailsDisplay, setDetailsDisplay] = useState(false);
@@ -28,7 +29,13 @@ const Settings = () => {
 					<img src={network} alt="network-level" />
 				</div>
 				<Volume />
-				<Battery />
+				{navigator.userAgent.includes("Firefox") ? (
+					<div className="settings-img">
+						<img src={batteryFull} alt="battery-charging" />
+					</div>
+				) : (
+					<Battery />
+				)}
 			</div>
 			{detailsDisplay && <Details closeWindow={handleSettinsModal} />}
 		</>
