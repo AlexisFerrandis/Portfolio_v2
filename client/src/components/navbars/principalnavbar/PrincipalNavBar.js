@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import FolderExplorer from "../../folder/FolderExplorer";
+import FolderExplorer from "../../folder";
 
 //img
 import folder from "./../../../assets/navbars/principalnavbar/folder-yellow.svg";
@@ -22,22 +22,22 @@ const PrincipalNavBar = () => {
 		<>
 			{openFolder && <FolderExplorer />}
 			<div className="principal-nav-bar">
-				<div className="principal-nav-bar__icon" onClick={handleFolderOpening}>
+				<div className={openFolder ? "principal-nav-bar__icon app-icon active" : "principal-nav-bar__icon app-icon"} onClick={handleFolderOpening}>
 					<img src={folder} alt="folder" />
 				</div>
-				<div className="principal-nav-bar__icon">
+				<div className="principal-nav-bar__icon app-icon">
 					<img src={console} alt="console" />
 				</div>
-				<div className="principal-nav-bar__icon">
+				<div className="principal-nav-bar__icon app-icon">
 					<img src={facebook} alt="facebook" />
 				</div>
-				<div className="principal-nav-bar__icon">
+				<div className="principal-nav-bar__icon app-icon">
 					<img src={netflix} alt="netflix" />
 				</div>
-				<div className="principal-nav-bar__icon">
+				<div className="principal-nav-bar__icon app-icon">
 					<img src={chat} alt="chat" />
 				</div>
-				<div className="principal-nav-bar__icon">
+				<div className="principal-nav-bar__icon app-icon">
 					<img src={games} alt="video-games" />
 				</div>
 

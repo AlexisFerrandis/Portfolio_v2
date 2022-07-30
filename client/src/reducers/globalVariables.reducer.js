@@ -1,4 +1,4 @@
-import { SET_BRIGHTNESS, SET_VOLUME, SET_LANGUAGE } from "../actions/globalVariables.actions";
+import { SET_BRIGHTNESS, SET_VOLUME, SET_LANGUAGE, SET_DARK_MODE } from "../actions/globalVariables.actions";
 
 const initialState = {};
 
@@ -12,6 +12,9 @@ export default function globalVariablesReducer(state = initialState, action) {
 
 		case SET_LANGUAGE:
 			return { ...state, language: action.payload };
+
+		case SET_DARK_MODE:
+			return { ...state, darkMode: action.payload };
 
 		default:
 			return state;
