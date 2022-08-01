@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import FolderExplorer from "../../folder/FolderExplorer";
+import FolderExplorer from "../../folderExplorer";
 
 //img
 import folder from "./../../../assets/navbars/principalnavbar/folder-yellow.svg";
