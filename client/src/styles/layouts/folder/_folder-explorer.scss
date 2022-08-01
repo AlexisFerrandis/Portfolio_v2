@@ -23,11 +23,11 @@
 			.text {
 				display: flex;
 				padding: 3px 10px 3px 6px;
-				background-color: $af-secondary;
 				font-weight: 500;
 				font-size: 14px;
 				border-radius: 2px;
 				user-select: none;
+				text-transform: capitalize;
 				img {
 					width: 16px;
 					height: 16px;
@@ -79,7 +79,7 @@
 				left: 0;
 			}
 			.active {
-				background-color: $af-secondary;
+				background-color: $af-primary;
 				.navbar-ico {
 					filter: invert(1) brightness(1.4);
 				}

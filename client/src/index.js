@@ -11,6 +11,7 @@ import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
 import { setVolume, setBrightness, setLanguage, setDarkMode } from "./actions/globalVariables.actions";
+import { getActivesWindows } from "./actions/activesWindows.actions";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -18,6 +19,8 @@ store.dispatch(setVolume());
 store.dispatch(setBrightness());
 store.dispatch(setLanguage());
 store.dispatch(setDarkMode());
+
+store.dispatch(getActivesWindows());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

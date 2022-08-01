@@ -17,6 +17,8 @@ import envelope from "../../../../assets/navbars/topnavbar/envelope.svg";
 const Details = ({ closeWindow }) => {
 	const dispatch = useDispatch();
 	const globalVariables = useSelector((state) => state.globalVariablesReducer);
+	const activesWindows = useSelector((state) => state.activesWindowsReducer);
+	console.log(activesWindows);
 
 	const handleBrightnessModification = (e) => {
 		dispatch({ type: "SET_BRIGHTNESS", payload: e.target.value });
@@ -24,6 +26,16 @@ const Details = ({ closeWindow }) => {
 
 	const handleDarkModeModification = (e) => {
 		dispatch({ type: "SET_DARK_MODE", payload: !globalVariables.darkMode });
+	};
+
+	const handleSettingsDisplay = (e) => {
+		e.preventDefault();
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "FolderSettingsMenu" });
+	};
+
+	const handleContactDisplay = (e) => {
+		e.preventDefault();
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "contactPage" });
 	};
 
 	return (
@@ -61,19 +73,19 @@ const Details = ({ closeWindow }) => {
 					</div>
 				</button>
 
-				<button className="settings-details__content--setting">
+				<div className="settings-details__content--setting">
 					<div className="setting">
 						<div className="footer-ico">
-							<img src={gear} alt="settings" />
+							<img src={gear} alt="settings" onClick={(e) => handleSettingsDisplay(e)} />
 						</div>
 						<div className="footer-ico">
-							<img src={envelope} alt="send message" />
+							<img src={envelope} alt="send message" onClick={(e) => handleContactDisplay(e)} />
 						</div>
 						<div className="footer-ico">
 							<img src={github} alt="github" />
 						</div>
 					</div>
-				</button>
+				</div>
 			</div>
 		</div>
 	);

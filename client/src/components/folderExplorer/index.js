@@ -13,6 +13,8 @@ import Games from "./home/games/Games";
 import Contact from "./home/contact/Contact";
 import Settings from "./home/settings/Settings";
 
+import Wine from "./home/wine/Wine";
+
 // img
 import folder from "./../../assets/navbars/principalnavbar/folder-yellow.svg";
 import home from "./../../assets/folder/user-home-symbolic.svg";
@@ -24,12 +26,16 @@ import videoIco from "./../../assets/folder/video-x-generic-symbolic.svg";
 import gamesIco from "./../../assets/folder/applications-games-symbolic.svg";
 import contactIco from "./../../assets/folder/contact-new-symbolic.svg";
 import settingsIco from "./../../assets/folder/gear.svg";
+import wineIco from "./../../assets/folder/wine-glass-solid.svg";
 
 const FolderExplorer = ({ closeWindow }) => {
 	const lang = useSelector((state) => state.globalVariablesReducer.language);
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
 
 	const nodeRef = useRef(null);
+
+	const [firstPath, setFirstPath] = useState("Home");
+	const [secondPath, setSecondPath] = useState("");
 
 	const [homeDisplay, setHomeDisplay] = useState(true);
 	const [projectsDisplay, setProjectsDisplay] = useState(false);
@@ -40,6 +46,8 @@ const FolderExplorer = ({ closeWindow }) => {
 	const [contactDisplay, setContactDisplay] = useState(false);
 
 	const [settingsDisplay, setSettingsDisplay] = useState(false);
+
+	const [wineDisplay, setWineDisplay] = useState(false);
 
 	const handleNavSelection = (e) => {
 		e.preventDefault();
@@ -52,6 +60,11 @@ const FolderExplorer = ({ closeWindow }) => {
 		setGamesDisplay(false);
 		setContactDisplay(false);
 		setSettingsDisplay(false);
+
+		setWineDisplay(false);
+
+		setFirstPath(e.target.id);
+		setSecondPath("");
 
 		switch (e.target.id) {
 			case "home":
@@ -80,10 +93,18 @@ const FolderExplorer = ({ closeWindow }) => {
 				setSettingsDisplay(true);
 				break;
 
+			case "wine":
+				setWineDisplay(true);
+				break;
+
 			default:
 				setHomeDisplay(true);
 				break;
 		}
+	};
+
+	const handleSecondPath = (e) => {
+		setSecondPath(e);
 	};
 
 	return (
@@ -109,13 +130,16 @@ const FolderExplorer = ({ closeWindow }) => {
 						{homeDisplay && (
 							<div className="text">
 								<img src={home} alt="home" className="header-ico" />
-								<p>Home</p>
+								<p>{firstPath}</p>
 							</div>
 						)}
 						{projectsDisplay && (
 							<div className="text">
 								<img src={documentsIco} alt="projects" className="header-ico" />
-								<p>{lang === "Fr" ? "Projets" : "Projects"}</p>
+								<p>
+									{firstPath}
+									{secondPath && ` \\ ${secondPath}`}
+								</p>
 							</div>
 						)}
 						{picturesDisplay && (
@@ -152,6 +176,12 @@ const FolderExplorer = ({ closeWindow }) => {
 							<div className="text">
 								<img src={settingsIco} alt="settings" className="header-ico" />
 								<p>{lang === "Fr" ? "Paramètres" : "Settings"}</p>
+							</div>
+						)}
+						{wineDisplay && (
+							<div className="text">
+								<img src={wineIco} alt="wine" className="header-ico" />
+								<p>{lang === "Fr" ? "Vin" : "Wine"}</p>
 							</div>
 						)}
 					</div>
@@ -204,13 +234,16 @@ const FolderExplorer = ({ closeWindow }) => {
 					<div className={darkMode ? "folder-explorer__body--content dark-mode" : "folder-explorer__body--content"}>
 						{homeDisplay && <Home path={handleNavSelection} />}
 
-						{projectsDisplay && <Projects />}
+						{projectsDisplay && <Projects path={handleSecondPath} />}
 						{picturesDisplay && <Pictures />}
 						{musicDisplay && <Music />}
 						{videosDisplay && <Videos />}
 						{gamesDisplay && <Games />}
 						{contactDisplay && <Contact />}
+
 						{settingsDisplay && <Settings />}
+
+						{wineDisplay && <Wine />}
 					</div>
 				</div>
 			</div>
