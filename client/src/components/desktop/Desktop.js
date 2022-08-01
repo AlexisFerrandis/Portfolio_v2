@@ -9,6 +9,7 @@ import Brightness from "./Brightness";
 const index = () => {
 	return (
 		<div id="desktopInterface">
+			<div className="app-delimitation"></div>
 			<Brightness />
 			<img className="desktop-wpp" src={desktopWpp} alt="desktopWpp" />
 			<TopNavBar />

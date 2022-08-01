@@ -16,7 +16,7 @@ const Settings = () => {
 		setDetailsDisplay(!detailsDisplay);
 	};
 	window.addEventListener("click", (e) => {
-		if (e.target.classList.contains("desktop-wpp")) {
+		if (e.target.classList.contains("desktop-wpp") || e.target.classList.contains("app-delimitation")) {
 			setDetailsDisplay(false);
 		}
 	});

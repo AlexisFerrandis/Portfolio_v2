@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-import FolderExplorer from "../../folder";
+import FolderExplorer from "../../folder/FolderExplorer";
 
 //img
 import folder from "./../../../assets/navbars/principalnavbar/folder-yellow.svg";
-import console from "./../../../assets/navbars/principalnavbar/gnome-console.svg";
 import facebook from "./../../../assets/navbars/principalnavbar/facebook.svg";
 import netflix from "./../../../assets/navbars/principalnavbar/netflix.svg";
 import chat from "./../../../assets/navbars/principalnavbar/gnome-robots.svg";
@@ -20,13 +19,10 @@ const PrincipalNavBar = () => {
 
 	return (
 		<>
-			{openFolder && <FolderExplorer />}
+			{openFolder && <FolderExplorer closeWindow={handleFolderOpening} />}
 			<div className="principal-nav-bar">
 				<div className={openFolder ? "principal-nav-bar__icon app-icon active" : "principal-nav-bar__icon app-icon"} onClick={handleFolderOpening}>
 					<img src={folder} alt="folder" />
-				</div>
-				<div className="principal-nav-bar__icon app-icon">
-					<img src={console} alt="console" />
 				</div>
 				<div className="principal-nav-bar__icon app-icon">
 					<img src={facebook} alt="facebook" />

@@ -1,4 +1,12 @@
 #desktopInterface {
+	.app-delimitation {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 97%;
+		height: 97%;
+	}
 	.desktop-wpp {
 		position: absolute;
 		top: 0;

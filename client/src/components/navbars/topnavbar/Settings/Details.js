@@ -17,7 +17,6 @@ import envelope from "../../../../assets/navbars/topnavbar/envelope.svg";
 const Details = ({ closeWindow }) => {
 	const dispatch = useDispatch();
 	const globalVariables = useSelector((state) => state.globalVariablesReducer);
-	console.log(globalVariables);
 
 	const handleBrightnessModification = (e) => {
 		dispatch({ type: "SET_BRIGHTNESS", payload: e.target.value });
