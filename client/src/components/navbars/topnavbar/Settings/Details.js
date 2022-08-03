@@ -30,7 +30,7 @@ const Details = ({ closeWindow }) => {
 
 	const handleSettingsDisplay = (e) => {
 		e.preventDefault();
-		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "FolderSettingsMenu" });
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "Folder" });
 	};
 
 	const handleContactDisplay = (e) => {

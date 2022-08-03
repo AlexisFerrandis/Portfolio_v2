@@ -11,8 +11,6 @@ import Music from "./home/music/Music";
 import Videos from "./home/videos/Videos";
 import Games from "./home/games/Games";
 import Contact from "./home/contact/Contact";
-import Settings from "./home/settings/Settings";
-
 import Wine from "./home/wine/Wine";
 
 // img
@@ -25,7 +23,6 @@ import musicIco from "./../../assets/folder/emblem-music-symbolic.svg";
 import videoIco from "./../../assets/folder/video-x-generic-symbolic.svg";
 import gamesIco from "./../../assets/folder/applications-games-symbolic.svg";
 import contactIco from "./../../assets/folder/contact-new-symbolic.svg";
-import settingsIco from "./../../assets/folder/gear.svg";
 import wineIco from "./../../assets/folder/wine-glass-solid.svg";
 
 const FolderExplorer = ({ closeWindow }) => {
@@ -45,8 +42,6 @@ const FolderExplorer = ({ closeWindow }) => {
 	const [gamesDisplay, setGamesDisplay] = useState(false);
 	const [contactDisplay, setContactDisplay] = useState(false);
 
-	const [settingsDisplay, setSettingsDisplay] = useState(false);
-
 	const [wineDisplay, setWineDisplay] = useState(false);
 
 	const handleNavSelection = (e) => {
@@ -59,7 +54,6 @@ const FolderExplorer = ({ closeWindow }) => {
 		setVideosDisplay(false);
 		setGamesDisplay(false);
 		setContactDisplay(false);
-		setSettingsDisplay(false);
 
 		setWineDisplay(false);
 
@@ -88,9 +82,6 @@ const FolderExplorer = ({ closeWindow }) => {
 
 			case "contact":
 				setContactDisplay(true);
-				break;
-			case "settings":
-				setSettingsDisplay(true);
 				break;
 
 			case "wine":
@@ -172,12 +163,7 @@ const FolderExplorer = ({ closeWindow }) => {
 								<p>Contact</p>
 							</div>
 						)}
-						{settingsDisplay && (
-							<div className="text">
-								<img src={settingsIco} alt="settings" className="header-ico" />
-								<p>{lang === "Fr" ? "Paramètres" : "Settings"}</p>
-							</div>
-						)}
+
 						{wineDisplay && (
 							<div className="text">
 								<img src={wineIco} alt="wine" className="header-ico" />
@@ -221,13 +207,6 @@ const FolderExplorer = ({ closeWindow }) => {
 							<img src={contactIco} alt="contact" className="navbar-ico" />
 							<p>Contact</p>
 						</div>
-
-						<div className="navbar-footer">
-							<div className={settingsDisplay ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="settings">
-								<img src={settingsIco} alt="settings" className="navbar-ico" />
-								<p>{lang === "Fr" ? "Paramètres" : "Settings"}</p>
-							</div>
-						</div>
 					</div>
 
 					{/* content */}
@@ -240,8 +219,6 @@ const FolderExplorer = ({ closeWindow }) => {
 						{videosDisplay && <Videos />}
 						{gamesDisplay && <Games />}
 						{contactDisplay && <Contact />}
-
-						{settingsDisplay && <Settings />}
 
 						{wineDisplay && <Wine />}
 					</div>

@@ -28,7 +28,7 @@ const Volume = ({ context }) => {
 						{globalVariables.volume < 2 && <img src={volumeMuted} alt="volume-level" className="volume-invert" onClick={setMutedVolume} />}
 						{globalVariables.volume >= 2 && globalVariables.volume < 35 && <img src={volumeLow} alt="volume-level" className="volume-invert volume-to-mute" onClick={setMutedVolume} />}
 						{globalVariables.volume >= 35 && globalVariables.volume < 75 && <img src={volumeMedium} alt="volume-level" className="volume-invert volume-to-mute" onClick={setMutedVolume} />}
-						{globalVariables.volume >= 75 && globalVariables.volume <= 100 && <img src={volumeHigh} alt="volume-level volume-to-mute" onClick={setMutedVolume} />}
+						{globalVariables.volume >= 75 && globalVariables.volume <= 100 && <img src={volumeHigh} alt="volume-level" onClick={setMutedVolume} />}
 						<input type="range" min="0" max="100" id="range" defaultValue={globalVariables.volume} onChange={handleVolumeModification} />
 					</div>
 				</button>
