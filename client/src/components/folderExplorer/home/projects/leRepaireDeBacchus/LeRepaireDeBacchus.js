@@ -1,17 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 
 // img
-import lrdbLogo from "../../../../../assets/folder/projects/bacchus.jpg";
+import lrdbLogo from "../../../../../assets/folder/projects/lerepairedebacchus/bacchus.jpg";
 import readMe from "../../../../../assets/folder/projects/text-x-po.svg";
 
 // video
-import lrdbPreview from "../../../../../assets/folder/projects/bacchus-preview.mp4";
+import lrdbPreview from "../../../../../assets/folder/projects/lerepairedebacchus/bacchus-preview.mp4";
 
 const LeRepaireDeBacchus = () => {
+	const dispatch = useDispatch();
 	const [videoPlaying, setVideoPlaying] = useState(false);
 
 	const openText = (e) => {
-		// console.log(e);
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "lrdbReadMe" });
 	};
 
 	const startPreview = (e) => {

@@ -11,7 +11,7 @@ import thunk from "redux-thunk";
 import rootReducer from "./reducers";
 
 import { setVolume, setBrightness, setLanguage, setDarkMode } from "./actions/globalVariables.actions";
-import { setAtiveWindows } from "./actions/activesWindows.actions";
+import { setAtiveWindows, setDesactiveWindows } from "./actions/activesWindows.actions";
 import { folderPath } from "./actions/folderPath.actions";
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
@@ -22,6 +22,7 @@ store.dispatch(setLanguage());
 store.dispatch(setDarkMode());
 
 store.dispatch(setAtiveWindows());
+store.dispatch(setDesactiveWindows());
 
 store.dispatch(folderPath());
 

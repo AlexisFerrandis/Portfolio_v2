@@ -5,11 +5,13 @@ import desktopWpp from "../../assets/desktop/desktop_wpp.jpg";
 import PrincipalNavBar from "../navbars/principalnavbar/PrincipalNavBar";
 import TopNavBar from "../navbars/topnavbar/TopNavBar";
 import Brightness from "./Brightness";
+import Windows from "./Windows";
 
 const index = () => {
 	return (
 		<div id="desktopInterface">
 			<div className="app-delimitation"></div>
+			<Windows />
 			<Brightness />
 			<img className="desktop-wpp" src={desktopWpp} alt="desktopWpp" />
 			<TopNavBar />

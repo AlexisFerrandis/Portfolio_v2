@@ -123,6 +123,9 @@
 					&:hover {
 						background-color: rgba($af-gray-40, 0.2);
 					}
+					&:focus {
+						background-color: rgba($af-gray-40, 0.2);
+					}
 					.folder-pic {
 						width: 48px;
 						height: 48px;

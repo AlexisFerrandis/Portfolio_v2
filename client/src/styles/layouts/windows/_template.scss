@@ -3,4 +3,25 @@
 	border: 1px solid $af-gray-70;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $af-gray-80;
+		color: $af-gray-20;
+		padding: 4px 10px;
+		&--title {
+			display: flex;
+			align-items: center;
+			.icon {
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+		}
+	}
+	&__body {
+		background-color: white;
+	}
 }
