@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import folder from "./../../assets/navbars/principalnavbar/folder-yellow.svg";
 import home from "./../../assets/folder/user-home-symbolic.svg";
 
-import documentsIco from "./../../assets/folder/folder-open-symbolic.svg";
+import projectsIco from "./../../assets/folder/folder-open-symbolic.svg";
 import appsIco from "./../../assets/folder/applications-engineering-symbolic.svg";
 import picturesIco from "./../../assets/folder/folder-pictures-symbolic.svg";
 import musicIco from "./../../assets/folder/emblem-music-symbolic.svg";
@@ -21,6 +21,8 @@ const Header = () => {
 		<div>
 			<div className="folder-explorer__header--title">
 				<img src={folder} alt="folder" className="folder-ico" />
+
+				{/* first path  */}
 				{folderPath === "home" && (
 					<div className="text">
 						<img src={home} alt="home" className="header-ico" />
@@ -29,7 +31,7 @@ const Header = () => {
 				)}
 				{folderPath === "projects" && (
 					<div className="text">
-						<img src={documentsIco} alt="projects" className="header-ico" />
+						<img src={projectsIco} alt="projects" className="header-ico" />
 						<p>{folderPath}</p>
 					</div>
 				)}
@@ -67,6 +69,14 @@ const Header = () => {
 					<div className="text">
 						<img src={contactIco} alt="contact" className="header-ico" />
 						<p>Contact</p>
+					</div>
+				)}
+
+				{/* second path  */}
+				{folderPath === "leRepaireDeBacchus" && (
+					<div className="text">
+						<img src={projectsIco} alt="projects" className="header-ico" />
+						<p>{lang === "Fr" ? "Projets \\ Le Repaire de Bacchus" : "Projects \\ Le Repaire de Bacchus"}</p>
 					</div>
 				)}
 			</div>

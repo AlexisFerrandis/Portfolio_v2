@@ -30,7 +30,7 @@ const NavBar = () => {
 				<p>Home</p>
 			</div>
 
-			<div className={folderPath === "projects" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="projects">
+			<div className={folderPath === "projects" || folderPath === "leRepaireDeBacchus" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="projects">
 				<img src={documentsIco} alt="projects" className="navbar-ico" />
 				<p>{lang === "Fr" ? "Projets" : "Projects"}</p>
 			</div>

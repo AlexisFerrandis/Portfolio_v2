@@ -16,7 +16,7 @@ const Settings = () => {
 		setDetailsDisplay(!detailsDisplay);
 	};
 	window.addEventListener("click", (e) => {
-		if (e.target.classList.contains("desktop-wpp") || e.target.classList.contains("app-delimitation")) {
+		if (e.target.classList.contains("desktop-wpp") || e.target.classList.contains("app-delimitation") || e.target.classList.contains("folder-explorer__body--content") || e.target.classList.contains("folder-explorer__header")) {
 			setDetailsDisplay(false);
 		}
 	});
