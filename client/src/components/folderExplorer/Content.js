@@ -16,7 +16,7 @@ const Content = () => {
 	const folderPath = useSelector((state) => state.folderPathReducer.path);
 
 	return (
-		<div>
+		<>
 			{folderPath === "home" && <Home />}
 
 			{folderPath === "projects" && <Projects />}
@@ -28,7 +28,7 @@ const Content = () => {
 			{folderPath === "contact" && <Contact />}
 
 			{folderPath === "leRepaireDeBacchus" && <LeRepaireDeBacchus />}
-		</div>
+		</>
 	);
 };
 
