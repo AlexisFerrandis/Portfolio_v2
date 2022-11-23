@@ -14,7 +14,7 @@ const Projects = () => {
 
 	return (
 		<div className="container">
-			<div className="folder" onDoubleClick={(e) => handleProjectsPath(e)} id="leRepaireDeBacchus">
+			<div className="folder" onClick={(e) => handleProjectsPath(e)} id="leRepaireDeBacchus">
 				<img src={documentsFolder} alt="projects" className="folder-pic" />
 				<p>Le Repaire de Bacchus</p>
 			</div>

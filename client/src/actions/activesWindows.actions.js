@@ -3,7 +3,7 @@ export const SET_DESACTIVE_WINDOWS = "SET_DESACTIVE_WINDOW";
 
 export const setAtiveWindows = (window) => {
 	return (dispatch) => {
-		if (window === undefined) window = "app";
+		if (window === undefined) window = "helloWorld";
 		dispatch({ type: SET_ACTIVE_WINDOWS, payload: window });
 	};
 };

@@ -10,8 +10,9 @@ import Language from "./Language";
 import batteryFull from "../../../../assets/navbars/topnavbar/battery-full.svg";
 import moon from "../../../../assets/navbars/topnavbar/moon.svg";
 import sunflower from "../../../../assets/navbars/topnavbar/sunflower.svg";
-import gear from "../../../../assets/navbars/topnavbar/gear.svg";
+// import gear from "../../../../assets/navbars/topnavbar/gear.svg";
 import github from "../../../../assets/navbars/topnavbar/github.svg";
+import linkedin from "../../../../assets/navbars/topnavbar/linkedin.svg";
 import envelope from "../../../../assets/navbars/topnavbar/envelope.svg";
 
 const Details = ({ closeWindow }) => {
@@ -27,10 +28,10 @@ const Details = ({ closeWindow }) => {
 		dispatch({ type: "SET_DARK_MODE", payload: !globalVariables.darkMode });
 	};
 
-	const handleSettingsDisplay = (e) => {
-		e.preventDefault();
-		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "Folder" });
-	};
+	// const handleSettingsDisplay = (e) => {
+	// 	e.preventDefault();
+	// 	dispatch({ type: "SET_ACTIVE_WINDOW", payload: "Folder" });
+	// };
 
 	const handleContactDisplay = (e) => {
 		e.preventDefault();
@@ -75,13 +76,20 @@ const Details = ({ closeWindow }) => {
 				<div className="settings-details__content--setting">
 					<div className="setting">
 						<div className="footer-ico">
-							<img src={gear} alt="settings" onClick={(e) => handleSettingsDisplay(e)} />
-						</div>
-						<div className="footer-ico">
 							<img src={envelope} alt="send message" onClick={(e) => handleContactDisplay(e)} />
 						</div>
+						{/* <div className="footer-ico">
+							<img src={gear} alt="settings" onClick={(e) => handleSettingsDisplay(e)} />
+						</div> */}
 						<div className="footer-ico">
-							<img src={github} alt="github" />
+							<a href="https://github.com/AlexisFerrandis" target="_blank" rel="noreferrer">
+								<img src={github} alt="github" />
+							</a>
+						</div>
+						<div className="footer-ico">
+							<a href="https://fr.linkedin.com/in/alexis-ferrandis-5b5343106" target="_blank" rel="noreferrer">
+								<img src={linkedin} alt="linkedin" />
+							</a>
 						</div>
 					</div>
 				</div>

@@ -22,10 +22,10 @@ const ReadMe = () => {
 	return (
 		<Rnd
 			default={{
-				x: 100,
-				y: 50,
-				width: 210,
-				height: 480,
+				x: document.documentElement.clientWidth / 2 - 310 / 2,
+				y: document.documentElement.clientHeight / 2 - 510 / 2,
+				width: 310,
+				height: 510,
 			}}
 			minWidth={300}
 			minHeight={300}
@@ -39,7 +39,7 @@ const ReadMe = () => {
 				<div className="readme-template__header">
 					<div className="readme-template__header--title">
 						<img src={lrdbIco} alt="logo" className="icon" />
-						<p>README.md</p>
+						<p>Notes.txt</p>
 					</div>
 					<CloseWindow closeWindow={(e) => dispatch({ type: "SET_DESACTIVE_WINDOW", payload: "lrdbReadMe" })} />
 				</div>

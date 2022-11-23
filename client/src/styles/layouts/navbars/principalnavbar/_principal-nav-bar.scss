@@ -7,7 +7,8 @@
 	transform: translateX(-50%);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	background-color: rgba($af-gray-70, 0.3);
+	background-color: rgba($af-gray-00, 0.2);
+	backdrop-filter: blur(22px);
 	&__icon {
 		display: flex;
 		justify-content: center;
@@ -15,8 +16,8 @@
 		background-color: rgba($af-gray-70, 0);
 		padding: 5px;
 		margin: 0 2px;
-		width: 42px;
-		height: 42px;
+		width: 52px;
+		height: 52px;
 		border-radius: 2px;
 		cursor: pointer;
 		transition: $short-animation;
@@ -24,8 +25,8 @@
 			background-color: rgba($af-gray-70, 0.3);
 		}
 		img {
-			width: 32px;
-			height: 32px;
+			width: 42px;
+			height: 42px;
 			object-fit: cover;
 		}
 	}

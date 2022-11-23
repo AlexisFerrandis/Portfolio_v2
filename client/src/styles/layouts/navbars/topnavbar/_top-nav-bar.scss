@@ -3,8 +3,10 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 3px 4px;
-	background-color: rgba($af-gray-80, 0.7);
-	color: $af-gray-30;
+	background-color: rgba($af-gray-00, 0.3);
+	backdrop-filter: blur(22px);
+	color: $desk-70;
+	font-weight: 600;
 	font-size: 12px;
 	&__date {
 		user-select: none;

@@ -14,17 +14,19 @@ const FolderExplorer = ({ closeWindow }) => {
 	return (
 		<Rnd
 			default={{
-				x: document.documentElement.clientWidth / 2 - 610 / 2,
+				x: document.documentElement.clientWidth / 2 - 360 / 2,
 				y: 100,
-				width: 610,
+				width: document.documentElement.clientWidth / 2,
 				height: 350,
 			}}
-			minWidth={375}
+			minWidth={360}
 			minHeight={300}
+			maxWidth={600}
 			disableDragging={false}
 			bounds={".app-delimitation"}
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
 			dragHandleClassName={"folder-explorer__header"}
+			cancel={"img, btn, .close-window-btn-container"}
 		>
 			<div ref={nodeRef} className="window-template folder-explorer">
 				<div className="folder-explorer__header">

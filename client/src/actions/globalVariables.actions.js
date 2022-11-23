@@ -5,14 +5,14 @@ export const SET_DARK_MODE = "SET_DARK_MODE";
 
 export const setBrightness = (num) => {
 	return (dispatch) => {
-		if (num === undefined) num = 85;
+		if (num === undefined) num = 95;
 		dispatch({ type: SET_BRIGHTNESS, payload: num });
 	};
 };
 
 export const setVolume = (num) => {
 	return (dispatch) => {
-		if (num === undefined) num = 45;
+		if (num === undefined) num = 75;
 		dispatch({ type: SET_VOLUME, payload: num });
 	};
 };

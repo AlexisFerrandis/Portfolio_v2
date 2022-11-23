@@ -1,9 +1,6 @@
 import React from "react";
 
-// img
-// import cross from "../../assets/components/buttons/black-cross.svg";
-
-const CloseWindow = ({ closeWindow }) => {
+const CTA = ({ closeWindow }) => {
 	return (
 		<div className="close-window-btn-container" onClick={closeWindow}>
 			<button className="close-btn">
@@ -13,4 +10,4 @@ const CloseWindow = ({ closeWindow }) => {
 	);
 };
 
-export default CloseWindow;
+export default CTA;

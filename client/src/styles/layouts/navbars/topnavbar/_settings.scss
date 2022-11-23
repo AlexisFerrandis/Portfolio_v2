@@ -6,13 +6,13 @@
 		align-items: center;
 		padding: 2px;
 		border-radius: 3px;
-		background-color: rgba($af-gray-80, 0);
+		background-color: rgba($desk-60, 0);
 		transition: $short-animation;
 		&:hover {
-			background-color: rgba($af-gray-80, 0.4);
+			background-color: rgba($desk-60, 0.4);
 		}
 		&:active {
-			background-color: rgba($af-gray-80, 0.5);
+			background-color: rgba($desk-60, 0.5);
 			-webkit-box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.15);
 			box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.15);
 		}
@@ -50,6 +50,10 @@
 		right: 10px;
 		width: 200px;
 		animation: window-fade-up 100ms both ease-in-out;
+		color: $desk-70;
+		font-weight: 600;
+		background-color: rgba($af-gray-00, 0.5);
+		backdrop-filter: blur(22px);
 		cursor: default;
 		user-select: none;
 		.settings-img {
@@ -59,7 +63,6 @@
 				width: 19px;
 				height: 19px;
 				transform: rotate(90deg);
-				filter: grayscale(1);
 				margin-right: 5px;
 			}
 		}
@@ -85,19 +88,18 @@
 					width: 21px;
 					height: 21px;
 					object-fit: cover;
+					filter: brightness(0) saturate(100%) invert(12%) sepia(75%) saturate(1915%) hue-rotate(208deg) brightness(96%) contrast(89%);
 				}
-				.volume-invert {
-					filter: invert(1.2);
-				}
-				.volume-to-mute {
-					border-radius: 50%;
-					cursor: pointer;
-					&:hover {
-						background-color: rgba(210, 210, 210, 1);
-					}
-				}
+				// .volume-invert {
+				// 	filter: grayscale(1) invert(1);
+				// }
+				// .volume-to-mute {
+				// 	border-radius: 50%;
+				// 	cursor: pointer;
+					
+				// }
 				.sunflower {
-					filter: invert(0.85);
+					// filter: invert(1);
 					width: 17px;
 					height: 17px;
 				}
@@ -105,7 +107,7 @@
 					-webkit-appearance: none;
 					margin-left: 8px;
 					height: 6px;
-					background: $af-gray-40;
+					background: $desk-40;
 					border-radius: 5px;
 					cursor: pointer;
 				}
@@ -114,17 +116,18 @@
 					height: 15px;
 					width: 15px;
 					border-radius: 50%;
-					background: $af-gray-10;
+					background: $desk-60;
 					cursor: pointer;
 					box-shadow: 0 0 2px 0 #555;
 					transition: background 0.3s ease-in-out;
 				}
 				p {
-					padding: 6px 12px;
+					padding: 7px 12px;
 					width: 75px;
-					background-color: $af-gray-60;
 					cursor: pointer;
 					transition: $short-animation;
+					color: $desk-70;
+					font-weight: 500;
 					&:hover {
 						filter: brightness(1.3);
 					}
@@ -134,7 +137,9 @@
 					}
 				}
 				.active-language {
-					filter: brightness(1.3);
+					background-color: $desk-60;
+					color: $af-gray-10;
+					font-weight: 500;
 				}
 				.dark-mode {
 					display: flex;
@@ -142,9 +147,10 @@
 					justify-content: center;
 					width: 130px;
 					padding: 6px 0;
-					background-color: $af-gray-60;
 					cursor: pointer;
 					transition: $short-animation;
+					color: $desk-70;
+					font-weight: 500;
 					&:hover {
 						filter: brightness(1.3);
 					}
@@ -156,11 +162,16 @@
 						width: 18px;
 						height: 18px;
 						margin-right: 7px;
-						filter: invert(0.9);
+						filter: invert(12%) sepia(75%) saturate(1915%) hue-rotate(208deg) brightness(96%) contrast(89%);
 					}
 				}
 				.dark-mode-active {
-					filter: brightness(1.3);
+					background-color: $desk-60;
+					color: $af-gray-10;
+					font-weight: 400;
+					img {
+						filter: invert(0.9);
+					}
 				}
 				.footer-ico {
 					display: flex;
@@ -168,13 +179,12 @@
 					align-items: center;
 					width: 26px;
 					height: 26px;
+					padding: 1px;
 					background-color: rgba($af-gray-10, 0);
 					border-radius: 50%;
-					filter: invert(0.8);
 					cursor: pointer;
 					transition: $short-animation;
 					&:hover {
-						filter: invert(1);
 						background-color: rgba($af-gray-10, 0.4);
 					}
 					img {

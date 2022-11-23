@@ -1,6 +1,8 @@
 .window-template {
-	background-color: $af-gray-60;
-	border: 1px solid $af-gray-70;
+	// background-color: $af-gray-60;
+	// border: 1px solid $af-gray-70;
+	background-color: rgba($af-gray-00, 0.3);
+	backdrop-filter: blur(22px);
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
