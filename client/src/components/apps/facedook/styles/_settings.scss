@@ -1,0 +1,143 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$fds-blue-05: #ecf3ff;
+$fds-blue-30: #aac9ff;
+$fds-blue-40: #77a7ff;
+$fds-blue-60: #1877f2;
+$fds-blue-70: #2851a3;
+$fds-blue-80: #1d3c78;
+
+$fds-gray-00: #f5f6f7;
+$fds-gray-05: #f2f3f5;
+$fds-gray-10: #ebedf0;
+$fds-gray-20: #dadde1;
+$fds-gray-25: #ccd0d5;
+$fds-gray-30: #bec3c9;
+$fds-gray-45: #8d949e;
+$fds-gray-70: #606770;
+$fds-gray-80: #444950;
+$fds-gray-90: #303338;
+$fds-gray-100: #1c1e21;
+$fds-green-55: #00a400;
+$fds-highlight: #3578e5;
+
+$blue-link: #216fdb;
+
+$primary-btn-bg: #1b74e4;
+
+$log-background: #f0f2f5;
+$grey-separator: #dadde1;
+$text-setting-title: #8a8d91;
+
+$primary-icon: #1b74e4;
+$secondary-icon: #65676b;
+
+$user-btn-bg: #e7f3ff;
+$user-btn-text: #1877f2;
+
+$cam-red: rgb(243, 66, 95);
+$pic-green: rgb(69, 189, 98);
+$mood-yellow: rgb(247, 185, 40);
+
+.app-facebook {
+	container-type: inline-size;
+	::-webkit-scrollbar {
+		width: 9px;
+	}
+	::-webkit-scrollbar-track {
+		background: $fds-gray-20;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $fds-gray-45;
+		cursor: pointer;
+		border-radius: 3px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: $fds-gray-30;
+	}
+}
+
+.facebook-window {
+	overflow-y: scroll;
+	text-align: left;
+}
+
+.facebook-app { 
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	h1, h2, h3, h4, h5, h6, p, span, button, ul, li, a {
+		font-family: "Noto Sans", sans-serif ;
+	}
+}
+
+.error {
+	color: rgb(189, 6, 6);
+	font-size: 14px;
+}
+.success {
+	color: $fds-green-55;
+	font-size: 14px;
+}
+
+.grey-separator {
+	height: 1px;
+	width: 100%;
+	margin: 10px auto;
+	background-color: $grey-separator;
+}
+
+// hashtag
+.hashtag {
+	color: $fds-blue-60;
+	cursor: pointer;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// spinner
+.spinner-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	.spinner {
+		width: 30px;
+		height: 30px;
+		margin: 30px auto;
+		animation: spinner infinite 2.5s forwards;
+	}
+}
+.spinner {
+	width: 30px;
+	height: 30px;
+	animation: spinner infinite 2.5s forwards;
+}
+@keyframes spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+// mixins
+@mixin fd-small-breakpoint {
+	@container (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin fd-tablet-breakpoint {
+	@container (max-width: 900px) {
+		@content;
+	}
+}
+@mixin fd-mobile-breakpoint {
+	@container (max-width: 550px) {
+		@content;
+	}
+}
+

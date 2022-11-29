@@ -1,0 +1,323 @@
+.player-animation {
+	position: absolute;
+	top: 0;
+	width: 200px;
+	height: 100%;
+	z-index: 2;
+	pointer-events: none;
+}
+.enemy-animation {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 100%;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.battle-movement-right {
+	animation: battle-movement-right 0.6s;
+}
+@keyframes battle-movement-right {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(15px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.battle-movement-left {
+	animation: battle-movement-left 0.6s;
+}
+@keyframes battle-movement-left {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-15px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.battle-movement-rotate {
+	animation: battle-movement-rotate 1s;
+	animation-iteration-count: 2;
+	transform-origin:100%;
+}
+@keyframes battle-movement-rotate {
+	0%{
+		transform:rotate(0deg)
+				  translateX(-10px)
+				  translateY(0)
+				  rotate(0deg);
+				}
+				100%{
+					transform:rotate(360deg)
+					translateX(-10px)
+					translateY(0)
+					rotate(-360deg);
+	  }
+}
+
+@keyframes fade-in-out {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+
+.LOW-ATK {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 192px;
+		height: 160px;
+		background-image: url(../../../assets/graphics//battle/animations/statEffect.png);
+		background-repeat: no-repeat;
+		animation-name: stat-handler;
+		animation-duration: 1.4s;
+		animation-timing-function: steps(13);
+		animation-iteration-count: 2;
+		animation-delay: 1200ms;
+		transform:  scale(0.7) translateY(180px) rotate(180deg);
+		filter: invert(8%) sepia(87%) saturate(6159%) hue-rotate(5deg) brightness(76%) contrast(110%);
+		opacity: 0;
+	}
+}
+.LOW-DEF {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 192px;
+		height: 160px;
+		background-image: url(../../../assets/graphics//battle/animations/statEffect.png);
+		background-repeat: no-repeat;
+		animation-name: stat-handler;
+		animation-duration: 1.4s;
+		animation-timing-function: steps(13);
+		animation-iteration-count: 2;
+		animation-delay: 1200ms;
+		transform:  scale(0.7) translateY(180px) rotate(180deg);
+		filter: invert(23%) sepia(99%) saturate(3452%) hue-rotate(103deg) brightness(93%) contrast(105%);
+		opacity: 0;
+	}
+}
+.LOW-SPD {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 192px;
+		height: 160px;
+		background-image: url(../../../assets/graphics//battle/animations/statEffect.png);
+		background-repeat: no-repeat;
+		animation-name: stat-handler;
+		animation-duration: 1.4s;
+		animation-timing-function: steps(13);
+		animation-iteration-count: 2;
+		animation-delay: 1200ms;
+		transform:  scale(0.7) translateY(180px) rotate(180deg);
+		filter: invert(42%) sepia(81%) saturate(789%) hue-rotate(28deg) brightness(86%) contrast(101%);
+		opacity: 0;
+	}
+}
+
+@keyframes stat-handler {
+	0% {
+		background-position-x: 0px;
+		opacity: 1;
+	}
+	99% {
+		background-position-x: -2495px;
+		opacity: 1;
+
+	}
+	100% {
+		background-position-x: -2496px;
+		opacity: 0;
+		display: none;
+	}
+}
+
+.TACKLE {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 150px;
+		height: 150px;
+		background-image: url(../../../assets/graphics//battle/animations/Tackle_B.png);
+		background-repeat: no-repeat;
+		animation-name: tackle;
+		animation-duration: 0.2s;
+		transform: translateY(30px);
+		opacity: 0;
+	}
+}
+@keyframes tackle {
+	0% {
+	  	opacity: 0.8;
+	}
+	99% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.SCRATCH {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 192px;
+		height: 160px;
+		background-image: url(../../../assets/graphics//battle/animations/scratchbattle.png);
+		background-repeat: no-repeat;
+		animation-name: scratch;
+		animation-duration: 0.5s;
+		animation-timing-function: steps(5);
+		transform: translateY(20px);
+		opacity: 0;
+	}
+}
+@keyframes scratch {
+	0% {
+		background-position-x: 0px;
+		opacity: 1;
+	}
+	99% {
+		background-position-x: -959px;
+		opacity: 1;
+
+	}
+	100% {
+		background-position-x: -960px;
+		opacity: 0;
+	}
+}
+
+.GROWL {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 256px;
+		height: 192px;
+		background-image: url(../../../assets/graphics//battle/animations/Growl.png);
+		background-repeat: no-repeat;
+		animation-name: growl;
+		animation-duration: 200ms;
+		animation-timing-function: steps(2);
+		animation-iteration-count: 6;
+		transform: translateY(0) translateX(-70px) scale(1);   
+		opacity: 0;
+	}
+}
+@keyframes growl {
+	0% {
+		background-position-x: 0px;
+		opacity: 1;
+	}
+	99% {
+		background-position-x: -767px;
+		opacity: 1;
+
+	}
+	100% {
+		background-position-x: -768px;
+		opacity: 0;
+	}
+}
+
+.STRINGSHOT {
+	&::after {
+		content: "";
+		position: absolute;
+		background-image: url(../../../assets/graphics//battle/animations/stringshot.png);
+		background-repeat: no-repeat;
+		animation-name: stringshot;
+		animation-duration: 700ms;
+		top: 0;
+		left: 0; 
+		width:300px;
+		height: 300px;
+		opacity: 0;
+	}
+}
+@keyframes stringshot {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+}
+
+.PECK {
+	&::after {
+		position: absolute;
+		content: "";
+		width: 150px;
+		height: 150px;
+		background-image: url(../../../assets/graphics//battle/animations/peck.png);
+		background-repeat: no-repeat;
+		animation-name: peck;
+		animation-duration: 0.2s;
+		transform: translateY(80px);
+		opacity: 0;
+	}
+}
+@keyframes peck {
+	0% {
+	  	opacity: 0.8;
+	}
+	99% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.thunder-shock {
+	width: 160px;
+	height: 192px;
+	background-image: url(../../../assets/graphics/battle/animations/T.Shock.png);
+	background-repeat:no-repeat;
+	animation-name: thunder-shock;
+	animation-duration: 0.8s;
+	animation-iteration-count: 2;
+	animation-timing-function: steps(6);
+	transform: scale(2) translateY(30px);
+	z-index: 1;
+	opacity: 0;
+  }
+  
+  @keyframes thunder-shock {
+	0% {
+	  background-position-x: 0px;
+	  opacity: 1;
+	}
+	99% {
+		background-position-x: -1151px;
+		opacity: 1;
+
+	}
+	100% {
+	  background-position-x: -1152px;
+	  opacity: 0;
+	}
+  }

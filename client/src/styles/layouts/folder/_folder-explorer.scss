@@ -126,13 +126,14 @@
 					width: 80px;
 					margin: 2px 7px;
 					padding: 4px;
-					background-color: rgba($af-gray-40, 0);
+					background-color: rgba($desk-50, 0);
 					cursor: pointer;
+					border-radius: 3px;
 					&:hover {
-						background-color: rgba($af-gray-40, 0.2);
+						background-color: rgba($desk-50, 0.2);
 					}
 					&:focus {
-						background-color: rgba($af-gray-40, 0.2);
+						background-color: rgba($desk-50, 0.2);
 					}
 					.folder-pic {
 						width: 48px;
@@ -150,8 +151,8 @@
 				}
 				.video-preview-container {
 					position: absolute;
-					top: 120px;
-					left: 60px;
+					top: 110px;
+					left: 70px;
 					width: 320px;
 					height: 200px;
 					overflow: hidden;
@@ -167,7 +168,7 @@
 			}
 		}
 		.dark-mode {
-			background-color: rgba($af-gray-70, 0.8);
+			background-color: rgba($desk-70, 0.7);
 			backdrop-filter: blur(22px);
 			color: $af-gray-10;
 			::-webkit-scrollbar-track {

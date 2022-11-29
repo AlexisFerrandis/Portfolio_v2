@@ -1,10 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const CTA = ({ closeWindow }) => {
+const CTA = ({ ctaAction, ctaValue }) => {
+	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
+
 	return (
-		<div className="close-window-btn-container" onClick={closeWindow}>
-			<button className="close-btn">
-				{/* <img src={cross} alt="close" /> */}
+		<div className="cta-container" onClick={ctaAction}>
+			<button className={darkMode ? "cta-btn-dark-mode" : "cta-btn"}>
+				{ctaValue}
 			</button>
 		</div>
 	);

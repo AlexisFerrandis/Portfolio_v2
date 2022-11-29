@@ -1,0 +1,484 @@
+
+.facebook-window.dark-mode {
+	.content  {
+        h1, h2, h3, h4, h5, h6, p, span, button {
+            color: $fds-gray-05;
+        }
+		.facebook-app {
+		background-color: $fds-gray-90;
+            .full-login-page {
+		        background-color: $fds-gray-90;
+                .connection-form {
+                    background-color: $fds-gray-100;
+                    input {
+                        background-color: $fds-gray-90;
+                        color: $fds-gray-05;
+                        &::placeholder {
+                            color: $fds-gray-30;
+                        }
+                    }
+                    .blue-btn {
+                        background-color: $fds-blue-60;
+                    }
+                    .green-btn {
+                        background-color: #3ca227;
+                    }
+                }
+            }
+
+
+
+			.header > .principal-nav {
+				background-color: $fds-gray-90;
+                .search-on {
+					background-color: $fds-gray-70;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+                li:hover {
+					background-color: $fds-gray-70;
+                }
+                .mid-part {
+                    img {
+                        filter: invert(1);
+                    }
+                }
+                .is-active {
+                    img {
+                        filter: invert(33%) sepia(99%) saturate(1159%) hue-rotate(192deg) brightness(95%) contrast(90%);
+                    }
+                }
+                .right-part {
+                    &-list {
+                        .options-navbar-ico {
+                            background-color: $fds-gray-70;
+                            .ico {
+                                filter: invert(1);
+                            }
+                        }
+                    }
+                }
+			}
+            .home-container, main {
+                //btn 
+                .close-window {
+	                color: $fds-gray-05;
+	                background-color: $fds-gray-100;
+                }
+                .close-window-secondary-edition {
+	                color: $fds-gray-05;
+	                background-color: $fds-gray-100;
+                    border: none;
+                }
+                .delete-btn {
+                    background-color: $fds-gray-90;
+                    color: $fds-gray-05;
+                    
+                }
+                .delete-card button{
+                    background-color: $fds-gray-90;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+
+                .home-content {
+                    background-color: $fds-gray-90;
+                    .left-nav-container {
+                        .link-container {
+                            background-color: $fds-gray-90;
+                        }
+                    }
+                    main {
+                        .post-form-container {
+                            background-color: $fds-gray-80;
+                            .vanilla-input {
+                                background-color: $fds-gray-90;
+                            }
+                        }
+                        .footer-form .complexe-input {
+                            background-color: $fds-gray-90;
+                            color: $fds-gray-05;
+                        }
+                        .form-inputs-background {
+                            background-color: rgba(0, 0, 0, 0.6);
+	                        .form-inputs-container {
+                                background-color: $fds-gray-90;
+                                border: 1px solid $fds-gray-90;
+	                            .user-informations {
+                                    margin-bottom: 20px;
+                                    .public-target {
+                                        background-color:$fds-gray-100;
+                                        img {
+                                            filter: invert(1);
+                                        }
+                                    }
+                                }
+
+                                .form-inputs-content {
+                                    textarea {
+                                        background-color: $fds-gray-100;
+                                        color: $fds-gray-05;
+                                    }
+                                    .form-inputs-content-add {
+                                        ul > li {
+                                            background-color: $fds-gray-100;
+                                        }
+                                    }
+                                }
+
+                                .form-media-preview-container {
+                                    background-color: $fds-gray-100;
+                                    label {
+                                        color: $fds-gray-05;
+                                    }
+                                }
+
+                                .form-video-preview-container {
+			                        background-color: $fds-gray-80;
+                                    img {
+                                        filter: invert(1);
+                                    }
+                                    .video-link {
+                                        background-color: $fds-gray-100;
+                                    }
+                                }
+                            }
+                        }
+
+
+
+                        .window-container {
+                            background-color: $fds-gray-100;
+                        }
+                        .friend-recommandation {
+                            color: $fds-gray-05;
+                            .friend-recommandation-name {
+                                color: $fds-gray-05;
+                            }
+                            
+		                    .add-friend-btn {
+                                background-color: $fds-blue-80;
+                                img {
+                                    filter: invert(1);
+                                }
+                            }
+                        }
+
+                        .post-interactions { 
+                            .interaction{
+                                background-color: $fds-gray-90;
+                            }
+                            .liked {
+                                background-color: $fds-blue-80;
+                                img {
+                                    filter: invert(1);
+                                }
+                            }
+                        }
+
+                        .comments-container {
+                            input {
+                                background-color: $fds-gray-90;
+                                color: $fds-gray-05;
+                            }
+                            .send-btn {
+                                background-color: $fds-gray-100;
+                            }
+                            .inactif-btn {
+                                background-color: $fds-gray-100;
+                                border: none;
+                                right: 0;
+                                img {
+                                    width: 22px;
+                                    user-select: none;
+                                    filter: invert(0.7);
+                                }
+                            }
+
+                            .editor-container{
+                                background-color: $fds-gray-90;
+                            }
+                            .edit-comment {
+                                background-color: $fds-gray-90;
+                            }
+                        
+	                        .comment-interactions {
+                                .liked {
+                                    color: $fds-blue-60;
+                                }
+                                .comment-likes {
+                                    background-color: $fds-gray-80;
+                                }
+                            }
+                        }
+                    }
+                    .right-nav-container {
+                        .profil-link {
+                            background-color: $fds-gray-90;
+                        }
+                        .notification {
+                            background-color: $fds-gray-90;
+                            img {
+                                filter: invert(1);
+                            }
+                        }
+                        .add-group {
+                            background-color: $fds-gray-100;
+                            color: $fds-gray-05;
+                        }
+                    }
+                }
+            }
+            .friends-page {
+                background-color: $fds-gray-90;
+                .friends-menu { 
+                    background-color: $fds-gray-90;
+                        img {
+                            filter: invert(1);
+                        }
+                    .friends-menu-option {
+                        background-color: $fds-gray-90;
+						.friends-menu-option-ico {
+                            background-color: $fds-gray-100;
+                        }
+                        
+                    }
+                }
+                .window-container {
+                    background-color: $fds-gray-100;
+                }
+                .friend-recommandation {
+                    color: $fds-gray-05;
+                    .friend-recommandation-name {
+                        color: $fds-gray-05;
+                    }
+                    
+                    .add-friend-btn {
+                        background-color: $fds-blue-80;
+                        img {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+
+            .post-interactions { 
+                .interaction{
+                    background-color: $fds-gray-90;
+                }
+                .liked {
+                    background-color: $fds-blue-80;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+            }
+
+            .update-profil-page {
+                button {
+                    background-color: $fds-gray-100;
+                    img {
+                        filter:invert(1);
+                    }
+                }
+                .add-friend-btn {
+                    background-color: $fds-blue-80;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+            }
+            .profil-page, .update-profil-page {
+                background-color: $fds-gray-90;
+                button {
+                    background-color: $fds-gray-100;
+                    img {
+                        filter:invert(1);
+                    }
+                }
+                .delete-btn {
+                    background-color: $fds-gray-90;
+                    color: $fds-gray-05;
+                    
+                }
+                .fake-link {
+					&:hover {
+                        background-color: $fds-gray-90;
+					}
+				}
+                .pic-container {
+                    border: 6px solid $fds-gray-90;
+                    img {
+						border: none;
+                    }
+                }
+                .camera-picto-container {
+                    background-color: $fds-gray-100;
+                    img {
+                        filter: invert(1);
+                    }
+                }
+				.logout {
+                    img {
+                        filter: invert(1);
+                    }
+                }
+				.follow button {
+                    color: $fds-gray-05;
+                }
+	            .user-informations li {
+                    color: $fds-gray-05;
+                    &:hover {
+                        background-color: $fds-gray-100;
+                    }
+                }
+                .user-informations .is-active {
+                    color: $primary-icon;
+                }
+                .window-container {
+                    background-color: $fds-gray-100;
+                }
+                .friend-recommandation {
+                    color: $fds-gray-05;
+                    .friend-recommandation-name {
+                        color: $fds-gray-05;
+                    }
+                    
+                    .add-friend-btn {
+                        background-color: $fds-blue-80;
+                        img {
+                            filter: invert(1);
+                        }
+                    }
+                }
+            }
+            .user-firends-bio-thread {
+                background-color: $fds-gray-90;
+
+                .window-container {
+                    background-color: $fds-gray-100;
+                }
+                .friend-recommandation {
+                    color: $fds-gray-05;
+                    .friend-recommandation-name {
+                        color: $fds-gray-05;
+                    }
+                    
+                    .add-friend-btn {
+                        background-color: $fds-blue-80;
+                        img {
+                            filter: invert(1);
+                        }
+                    }
+                }
+
+                .informations-container { 
+                    .principal-option {
+                        color: $fds-gray-05;
+                        background-color: $fds-gray-80;
+                    }
+                }
+
+                .post-form-container {
+                    background-color: $fds-gray-100;
+                    .vanilla-input {
+                        background-color: $fds-gray-90;
+                    }
+                }
+                .footer-form .complexe-input {
+                    background-color: $fds-gray-90;
+                    color: $fds-gray-05;
+                }
+                .form-inputs-background {
+                    background-color: rgba(0, 0, 0, 0.6);
+                    .form-inputs-container {
+                        background-color: $fds-gray-90;
+                        border: 1px solid $fds-gray-90;
+                        .user-informations {
+                            margin-bottom: 20px;
+                            .public-target {
+                                background-color:$fds-gray-100;
+                                img {
+                                    filter: invert(1);
+                                }
+                            }
+                        }
+
+                        .form-inputs-content {
+                            textarea {
+                                background-color: $fds-gray-100;
+                                color: $fds-gray-05;
+                            }
+                            .form-inputs-content-add {
+                                ul > li {
+                                    background-color: $fds-gray-100;
+                                }
+                            }
+                        }
+
+                        .form-media-preview-container {
+                            background-color: $fds-gray-100;
+                            label {
+                                color: $fds-gray-05;
+                            }
+                        }
+
+                        .form-video-preview-container {
+                            background-color: $fds-gray-80;
+                            img {
+                                filter: invert(1);
+                            }
+                            .video-link {
+                                background-color: $fds-gray-100;
+                            }
+                        }
+                    }
+                    
+                }
+                .comments-container {
+                    input {
+                        background-color: $fds-gray-90;
+                        color: $fds-gray-05;
+                    }
+                    .send-btn {
+                        background-color: $fds-gray-100;
+                    }
+                    .inactif-btn {
+                        background-color: $fds-gray-100;
+                        border: none;
+                        right: 0;
+                        img {
+                            width: 22px;
+                            user-select: none;
+                            filter: invert(0.7);
+                        }
+                    }
+                    .editor-container{
+                        background-color: $fds-gray-90;
+                    }
+                    .edit-comment {
+                        background-color: $fds-gray-90;
+                    }
+                
+                    .comment-interactions {
+                        .liked {
+                            color: $fds-blue-60;
+                        }
+                        .comment-likes {
+                            background-color: $fds-gray-80;
+                        }
+                    }
+                }
+            }
+		}
+        .upload-profil-pic-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            .upload-pic-container label{
+                background-color: $fds-gray-90;
+                color: $fds-gray-05;
+            }
+        }
+	}
+}

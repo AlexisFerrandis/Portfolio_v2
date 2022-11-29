@@ -7,19 +7,21 @@ import CloseWindow from "./../buttons/CloseWindow";
 import logoLetter from "./../../assets/logos/logo-letter.png"
 import locIco from "./../../assets/components/icons/location-dot-solid.svg"
 import logo from "./../../assets/logos/logo-name.png"
+import logo20 from "./../../assets/logos/logo-name-20.png"
+import CTA from "../buttons/CTA";
 
 const HelloWorld = () => {
 	const dispatch = useDispatch();
 	const nodeRef = useRef(null);
 
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
-	// const lang = useSelector((state) => state.globalVariablesReducer.language);
+	const lang = useSelector((state) => state.globalVariablesReducer.language);
 
 	return (
 		<Rnd
 			default={{
 				x: document.documentElement.clientWidth / 2 - 345 / 2,
-				y: document.documentElement.clientHeight / 2 - 550 / 2,
+				y: document.documentElement.clientHeight / 2 - 620 / 2,
 				width: 345,
 				height: 550,
 			}}
@@ -42,25 +44,30 @@ const HelloWorld = () => {
 
 				<div className={darkMode ? "readme-template__body dark-mode" : "readme-template__body"}>
 					<div className="content">
-						<img className="logo" src={logo} alt="Alexis Ferrandis logo" />
-						<h2>Développement Web</h2>
+						
+						<img className="logo" src={darkMode ? logo20 : logo} alt="Alexis Ferrandis logo" />
+						<h2>{lang === "Fr" ? "Développement Web" : "Web development"}</h2>
 						<p className="localisation">
 							<img className="localisation" src={locIco} alt="localisation" />
 							Paris, France
 						</p>
 						<div className="info">
-							<h3>Bienvenue sur mon portfolio,</h3>
+							<h3>{lang === "Fr" ? "Bienvenue sur mon portfolio," : "Welcome to my portfolio,"}</h3>
 							<p>
 								<br />
-								N'hésitez pas à parcourir les différents dossiers du bureau pour découvrir mes applications et projets.
+								{lang === "Fr" ? "Je vous invite à parcourir les dossiers du bureau pour découvrir mes applications." : "I invite you to browse the desktop folders to discover my applications."}
 								<br />
 								<br />
-								Pour des missions en freelance, vous pouvez m'envoyer un <a href="mailto:alexisferrandis@protonmail.com">email</a>, ou visiter la page de contact.
+								{lang === "Fr" ? "N'hésitez pas à m'envoyer un " : "Feel free to send me an "}
+								<a href="mailto:alexisferrandis@protonmail.com">email</a>
+								{lang === "Fr" ? ", ou visiter la page de contact pour discuter de votre projet." : ", or visit the contact page to discuss your project."}
 								<br />
 								<br />
-								Merci pour votre visite 🙂
+								{lang === "Fr" ? "Merci pour votre visite 🙂" : "Thank you for your visit 🙂"}
+								
 							</p>
 						</div>
+						<CTA ctaAction={console.log("tt")} ctaValue={"contact"} />
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,31 @@
+@import "./settings";
+
+@import "./components/buttons";
+@import "./components/window";
+
+@import "./components/log";
+@import "./components/connection-form";
+
+@import "./components/principal-navbar";
+@import "./components/thread-container";
+@import "./components/friends-recommandations";
+
+@import "./components/post-form";
+@import "./components/post-card";
+
+@import "./components/left-navbar";
+@import "./components/right-navbar";
+
+@import "./components/comments";
+
+@import "./components/upload-profil-pic";
+
+@import "./pages/home";
+@import "./pages/profil";
+@import "./pages/friends";
+@import "./pages/watch";
+
+@import "./pages/not-found";
+
+
+@import "./dark-mode"

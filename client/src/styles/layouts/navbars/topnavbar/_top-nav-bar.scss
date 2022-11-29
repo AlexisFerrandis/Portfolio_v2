@@ -8,11 +8,24 @@
 	color: $desk-70;
 	font-weight: 600;
 	font-size: 12px;
+	opacity: 0;
+    animation: top-nav-fade-in 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 1200ms;	
 	&__date {
 		user-select: none;
 	}
 	&__left,
 	&__settings {
 		width: 101px;
+	}
+}
+
+@keyframes top-nav-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-30px) ;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) ;
 	}
 }

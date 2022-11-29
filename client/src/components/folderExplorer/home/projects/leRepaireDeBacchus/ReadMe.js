@@ -22,13 +22,14 @@ const ReadMe = () => {
 	return (
 		<Rnd
 			default={{
-				x: document.documentElement.clientWidth / 2 - 310 / 2,
-				y: document.documentElement.clientHeight / 2 - 510 / 2,
-				width: 310,
-				height: 510,
+				x: document.documentElement.clientWidth / 2 - 345 / 2,
+				y: document.documentElement.clientHeight / 2 - 620 / 2,
+				width: 345,
+				height: 660,
 			}}
 			minWidth={300}
 			minHeight={300}
+			maxWidth={700}
 			disableDragging={false}
 			bounds={".app-delimitation"}
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
@@ -39,7 +40,7 @@ const ReadMe = () => {
 				<div className="readme-template__header">
 					<div className="readme-template__header--title">
 						<img src={lrdbIco} alt="logo" className="icon" />
-						<p>Notes.txt</p>
+						<p>Info.html</p>
 					</div>
 					<CloseWindow closeWindow={(e) => dispatch({ type: "SET_DESACTIVE_WINDOW", payload: "lrdbReadMe" })} />
 				</div>
@@ -47,7 +48,7 @@ const ReadMe = () => {
 				<div className={darkMode ? "readme-template__body dark-mode" : "readme-template__body"}>
 					<div className="container">
 						<h1>Le Repaire de Bacchus</h1>
-						<h2>{lang === "Fr" ? "Développement du site vitrine et de son interface d'administration" : "Development of the showcase site and its administration interface"}</h2>
+						<h2>{lang === "Fr" ? "Site vitrine et interface d'administration" : "Showcase site and its administration interface"}</h2>
 						<div className="gray-separator"></div>
 
 						<h3>{lang === "Fr" ? "Projet" : "Project"}</h3>

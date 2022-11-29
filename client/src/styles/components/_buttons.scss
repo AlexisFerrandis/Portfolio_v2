@@ -19,3 +19,41 @@
 	}
 }
 
+.cta-container {
+	.cta-btn {
+		padding: 10px 20px;
+		background-color: $desk-70;
+		color: $af-gray-00;
+		font-size: 1em;
+		font-weight: 500;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: $short-animation;
+		border-radius: 3px;
+		&:hover {
+			filter: brightness(1.1);
+		}
+		&:active {
+			-webkit-box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.4);
+			box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.4);
+		}
+	}
+	.cta-btn-dark-mode {
+		padding: 10px 20px;
+		background-color: $desk-20;
+		color: $desk-70;
+		font-size: 1em;
+		font-weight: 500;
+		text-transform: uppercase;
+		cursor: pointer;
+		transition: $short-animation;
+		border-radius: 3px;
+		&:hover {
+			filter: brightness(1.1);
+		}
+		&:active {
+			-webkit-box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.4);
+			box-shadow: inset 3px 3px 5px 3px rgba(0, 0, 0, 0.4);
+		}
+	}
+}

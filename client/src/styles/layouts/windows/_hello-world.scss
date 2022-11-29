@@ -1,19 +1,35 @@
 .hello-world {
     opacity: 0;
     animation: hello-world-fade-in 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 600ms;	
-
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	::-webkit-scrollbar-track {
+		display: none;
+	}
+	::-webkit-scrollbar-thumb {
+		display: none;
+		background: $af-gray-40;
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: $af-gray-60;
+	}
     .content {
 		padding: 25px 15px;
         height: 100%;
 		position: relative;
 		text-align: center;
 		align-items: center;
+		overflow-y: scroll;
+		
 		.logo {
-            width: 100%;
+            width: 90%;
+            height: 60px;
+            object-fit: contain;
             max-width: 300px;
             margin-bottom: 10px;
         }
-		
 		h2 {
 			font-size: 1.2em;
 			color: $desk-70;
@@ -40,8 +56,9 @@
 			h3 {
 				font-size: 1.3em;
 			    color: $desk-50;
-				margin-bottom: 0.6em;
+				margin-bottom: 1em;
 				user-select: none;
+                text-align: left;
 				@include mobile-breakpoint {
 					margin-bottom: 0.3em;
 				}
@@ -54,6 +71,24 @@
 				color: $desk-50;
 				text-decoration: underline;
 			}
+        }
+        .cta-container {
+            margin-top: 40px;
+			padding-bottom: 40px;
+        }
+    }
+    .dark-mode .content  {
+        p, h2 {
+		color: $af-gray-00;
+        }
+        .localisation img {
+            filter: invert(1);
+        }
+        h3 {
+            color: $desk-20;
+        }
+        a {
+            color: $desk-20;
         }
     }
 }

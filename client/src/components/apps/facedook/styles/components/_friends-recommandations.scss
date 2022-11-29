@@ -1,0 +1,106 @@
+.friends-recommendations-container {
+	padding: 20px 0 10px;
+	::-webkit-scrollbar {
+		height: 6px;
+	}
+	::-webkit-scrollbar-track {
+		background: $fds-gray-20;
+	}
+	::-webkit-scrollbar-thumb {
+		background: $fds-gray-45;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: $fds-gray-30;
+	}
+	.window-container {
+		overflow-x: scroll;
+	}
+	h4 {
+		font-size: 16px;
+		font-weight: 600;
+		margin: 7px 0 15px 15px;
+	}
+	ul {
+		display: flex;
+		margin-bottom: 7px;
+	}
+	.friend-recommandation {
+		position: relative;
+		width: 228px;
+		height: 340px;
+		margin-left: 15px;
+		border: 1px solid $fds-gray-20;
+		border-radius: 6px;
+		-webkit-box-shadow: 0px 3px 6px 6px rgba(36, 36, 36, 0.1);
+		box-shadow: 0px 3px 6px 6px rgba(36, 36, 36, 0.1);
+		@include fd-small-breakpoint {
+			width: 215px;
+			height: 310px;
+		}
+		@include fd-mobile-breakpoint {
+			width: 200px;
+			height: 300px;
+		}
+		.friend-recommandation-picture img {
+			width: 100%;
+			height: 228px;
+			object-fit: cover;
+			border-top-left-radius: 6px;
+			border-top-right-radius: 6px;
+			cursor: pointer;
+			@include fd-small-breakpoint {
+				height: 180px;
+			}
+		}
+		.friend-recommandation-infos {
+			padding: 4px 15px 5px;
+			.friend-recommandation-name {
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 5px;
+				color: black;
+				font-family: "Noto Sans", sans-serif ;
+				@include fd-tablet-breakpoint {
+					font-size: 14px;
+				}
+			}
+		}
+		.add-friend-btn {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 15px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			justify-content: center;
+			width: 90%;
+			padding: 7px 0;
+			margin-top: 30px;
+			font-size: 15px;
+			font-weight: 500;
+			color: $user-btn-text;
+			background-color: $user-btn-bg;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 300ms;
+			font-family: "Noto Sans", sans-serif ;
+			@include fd-tablet-breakpoint {
+				font-size: 15px;
+			}
+			&:hover {
+				filter: brightness(97%);
+			}
+			&:active {
+				filter: brightness(94%);
+			}
+			img {
+				width: 18px;
+				height: 18px;
+				margin-right: 5px;
+				filter: invert(22%) sepia(98%) saturate(4156%) hue-rotate(203deg) brightness(102%) contrast(96%);
+			}
+		}
+	}
+}

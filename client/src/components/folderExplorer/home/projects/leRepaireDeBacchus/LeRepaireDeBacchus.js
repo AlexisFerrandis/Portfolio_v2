@@ -9,7 +9,6 @@ import readMe from "../../../../../assets/folder/projects/text-x-po.svg";
 import lrdbPreview from "../../../../../assets/folder/projects/lerepairedebacchus/bacchus-preview.mp4";
 
 const LeRepaireDeBacchus = () => {
-	
 	const dispatch = useDispatch();
 	const [videoPlaying, setVideoPlaying] = useState(false);
 
@@ -38,7 +37,7 @@ const LeRepaireDeBacchus = () => {
 			</div>
 			<div className="folder" onClick={(e) => openText(e)}>
 				<img src={readMe} alt="projects" className="folder-pic" />
-				<p>Notes.txt</p>
+				<p>Info.html</p>
 			</div>
 
 			

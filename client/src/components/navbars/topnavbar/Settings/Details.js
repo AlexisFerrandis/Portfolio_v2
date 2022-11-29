@@ -18,6 +18,7 @@ import envelope from "../../../../assets/navbars/topnavbar/envelope.svg";
 const Details = ({ closeWindow }) => {
 	const dispatch = useDispatch();
 	const globalVariables = useSelector((state) => state.globalVariablesReducer);
+	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
 	// const activesWindows = useSelector((state) => state.activesWindowsReducer);
 
 	const handleBrightnessModification = (e) => {
@@ -39,7 +40,7 @@ const Details = ({ closeWindow }) => {
 	};
 
 	return (
-		<div className="settings-details window-template">
+		<div className={darkMode ? "settings-details window-template dark-moded" : "settings-details window-template"}>
 			<div className="settings-details__header">
 				{navigator.userAgent.includes("Firefox") ? (
 					<div className="settings-img">
@@ -52,7 +53,7 @@ const Details = ({ closeWindow }) => {
 				<CloseWindow closeWindow={closeWindow} />
 			</div>
 
-			<div className="settings-details__content">
+			<div className="settings-details__content"> 
 				<Volume context="details" />
 
 				<button className="settings-details__content--setting">

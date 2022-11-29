@@ -1,0 +1,109 @@
+.full-login-page {
+	height: 100%;
+	width: 100%;
+	background-color: $log-background;
+	.home-page-context {
+		width: 1000px;
+		height: 1000px;
+	}
+	.up-part {
+		padding: 72px 60px 145px 60px;
+		@include fd-tablet-breakpoint {
+			padding: 24px 15px 105px 15px;
+		}
+		
+		@include fd-mobile-breakpoint {
+			padding: 10px 15px 105px 15px;
+		}
+		.log-container {
+			display: flex;
+			max-width: 980px;
+			margin: 0 auto 5px;
+			padding: 25px 0;
+			@include fd-tablet-breakpoint {
+				flex-direction: column;
+				text-align: center;
+				justify-content: center;
+			}
+			.logo-tag {
+				width: 60%;
+				margin: 105px 0;
+				padding-right: 90px;
+				@include fd-tablet-breakpoint {
+					width: 80%;
+					padding: 0;
+					margin: 0 auto;
+				}
+				.img-container {
+					img {
+						object-fit: cover;
+						width: 235px;
+						margin-bottom: 12px;
+						@include fd-mobile-breakpoint {
+							width: 201px;
+						}
+					}
+				}
+				h1 {
+					font-weight: 400;
+					font-size: 24px;
+					line-height: 29px;
+					@include fd-mobile-breakpoint {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.pro-account-creation {
+			margin: 15px auto;
+			width: 380px;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 400;
+			span {
+				font-weight: 700;
+				cursor: pointer;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			@include fd-mobile-breakpoint {
+				width: 97%;
+			}
+		}
+	}
+
+	.bot-part {
+		padding: 20px 40px 70px;
+		font-size: 13px;
+		color: $text-setting-title;
+		@include fd-mobile-breakpoint {
+			padding: 12px 12px;
+		}
+		.settings-container {
+			max-width: 980px;
+			margin: auto;
+			ul {
+				li {
+					display: inline;
+					margin-right: 10px;
+					cursor: pointer;
+					font-size: 11px;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.more-languages {
+					width: 30px;
+					font-weight: 900;
+					border: 1px solid $fds-gray-30;
+					color: $text-setting-title;
+					cursor: pointer;
+				}
+			}
+			.copyright {
+				margin-top: 25px;
+			}
+		}
+	}
+}
