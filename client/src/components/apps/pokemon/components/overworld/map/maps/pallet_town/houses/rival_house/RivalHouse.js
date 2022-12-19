@@ -33,14 +33,14 @@ export const RivalHouse = {
                 {
                     required: ["TALKED_TO_CHEN_FIRST_TIME"],
                     events: [
-                        { type: "textMessage", text: "Cherry: My brother just went to Viridian City.", facePlayer: "npcCherry" },
-                        { type: "textMessage", text: "Cherry: He will defeat the Gym Leader.", facePlayer: "npcCherry" },
+                        { type: "textMessage", text: "Cherry: Mon frère vient de partir pour Jadielle.", facePlayer: "npcCherry" },
+                        { type: "textMessage", text: "Cherry: Tant mieux j'ai du mal à le supporter.", facePlayer: "npcCherry" },
                     ]
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "Cherry: My brother is at prof Chen's lab.", facePlayer: "npcCherry"},
-                        { type: "textMessage", text: "Cherry: I think he will have his first Pokemon.", facePlayer: "npcCherry"},
+                        { type: "textMessage", text: "Cherry: Mon frère est au laboratoire du Prof Chen.", facePlayer: "npcCherry"},
+                        { type: "textMessage", text: "Cherry: Je crois qu'il récupère son premier Pokemon.", facePlayer: "npcCherry"},
                     ]
                 },
             ]
@@ -53,9 +53,9 @@ export const RivalHouse = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Team Rocket has struck again!"},
-                        { type: "textMessage", text: "They stole all the pokeballs from the south of the continent."},
-                        { type: "textMessage", text: "We keep you informed."},
+                        { type: "textMessage", text: "La Team Rocket a encore frappé!"},
+                        { type: "textMessage", text: "Ils ont volé toutes les pokéballs du sud du continent."},
+                        { type: "textMessage", text: "Nous vous tiendrons informé."},
                     ]
                 },
             ]
@@ -68,7 +68,7 @@ export const RivalHouse = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "It's really dirty."},
+                        { type: "textMessage", text: "Ce n'est pas très propre."},
                     ]
                 },
             ]
@@ -81,7 +81,7 @@ export const RivalHouse = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Some capitalist books."},
+                        { type: "textMessage", text: "Des livres sur les motos."},
                     ]
                 },
             ]
@@ -94,7 +94,7 @@ export const RivalHouse = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Some capitalist books."},
+                        { type: "textMessage", text: "Des livres sur les roues de motos."},
                     ]
                 },
             ]

@@ -10,7 +10,7 @@ import {items} from "../../content/Items";
 
 import SoundEffect from '../../audio/sound_effect/SoundEffect';
 import canBuySound from "../../../assets/audio/sound_effect/overworld/martbuyitem.ogg"
-import TextMessage from '../../text/TextMessage';
+// import TextMessage from '../../text/TextMessage';
 
 export default class ItemMenu extends React.Component { 
     constructor({onComplete, itemsToBuy}) {
@@ -40,8 +40,8 @@ export default class ItemMenu extends React.Component {
 			return [
 				...itemsList,
                 {
-                    label: "Return",
-                        description: "Back",
+                    label: "Retour",
+                        description: "Quitter le magasin.",
                         id: "back",
                         handler: () => {
                     this.close();
@@ -105,7 +105,7 @@ export default class ItemMenu extends React.Component {
         this.element.classList.add("item-menu");
 
         const playerMoney = `
-            <div class="player-money">Money: <span class="money-value">${window.playerState.money}</span>¥</div>
+            <div class="player-money">Argent: <span class="money-value">${window.playerState.money}</span>¥</div>
         `
         this.element.innerHTML += playerMoney;
     }

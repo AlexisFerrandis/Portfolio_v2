@@ -35,12 +35,12 @@ export const ViridianPokeMarket = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Hello,", facePlayer: "npcC" },
-                        { type: "textMessage", text: "Team Rocket stole all my Pokeballs but,", facePlayer: "npcC" },
-                        { type: "textMessage", text: "Do you need anything?", facePlayer: "npcC" },
-                        { type: "shopMenu", itemsToBuy: ["POTION", "ANTIDOTE", "PARALYZEHEAL", "FULLHEAL",]},
+                        { type: "textMessage", text: "Bonjour,", facePlayer: "npcC" },
+                        { type: "textMessage", text: "La Team Rocket a volé toutes mes Pokéballs mais,", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Comment puis-je vous aider?", facePlayer: "npcC" },
+                        { type: "shopMenu", itemsToBuy: ["POTION", "ANTIDOTE", "PARALYZEHEAL",]},
                         
-                        { type: "textMessage", text: "Thank you!", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Merci beaucoup!", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -56,12 +56,12 @@ export const ViridianPokeMarket = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Hello,", facePlayer: "npcC" },
-                        { type: "textMessage", text: "Team Rocket stole all my Pokeballs but,", facePlayer: "npcC" },
-                        { type: "textMessage", text: "Do you need anything?", facePlayer: "npcC" },
-                        { type: "shopMenu", itemsToBuy: ["POTION", "ANTIDOTE", "PARALYZEHEAL", "FULLHEAL",]},
+                        { type: "textMessage", text: "Bonjour,", facePlayer: "npcC" },
+                        { type: "textMessage", text: "La Team Rocket a volé toutes mes Pokéballs mais,", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Comment puis-je vous aider?", facePlayer: "npcC" },
+                        { type: "shopMenu", itemsToBuy: ["POTION", "ANTIDOTE", "PARALYZEHEAL",]},
                         
-                        { type: "textMessage", text: "Thank you!", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Merci beaucoup!", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -86,7 +86,7 @@ export const ViridianPokeMarket = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I don't have enough money to buy that.", facePlayer: "npcD" },
+                        { type: "textMessage", text: "Je n'ai pas assez d'argent pour acheter ça.", facePlayer: "npcD" },
                     ]
                 }
             ]
@@ -102,8 +102,8 @@ export const ViridianPokeMarket = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "If there is something that I know.", facePlayer: "npcE" },
-                        { type: "textMessage", text: "It's that I don't know anything.", facePlayer: "npcE" },
+                        { type: "textMessage", text: "S'il y a quelque chose que je sais.", facePlayer: "npcE" },
+                        { type: "textMessage", text: "C'est que je ne sais rien.", facePlayer: "npcE" },
                     ]
                 }
             ]
@@ -119,7 +119,7 @@ export const ViridianPokeMarket = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "This video game is full of secret.", facePlayer: "npcF" },
+                        { type: "textMessage", text: "Ce jeu vidéo est plein de secret.", facePlayer: "npcF" },
                     ]
                 }
             ]

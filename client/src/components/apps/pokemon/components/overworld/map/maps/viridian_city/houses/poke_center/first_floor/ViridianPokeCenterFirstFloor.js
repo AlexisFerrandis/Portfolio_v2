@@ -8,7 +8,7 @@ import { asGridCoords, loadWall, withGrid } from '../../../../../../../../Utils'
 import blank from "../../../../../../../../assets/graphics/characters/blank.png";
 import npcNurse from "../../../../../../../../assets/graphics/characters/npcNurse.png";
 import npcBImg from "../../../../../../../../assets/graphics/characters/npcB.png";
-import npcLImg from "../../../../../../../../assets/graphics/characters/npcLBloody.png";
+import npcLImg from "../../../../../../../../assets/graphics/characters/npcL.png";
 import npcMImg from "../../../../../../../../assets/graphics/characters/npcM.png";
 import npcDImg from "../../../../../../../../assets/graphics/characters/npcD.png";
 
@@ -37,12 +37,12 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Hi,", facePlayer: "npcA" },
-                        { type: "textMessage", text: "You and your Pokemons looked exhausted!", facePlayer: "npcA" },
-                        { type: "textMessage", text: "You should rest a little bit.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Bonjour,", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Vous et vos Pokémons avez l'air épuisés!", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Vous devriez vous reposer un peu.", facePlayer: "npcA" },
                         { type: "healing", position: "ViridianPokeCenterFirstFloor"},
-                        { type: "textMessage", text: "You are all looking well better.", facePlayer: "npcA" },
-                        { type: "textMessage", text: "See you!", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Vous avez tous l'air d'aller bien mieux.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "À plus tard!", facePlayer: "npcA" },
                     ]
                 }
             ]
@@ -68,9 +68,9 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "My husband was mugged in Viridian Forest.", facePlayer: "npcB" },
-                        { type: "textMessage", text: "Look how they beat him up...", facePlayer: "npcB" },
-                        { type: "textMessage", text: "I'm so confused...", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Mon mari est tombé sur un dresseur dans la forêt de Jade.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Il était très méchant avec son Pikachu.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Il lui a pris son Fantominus.", facePlayer: "npcB" },
                     ]
                 }
             ]
@@ -86,9 +86,9 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "They hit me when i was on the floor!", facePlayer: "npcC" },
-                        { type: "textMessage", text: "I was there to catch Caterpies.", facePlayer: "npcC" },
-                        { type: "textMessage", text: "Nothing more.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Il m'a fait tomber.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "J'étais là pour attraper des Chenipans.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Et il est parti avec mon Fantominus.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -106,8 +106,8 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "You need something?", facePlayer: "npcD" },
-                        { type: "textMessage", text: "Nothing? Ho ok...", facePlayer: "npcD" },
+                        { type: "textMessage", text: "Tu as besoin de quelque chose?", facePlayer: "npcD" },
+                        { type: "textMessage", text: "Rien? Ha d'accord...", facePlayer: "npcD" },
                     ]
                 }
             ]
@@ -123,8 +123,8 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I'm waiting for my mother, her name is Anna.", facePlayer: "npcD" },
-                        { type: "textMessage", text: "She will be here soon.", facePlayer: "npcD" },
+                        { type: "textMessage", text: "J'attends mon Papa, il s'appelle Hal.", facePlayer: "npcD" },
+                        { type: "textMessage", text: "Il sera bientôt là.", facePlayer: "npcD" },
                     ]
                 }
             ]
@@ -137,7 +137,7 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Pokemon medicine.", facePlayer: "bookShelf1" },
+                        { type: "textMessage", text: "Médecine Pokémon.", facePlayer: "bookShelf1" },
                     ]
                 }
             ]
@@ -150,7 +150,7 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Pokemon medicine.", facePlayer: "bookShelf1" },
+                        { type: "textMessage", text: "Médecine Pokémon.", facePlayer: "bookShelf1" },
                     ]
                 }
             ]
@@ -163,7 +163,7 @@ export const ViridianPokeCenterFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Updating windows.", facePlayer: "computer" },
+                        { type: "textMessage", text: "Mise à jour Windows...", facePlayer: "computer" },
                     ]
                 }
             ]

@@ -35,40 +35,44 @@ export default class SubmissionMenu extends React.Component {
 
     getPages() {
 		const backOption = {
-			label: "◀",
-			description: "Return to previous page",
+			label: "Retour",
+			description: "Retour",
 			id: "back",
 			handler: () => {
 				this.keyboardMenu.setOptions(this.getPages().root);
+				const itemMenu = document.querySelector(".keyboard-menu");
+				if (itemMenu) itemMenu.classList.remove("item-menu")
 			},
 		};
 
 		return {
 			root: [
 				{
-					label: "FIGHT",
-					description: `What will ${this.caster.Name} do?`,
+					label: "ATTAQUE",
+					description: `Que dois faire ${this.caster.Name}?`,
 					handler: () => {
 						this.keyboardMenu.setOptions(this.getPages().attacks);
 					},
 				},
 				{
-					label: "BAG",
-					description: "Choose an item",
-					handler: () => {
+					label: "SAC",
+					description: "Utiliser un objet.",
+					handler: () => {					
+						const itemMenu = document.querySelector(".keyboard-menu");
+						itemMenu.classList.add("item-menu")
 						this.keyboardMenu.setOptions(this.getPages().items);
 					},
 				},
 				{
 					label: "POKEMON",
-					description: "Change to another Pokemon",
+					description: "Changer de Pokémon.",
 					handler: () => {
 						this.keyboardMenu.setOptions(this.getPages().replacements);
 					},
 				},
 				{
-					label: "RUN",
-					description: "Try to leave the battle",
+					label: "FUITE",
+					description: "Essayer de quitter le combat.",
 					handler: () => {
 						this.runSubmit(this.enemy.id);
 					},
@@ -90,6 +94,7 @@ export default class SubmissionMenu extends React.Component {
 			items: [
 				...this.item.map((i) => {
 					const item = items[i.itemId];
+
 					return {
 						// img src : 
 						label: item.Name,
@@ -99,6 +104,8 @@ export default class SubmissionMenu extends React.Component {
 						},
 						handler: () => {
 							this.menuSubmit(item, i.instanceId);
+							const itemMenu = document.querySelector(".keyboard-menu");
+							if (itemMenu) itemMenu.classList.remove("item-menu")
 						},
 					};
 				}),

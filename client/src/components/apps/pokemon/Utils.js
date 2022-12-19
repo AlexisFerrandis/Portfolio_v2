@@ -108,3 +108,9 @@ export const emitEvent = (name, detail) => {
     });
     document.dispatchEvent(event);
 };
+
+
+export const setLanguage = () =>  {
+    const lang = localStorage.getItem("language")
+    return  lang;
+};

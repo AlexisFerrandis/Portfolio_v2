@@ -7,6 +7,7 @@ import FolderExplorer from "../../folderExplorer";
 import folder from "./../../../assets/navbars/principalnavbar/folder-adwaita.svg";
 import facebook from "./../../../assets/navbars/principalnavbar/facebook.png";
 import pokemon from "./../../../assets/navbars/principalnavbar/pokemon.png";
+// import chatbot from "./../../../assets/navbars/principalnavbar/chatbot.png";
 
 const PrincipalNavBar = () => {
 	const dispatch = useDispatch();
@@ -20,6 +21,9 @@ const PrincipalNavBar = () => {
 	};
 	const handleFacedookOpenning = (e) => {
 		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "facedook" });
+	};
+	const handleChatBotOpenning = (e) => {
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "chatbot" });
 	};
 
 	return (
@@ -36,7 +40,9 @@ const PrincipalNavBar = () => {
 				<div className="principal-nav-bar__icon app-icon" onClick={handlePokemonOpenning}>
 					<img src={pokemon} alt="pokemon" />
 				</div>
-
+				<div className="principal-nav-bar__icon app-icon" onClick={handleChatBotOpenning}>
+				🤖
+				</div>
 
 			</div>
 		</>

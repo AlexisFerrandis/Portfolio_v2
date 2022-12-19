@@ -28,7 +28,7 @@ export const MomHouseSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Windows update..."},
+                        { type: "textMessage", text: "Mise à jour de Windows..."},
                     ]
                 },
             ]
@@ -41,10 +41,10 @@ export const MomHouseSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: '"Every challenge along the way,"'},
-                        { type: "textMessage", text: '"With courage I will face,"'},
-                        { type: "textMessage", text: '"I will battle everyday,"'},
-                        { type: "textMessage", text: '"To claim my rightful place!"'},
+                        { type: "textMessage", text: '"Un jour je serai le meilleur dresseur,"'},
+                        { type: "textMessage", text: '"Je me battrai sans répit,"'},
+                        { type: "textMessage", text: '"Je ferai tout pour être vainqueur,"'},
+                        { type: "textMessage", text: '"Et gagner les défis!"'},
                     ]
                 },
             ]
@@ -57,7 +57,7 @@ export const MomHouseSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "There is a lot of books here."},
+                        { type: "textMessage", text: "Des livres sur la nature."},
                     ]
                 },
             ]
@@ -70,7 +70,7 @@ export const MomHouseSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "There is a lot of books here."},
+                        { type: "textMessage", text: "Des livres sur les Pokémons."},
                     ]
                 },
             ]
@@ -83,7 +83,7 @@ export const MomHouseSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Why is it not working ?"},
+                        { type: "textMessage", text: "La télé ne fonctionne plus."},
                     ]
                 },
             ]
@@ -96,7 +96,7 @@ export const MomHouseSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Driver's license."},
+                        { type: "textMessage", text: "Certificat de Ukulélé."},
                     ]
                 },
             ]

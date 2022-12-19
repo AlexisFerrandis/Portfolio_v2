@@ -13,16 +13,17 @@ import Windows from "./Windows";
 
 const Desktop = () => {
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
-	console.log(darkMode);
 
 	return (
 		<div id="desktopInterface">
 			<div className="app-delimitation"></div>
 			<Windows />
 			<Brightness />
-			{darkMode ? <img className="desktop-wpp" src={desktopWppDark} alt="desktop wallpaper" />: <img className="desktop-wpp" src={desktopWpp} alt="desktop wallpaper" />}
-			
-			<img className="desktop-logo" src={desktopLogo} alt="desktop logo" />
+			<div>
+				<img className="desktop-wpp" src={darkMode ? desktopWppDark : desktopWpp} alt="desktop wallpaper" />
+				{/* {darkMode ? <img className="desktop-wpp dark-wpp" src={desktopWppDark} alt="desktop wallpaper" />: <img className="desktop-wpp light-wpp" src={desktopWpp} alt="desktop wallpaper" />} */}
+			</div>
+			<img className={darkMode ? "desktop-logo dark-logo" : "desktop-logo"} src={desktopLogo} alt="desktop logo" />
 			<TopNavBar />
 			<PrincipalNavBar />
 		</div>

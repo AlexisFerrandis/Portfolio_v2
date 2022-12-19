@@ -9,7 +9,7 @@ import npcRImg from "../../../../../../../assets/graphics/characters/npcR.png";
 import npcSImg from "../../../../../../../assets/graphics/characters/npcS.png";
 import npcTImg from "../../../../../../../assets/graphics/characters/npcT.png";
 
-import musicBg from "../../../../../../../assets/audio/background_music/ViridianCity.ogg"
+// import musicBg from "../../../../../../../assets/audio/background_music/ViridianCity.ogg"
 
 export const ViridianHouseOne = {
     id: "ViridianHouseOne",
@@ -33,8 +33,8 @@ export const ViridianHouseOne = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "She have to work a lot.", facePlayer: "npcA" },
-                        { type: "textMessage", text: "I don't want her to end up like her brother!", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Il faut beaucoup trvailler dans la vie.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Je veux qu'elle devienne médecin.", facePlayer: "npcA" },
                     ]
                 }
             ]
@@ -50,8 +50,8 @@ export const ViridianHouseOne = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "He is the worst teacher ever.", facePlayer: "npcB" },
-                        { type: "textMessage", text: "How am i supposed to learn anything like that.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "C'est le pire prof.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "En plus je veux devenir influenceuse beauté.", facePlayer: "npcB" },
                     ]
                 }
             ]
@@ -70,8 +70,8 @@ export const ViridianHouseOne = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "He's too harsh.", facePlayer: "npcC" },
-                        { type: "textMessage", text: "He should be careful, or she'll end up hating him.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Elle devrait s'interesser à l'art.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Je pense qu'elle deviendra une grande artiste.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -87,8 +87,8 @@ export const ViridianHouseOne = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Firefighters should arrive quickly.", facePlayer: "tv" },
-                        { type: "textMessage", text: "We keep you informed.", facePlayer: "tv" },
+                        { type: "textMessage", text: "Les pompiers arrivent.", facePlayer: "tv" },
+                        { type: "textMessage", text: "Nous vous tiendrons informé.", facePlayer: "tv" },
                     ]
                 }
             ]

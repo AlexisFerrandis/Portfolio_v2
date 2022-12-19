@@ -39,7 +39,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I love professor Chen.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "J'aime beaucoup Monsieur Chen.", facePlayer: "npcA" },
                     ]
                 }
             ]
@@ -58,7 +58,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "There's so much knowledge here.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Il y a tellement de connaissances ici.", facePlayer: "npcB" },
                     ]
                 }
             ]
@@ -74,7 +74,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "We have to learn more about Pokemon and their attributes.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Nous devons en savoir plus sur les Pokémons et leurs attributs.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -91,23 +91,23 @@ export const ChenLab = {
                 {
                     required: ["TALKED_TO_CHEN_FIRST_TIME"],
                     events: [
-                        { type: "textMessage", text: "Chen: Are you having fun?", facePlayer: "profChen"},
+                        { type: "textMessage", text: "Chen: Tu devrais pouvoir aller dans les hautes herbes à présent.", facePlayer: "profChen"},
                     ]
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "Chen: What do you want?", facePlayer: "profChen" },
-                        { type: "textMessage", text: "Green: I want you to give me a Pokemon." },
-                        { type: "textMessage", text: "Chen: I only have one left!" },
-                        { type: "textMessage", text: "Chen: Will you be nice with it?" },
-                        { type: "textMessage", text: "Green: Yes, of course." },
+                        { type: "textMessage", text: "Chen: Que veux tu encore Green?",  },
+                        { type: "textMessage", text: "Green: Je veux un Pokémon." },
+                        { type: "textMessage", text: "Chen: Mais il ne m'en reste qu'un seul!" },
+                        { type: "textMessage", text: "Chen: Seras-tu gentil avec lui?" },
+                        { type: "textMessage", text: "Green: Oui oui bien sûr." },
                         { who: "profChen", type: "stand", direction: "right", time: 700},
                         { who: "profChen", type: "stand", direction: "left", time: 700},
-                        { type: "textMessage", text: "Chen: Ok sure, you can take it.", facePlayer: "profChen" },
-                        { type: "textMessage", text: "Green: Thank you grandpa." },
-                        { type: "textMessage", text: "Green: I will try to raise it good." },
+                        { type: "textMessage", text: "Chen: D'accord, tu peux le prendre.", facePlayer: "profChen" },
+                        { type: "textMessage", text: "Green: Super Papi." },
+                        { type: "textMessage", text: "Green: J'espère qu'il est fort." },
                         { who: "rival", type: "stand", direction: "right", time: 500},
-                        { type: "textMessage", text: "Green: Sorry for you dude." },
+                        { type: "textMessage", text: "Green: Haha, plus de Pokémon pour toi!" },
                         { who: "rival", type: "walk", direction: "down"},
                         { who: "rival", type: "walk", direction: "right"},
                         { who: "rival", type: "walk", direction: "right"},
@@ -134,39 +134,40 @@ export const ChenLab = {
                         { who: "rival", type: "walk", direction: "down"},
                         { who: "rival", type: "walk", direction: "down"},
                         { who: "rival", type: "walk", direction: "down"},
-                        { who: "rival", type: "walk", direction: "down"},
-                        { type: "textMessage", text: "Chen: He is not a bad kid." },
-                        { type: "textMessage", text: "Chen: He can be a little rowdy though." },
-                        { type: "textMessage", text: "Chen: You are also here for a Pokemon right?" },
-                        { who: "rival", type: "walk", direction: "down"},
-                        { who: "rival", type: "walk", direction: "down"},
+                        { who: "rival", type: "walk", direction: "down", },
+                        { type: "textMessage", text: "Chen: Ce n'est pas un mauvais garçon.",  facePlayer: "profChen"},
+                        { type: "textMessage", text: "Chen: Il peut être un peu tapageur cependant." },
+                        { type: "textMessage", text: "Chen: Tu es aussi ici pour un Pokémon, n'est-ce pas ?" },
                         { who: "rival", type: "walk", direction: "down"},
                         { who: "rival", type: "walk", direction: "down"},
-                        { type: "textMessage", text: "Chen: As you can see, I unfortunately gave away my last Pokemon." },
+                        { who: "rival", type: "walk", direction: "down"},
+                        { who: "rival", type: "walk", direction: "down"},
+                        { type: "textMessage", text: "Chen: Comme tu peux le voir, j'ai malheureusement donné le dernier." },
                         { type: "textMessage", text: "Chen: ..." },
-                        { type: "textMessage", text: "Chen: I might have one slug which hangs around." },
+                        { type: "textMessage", text: "Chen: J'ai peut être une Poké Ball au fond d'un tiroir..." },
                         
                         { who: "profChen", type: "walk", direction: "left"},
                         { who: "profChen", type: "walk", direction: "left"},
                         { who: "profChen", type: "walk", direction: "left"},
                         { who: "profChen", type: "walk", direction: "up"},
                         { who: "profChen", type: "stand", direction: "up", time: 1000},
-                        { type: "textMessage", text: "Chen: Looks like it is." },
+                        { type: "textMessage", text: "Chen: On dirait que c'est le cas." },
                         { who: "profChen", type: "walk", direction: "down"},
                         { who: "profChen", type: "walk", direction: "right"},
                         { who: "profChen", type: "walk", direction: "right"},
                         { who: "profChen", type: "walk", direction: "right"},
                         { who: "profChen", type: "stand", direction: "down", time: 1000},
-                        { type: "textMessage", text: "Chen: You can take that!" },
+                        { type: "textMessage", text: "Chen: Tu peux prendre celui-là!" },
                         
                         // get mimikyu
-                        { type: "getPokemon", id:"dratini"},
+                        { type: "getPokemon", id:"growlithe"},
                         { type: "addStoryFlag", flag: "DRATINI_JOIN_TEAM"},
                         { who: "profChen", type: "stand", direction: "down", time: 3500},
                         
                         
-                        { type: "textMessage", text: "You get Dratini!" },
-                        { type: "textMessage", text: "Chen: Go have fun with it." },
+                        { type: "textMessage", text: "Caninos rejoint l'équipe!" },
+                        { type: "textMessage", text: "Chen: C'est un brave toutou." },
+                        { type: "textMessage", text: "Chen: Je suis sur que vous allez bien vous entendre." },
 
 
                         { type: "addStoryFlag", flag: "TALKED_TO_CHEN_FIRST_TIME"},
@@ -186,7 +187,7 @@ export const ChenLab = {
                 {
                     events: [
                         { type: "textMessage", text: "Green: Chen!" },
-                        { type: "textMessage", text: "Green: Give me a Pokemon!" },
+                        { type: "textMessage", text: "Green: Donne moi un Pokémon!" },
                     ]
                 }
             ],
@@ -200,7 +201,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "What's inside?"},
+                        { type: "textMessage", text: "Qui a t'il à l'intérieur?"},
                     ]
                 },
             ],
@@ -214,7 +215,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: 'Some datas on Pokémons.'},
+                        { type: "textMessage", text: 'Beaucoup de statistiques sur les Pokémons.'},
                     ]
                 },
             ]
@@ -227,7 +228,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: 'Pokemonology doctor.'},
+                        { type: "textMessage", text: 'Pokémonologie docteur.'},
                     ]
                 },
             ]
@@ -240,7 +241,7 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: 'Brainstorm master.'},
+                        { type: "textMessage", text: 'Maitre du Brainstorm.'},
                     ]
                 },
             ]

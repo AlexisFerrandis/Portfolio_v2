@@ -2,14 +2,14 @@ export const items = {
 	POTION: {
 		Name: "Potion",
         PluralName: "Potions",
-		Description: "A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",
+		Description: "Restaure 20 PV d'un POKéMON.",
         TargetType: "friendly",
 		Price : 100,
 		Src: "POTION",
 		Success: [
 			{
 				type: "textMessage",
-				text: "{CASTER} uses a {MOVE} !",
+				text: "{CASTER} utilise une {MOVE} !",
 			},
 			{
 				type: "animation",
@@ -21,21 +21,21 @@ export const items = {
 			},
             {
 				type: "textMessage",
-				text: "{CASTER} recovers HP !",
+				text: "{CASTER} récupère 20 HP !",
 			},
 		]
 	},
     FULLHEAL: {
-		Name: "FullHeal",
-        PluralName: "Full Heals",
-		Description: "A spray-type medicine. It heals all the status problems of a single Pokémon.",
+		Name: "Total Soin",
+        PluralName: "Total Soins",
+		Description: "Contre tout changement de statut.",
         TargetType: "friendly",
 		Price : 400,
 		Src: "FULLHEAL",
 		Success: [
 			{
 				type: "textMessage",
-				text: "{CASTER} uses a {MOVE} !",
+				text: "{CASTER} utilise {MOVE} !",
 			},
 			{
 				type: "animation",
@@ -47,21 +47,21 @@ export const items = {
 			},
             {
 				type: "textMessage",
-				text: "{CASTER} is ready to fight !",
+				text: "{CASTER} est en forme !",
 			},
 		]
 	},
 	ANTIDOTE: {
 		Name: "Antidote",
         PluralName: "Antidotes",
-		Description: "A spray-type medicine. It lifts the effect of poison from one Pokémon.",
+		Description: "Guérit un Pokémon empoisonné.",
         TargetType: "friendly",
 		Price : 200,
 		Src: "ANTIDOTE",
 		Success: [
 			{
 				type: "textMessage",
-				text: "{CASTER} uses a {MOVE} !",
+				text: "{CASTER} utilise un {MOVE} !",
 			},
 			{
 				type: "animation",
@@ -74,21 +74,21 @@ export const items = {
 			},
             {
 				type: "textMessage",
-				text: "{CASTER} is no longer poisoned.",
+				text: "{CASTER} n'est plus empoisonné.",
 			},
 		]
 	},
 	PARALYZEHEAL: {
-		Name: "ParalyzeHeal",
-        PluralName: "Paralyze Heals",
-		Description: "A spray-type medicine. It eliminates paralysis from a single Pokémon.",
+		Name: "Anti-Para",
+        PluralName: "AntiParas",
+		Description: "Soigne un Pokémon de la paralysie.",
         TargetType: "friendly",
 		Price : 200,
 		Src: "PARALYZEHEAL",
 		Success: [
 			{
 				type: "textMessage",
-				text: "{CASTER} uses a {MOVE} !",
+				text: "{CASTER} utilise un {MOVE} !",
 			},
 			{
 				type: "animation",
@@ -101,7 +101,7 @@ export const items = {
 			},
             {
 				type: "textMessage",
-				text: "{CASTER} is no longer paralyzed.",
+				text: "{CASTER} n'est plus paralysé.",
 			},
 		]
 	},

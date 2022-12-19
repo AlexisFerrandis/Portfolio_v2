@@ -14,9 +14,10 @@ import mimikyu from "../../../../../assets/graphics/characters/mimikyu.png";
 import npcA from "../../../../../assets/graphics/characters/npcAB.png";
 import npcB from "../../../../../assets/graphics/characters/npcAA.png";
 import npcC from "../../../../../assets/graphics/characters/npcC.png";
-import npcXX from "../../../../../assets/graphics/characters/npcXX.png";
+// import npcXX from "../../../../../assets/graphics/characters/npcXX.png";
 import npcE from "../../../../../assets/graphics/characters/npcE.png";
 import npcF from "../../../../../assets/graphics/characters/npcV.png";
+import npcG from "../../../../../assets/graphics/characters/npcA.png";
 
 import ViridianCityBg  from "../../../../../assets/audio/background_music/ViridianCity.ogg"
 import UmbrellaTownBg from "../../../../../assets/audio/background_music/UmbrellaTown.ogg"
@@ -85,24 +86,24 @@ export const ViridianForest = {
             isNotHere: "MIAMIKYU",
         }),
 
-        teamRocketA: ({
-            type: "Person",
-            x: withGrid(26),
-            y: withGrid(42),
-            src: teamRocketB,
-            canRun: true,
-            behaviorLoop: [
-                { type: "stand", direction: "right", time: 1200},
-            ],
-            talking : [
-                {
-                    events: [
-                        { type: "textMessage", text: "..."},
-                    ]
-                },
-            ],
-            isNotHere: "MIAMIKYU",
-        }),
+        // teamRocketA: ({
+        //     type: "Person",
+        //     x: withGrid(26),
+        //     y: withGrid(42),
+        //     src: teamRocketB,
+        //     canRun: true,
+        //     behaviorLoop: [
+        //         { type: "stand", direction: "right", time: 1200},
+        //     ],
+        //     talking : [
+        //         {
+        //             events: [
+        //                 { type: "textMessage", text: "..."},
+        //             ]
+        //         },
+        //     ],
+        //     isNotHere: "MIAMIKYU",
+        // }),
 
         npcA: ({
             type: "Person",
@@ -122,8 +123,8 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "One of the most beautiful forest in the world is burning.", facePlayer: "npcA" },
-                        { type: "textMessage", text: "That make me so sad...", facePlayer: "npcA" },
+                        { type: "textMessage", text: "L'une des plus belles forêts du monde brûle.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Ça me rend si triste...", facePlayer: "npcA" },
                     ]
                 },
             ],
@@ -148,8 +149,8 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I tried to put out the fire.", facePlayer: "npcB" },
-                        { type: "textMessage", text: "But I couldn't do anything.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "J'ai essayé d'éteindre le feu.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Mais je n'ai rien pu faire.", facePlayer: "npcB" },
                     ]
                 },
             ],
@@ -158,34 +159,16 @@ export const ViridianForest = {
             type: "Person",
             x: withGrid(47),
             y: withGrid(5),
-            src: npcXX,
+            src: npcG,
             behaviorLoop: [
-                { type: "stand", direction: "left", time: 5200},
+                { type: "stand", direction: "up", time: 5200},
+                { type: "stand", direction: "right", time: 5200},
             ],
             talking : [
                 {
-                    required: ["TALK_TO_ANNA"],
                     events: [
-                        { type: "textMessage", text: "..."},
-                    ]
-                },
-                {
-                    events: [
-                        { type: "textMessage", text: "..."},
-                        { type: "textMessage", text: "A branch fell on me."},
-                        { who: "npcD", type: "stand", direction: "left", time: 1234},
-                        { type: "textMessage", text: "My daughter is waiting for me."},
-                        { type: "textMessage", text: "But I don't think I'll be able to find her."},
-                        
-                        { who: "player", type: "stand", direction: "left", time: 800},
-                        { who: "player", type: "stand", direction: "down", time: 800},
-                        { who: "player", type: "stand", direction: "up", time: 800},
-                        
-                        { type: "textMessage", text: "If you see her, tell her that I love her more than anything."},
-                        { who: "npcD", type: "stand", direction: "left", time: 1234},
-                        { type: "textMessage", text: "Please..."},
-                        { who: "npcD", type: "stand", direction: "left", time: 1234},
-                        { type: "addStoryFlag", flag: "TALK_TO_ANNA"},
+                        { type: "textMessage", text: "Je me suis perdu.", facePlayer: "npcD"},
+                        { type: "textMessage", text: "Et ma fille m'attend au centre Pokémon de Jadielle."},
                     ]
                 },
             ],
@@ -200,15 +183,9 @@ export const ViridianForest = {
             ],
             talking : [
                 {
-                    required: ["TALK_TO_ANNA"],
                     events: [
-                        { type: "textMessage", text: "She doesn't look good at all."},
-                    ]
-                },
-                {
-                    events: [
-                        { type: "textMessage", text: "There's a wounded woman over there.", facePlayer: "npcE" },
-                        { type: "textMessage", text: "I hope she is fine.", facePlayer: "npcE" },
+                        { type: "textMessage", text: "Je viens de voir passer un Mimiqui!", facePlayer: "npcE" },
+                        { type: "textMessage", text: "Il avait l'air un peu apeuré.", facePlayer: "npcE" },
                     ]
                 },
             ],
@@ -232,9 +209,22 @@ export const ViridianForest = {
             ],
             talking : [
                 {
+                    required: ["EEVEE_JOIN_TEAM"],
                     events: [
-                        { type: "textMessage", text: "I lost myself.", facePlayer: "npcF" },
-                        { type: "textMessage", text: "This forest is a real maze.", facePlayer: "npcF" },
+                        { type: "textMessage", text: "Me voilà plus rassurée.", facePlayer: "npcF"},
+                    ]
+                },
+                {
+                    events: [
+                        { type: "textMessage", text: "Il y'a un dresseur étrange qui traîne à la sortie de la forêt.", facePlayer: "npcF" },
+                        { type: "textMessage", text: "Tu devrais prendre ce Pokémon pour te défendre.", facePlayer: "npcF" },
+                        { type: "textMessage", text: "J'espère qu'il te protégera.", facePlayer: "npcF" },
+                        { type: "getPokemon", id:"eevee"},
+                        { type: "addStoryFlag", flag: "EEVEE_JOIN_TEAM"},
+                        { who: "npcD", type: "stand", direction: "down", time: 3500},
+                        
+                        
+                        { type: "textMessage", text: "Evoli rejoint l'équipe!" },
                     ]
                 },
             ],
@@ -242,7 +232,7 @@ export const ViridianForest = {
 
        // trainers 
 
-       teamRocketA: ({
+       teamRocketX: ({
             type: "Person",
             x: withGrid(20),
             y: withGrid(48),
@@ -253,7 +243,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "No one should stay here."},
+                        { type: "textMessage", text: "Personne ne devrait rester ici."},
                     ]
                 },
             ],
@@ -270,7 +260,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I really like insects."},
+                        { type: "textMessage", text: "J'aime beaucoup les insectes."},
                     ]
                 },
             ],
@@ -287,7 +277,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I must not leave any witnesses."},
+                        { type: "textMessage", text: "Je ne dois laisser aucun témoin."},
                     ]
                 },
             ],
@@ -304,7 +294,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "This is a one-way road."},
+                        { type: "textMessage", text: "C'est une route à sens unique."},
                     ]
                 },
             ],
@@ -320,7 +310,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian Forest, don't get lost."},
+                        { type: "textMessage", text: "Forêt de Jade, ne vous perdez pas."},
                     ]
                 },
             ]
@@ -333,7 +323,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "To exit, go right."},
+                        { type: "textMessage", text: "Pour sortir, allez à droite."},
                     ]
                 },
             ]
@@ -346,7 +336,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "You might find rare pokemon here."},
+                        { type: "textMessage", text: "Vous pourriez trouver des Pokémons rares ici."},
                     ]
                 },
             ]
@@ -359,7 +349,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "To exit, go left."},
+                        { type: "textMessage", text: "Pour sortir, allez à gauche."},
                     ]
                 },
             ]
@@ -372,7 +362,7 @@ export const ViridianForest = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Umbrella Town."},
+                        { type: "textMessage", text: "Céladopole."},
                     ]
                 },
             ]
@@ -423,8 +413,8 @@ export const ViridianForest = {
                     { who: "player",type: "walk", direction: "up"},
                     { who: "player",type: "walk", direction: "up"},
                     { who: "player",type: "walk", direction: "up"},
-                    { type: "textMessage", text: "CHARIZARD!!! PLEASE!", },
-                    { type: "textMessage", text: "STOP!!!", },
+                    { type: "textMessage", text: "DRACAUFEU!!! JE T'EN PRIE!", },
+                    { type: "textMessage", text: "STOOOP!!!", },
                     { who: "player", type: "walk", direction: "up"},
                     
                     
@@ -434,22 +424,22 @@ export const ViridianForest = {
                     { type: "clientEvent", what:"charizard"},
                     
                     { who: "player", type: "stand", direction: "up", time: 3000},
-                    { type: "textMessage", text: "CHAAAAAAAARIIIZAAAAARD!!!", },
+                    { type: "textMessage", text: "GROOOOOAAAAAAAAARRRRRRRRR!!!", },
                     
                     { who: "player", type: "stand", direction: "up", time: 2000},
-                    { type: "textMessage", text: "What are you doing?!", },
-                    { type: "textMessage", text: "We just had to scare them!", },
-                    { type: "textMessage", text: "Not burn the whole forest!", },
+                    { type: "textMessage", text: "Qu'est ce que tu fais?!", },
+                    { type: "textMessage", text: "Il fallait juste leur faire peur!", },
+                    { type: "textMessage", text: "Pas brûler toute la forêt !", },
                     
-                    { type: "textMessage", text: "CHAAAAAAAAAAA!!!", },
+                    { type: "textMessage", text: "GROOOOAAAAAAAAAARRRRR!!!", },
 
                     { who: "teamRocketA", type: "stand", direction: "down", time: 1000},
-                    { type: "textMessage", text: "He is completely uncontrollable.", },
+                    { type: "textMessage", text: "Il est complètement incontrôlable.", },
                     { who: "teamRocketB", type: "stand", direction: "down", time: 1000},
-                    { type: "textMessage", text: "We wanted to keep the trainers away,", },
-                    { type: "textMessage", text: "So that we could steal all Pokemon in this forest.", },
-                    { type: "textMessage", text: "But Charizard start to burn everything.", },
-                    { type: "textMessage", text: "And now there's nothing we can do!", }, 
+                    { type: "textMessage", text: "Nous voulions éloigner les dresseurs,", },
+                    { type: "textMessage", text: "Pour que nous puissions récupérer les Pokémons de cette forêt.", },
+                    { type: "textMessage", text: "Mais Dracaufeu a commencé à tout brûler.", },
+                    { type: "textMessage", text: "Et maintenant, nous ne pouvons plus rien faire!", }, 
 
                     
                     { type: "clientEvent", what:"charizard-fire"},
@@ -465,7 +455,7 @@ export const ViridianForest = {
                     { who: "teamRocketA", type: "walk", direction: "left"},
 
                     
-                    { type: "textMessage", text: "Good luck with that!", }, 
+                    { type: "textMessage", text: "Bonne chance avec ça!", }, 
                     { who: "teamRocketB", type: "walk", direction: "left"},
                     { who: "teamRocketB", type: "walk", direction: "left"},
                     { who: "teamRocketB", type: "walk", direction: "left"},
@@ -481,33 +471,31 @@ export const ViridianForest = {
                     { who: "mimikyu", type: "stand", direction: "right", time: 1000},
                     
                     
-                    { type: "textMessage", text: "Mimikyu...", }, 
+                    { type: "textMessage", text: "Mimiqui...", }, 
                     { who: "mimikyu", type: "walk", direction: "right"},
                     { who: "mimikyu", type: "walk", direction: "right"},
                     
                     { who: "mimikyu", type: "stand", direction: "right", time:333 },
-                    { type: "textMessage", text: "MIMIKYU!!!", }, 
+                    { type: "textMessage", text: "MIMIQUI!!!", }, 
 
                     { type: "clientEvent", what:"miamikyu"},
                     { type: "addStoryFlag", flag: "MIAMIKYU"},
                     { who: "mimikyu", type: "stand", direction: "right", time:333},
 
-
                         { 
                             type: "changeMap", 
                             map: "ViridianForest",
                             soundEffect: "mimikyuScream",
+                            setFilter: "fire",
                             x: withGrid(28),
                             y: withGrid(44),
                             direction: 'up',
                         },
+                    // reset
                     { type: "clientEvent", what:"reset"},
-                   
-                    
+                    { type: "cameraPosition", x:-208, y:-112 },
                     { who: "player", type: "stand", direction: "up", time:444},
                     
-                    // reset
-                    { type: "cameraPosition", x:-208, y:-112 },
                 ]
             },
             {
@@ -524,10 +512,9 @@ export const ViridianForest = {
                 events: [
                     { type: "battleTeasing", who: "teamRocketB" },
                     { who: "player",type: "stand", direction: "down"},
-                    { type: "textMessage", text: "Why are you here?", },
+                    { type: "textMessage", text: "Pourquoi es-tu ici?", },
                     { type: "battle", enemyId: "teamRocketB" },
 
-                    { type: "textMessage", text: "I underestimated you.", },
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_B"},
                 ]
             },
@@ -545,11 +532,10 @@ export const ViridianForest = {
                 events: [
                     { type: "battleTeasing", who: "npcEcoA" },
                     { who: "player",type: "stand", direction: "left"},
-                    { type: "textMessage", text: "Can I show you my bug collection?", },
-                    { type: "textMessage", text: "Almost all of them burned.", },
+                    { type: "textMessage", text: "Puis-je te montrer ma collection d'insectes ?", },
+                    { type: "textMessage", text: "C'est la plus belle.", },
                     { type: "battle", enemyId: "npcEcoA" },
 
-                    { type: "textMessage", text: "I underestimated you.", },
                     { type: "addStoryFlag", flag: "DEFEAT_NPC_ECO_VF_A"},
                 ]
             },
@@ -565,11 +551,10 @@ export const ViridianForest = {
                 events: [
                     { type: "battleTeasing", who: "npcEcoA" },
                     { who: "player",type: "stand", direction: "left"},
-                    { type: "textMessage", text: "Can I show you my bug collection?", },
-                    { type: "textMessage", text: "Almost all of them burned.", },
+                    { type: "textMessage", text: "Puis-je te montrer ma collection d'insectes ?", },
+                    { type: "textMessage", text: "C'est la plus belle.", },
                     { type: "battle", enemyId: "npcEcoA" },
 
-                    { type: "textMessage", text: "I underestimated you.", },
                     { type: "addStoryFlag", flag: "DEFEAT_NPC_ECO_VF_A"},
                 ]
             },
@@ -587,10 +572,9 @@ export const ViridianForest = {
                 events: [
                     { type: "battleTeasing", who: "teamRocketC" },
                     { who: "player",type: "stand", direction: "right"},
-                    { type: "textMessage", text: "There should be no witnesses.", },
+                    { type: "textMessage", text: "Il ne devrait pas y avoir de témoins.", },
                     { type: "battle", enemyId: "teamRocketC" },
 
-                    { type: "textMessage", text: "I can't stop you now..", },
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_071120221"},
                 ]
             },
@@ -608,10 +592,9 @@ export const ViridianForest = {
                     { who: "player",type: "stand", direction: "right"},
         
                     { who: "teamRocketC",type: "walk", direction: "left"},
-                    { type: "textMessage", text: "There should be no witnesses.", },
+                    { type: "textMessage", text: "Il ne devrait pas y avoir de témoins.", },
                     { type: "battle", enemyId: "teamRocketC" },
 
-                    { type: "textMessage", text: "I can't stop you now..", },
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_071120221"},
                 ]
             },
@@ -629,7 +612,7 @@ export const ViridianForest = {
                 events: [
                     { type: "battleTeasing", who: "teamRocketD" },
                     { who: "player",type: "stand", direction: "left"},
-                    { type: "textMessage", text: "Unfortunately you can't go any further.", },
+                    { type: "textMessage", text: "Malheureusement, tu ne peux pas aller plus loin.", },
                     { type: "battle", enemyId: "teamRocketD" },
 
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_071120222"},
@@ -649,7 +632,7 @@ export const ViridianForest = {
                     { who: "player",type: "stand", direction: "left"},
                     
                     { who: "teamRocketD",type: "walk", direction: "right"},
-                    { type: "textMessage", text: "Unfortunately you can't go any further.", },
+                    { type: "textMessage", text: "Malheureusement, tu ne peux pas aller plus loin.", },
                     { type: "battle", enemyId: "teamRocketD" },
 
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_071120222"},

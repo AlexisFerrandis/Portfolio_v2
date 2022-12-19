@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default class BackgroundMusic extends React.Component { 
     constructor(song) {
         super(song);

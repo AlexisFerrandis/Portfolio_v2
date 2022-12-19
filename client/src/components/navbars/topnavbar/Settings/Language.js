@@ -7,10 +7,12 @@ const Language = ({ context }) => {
 
 	const setFrench = (e) => {
 		dispatch({ type: "SET_LANGUAGE", payload: "Fr" });
+		// localStorage.setItem("language", "Fr")
 	};
 
 	const setEnglish = (e) => {
 		dispatch({ type: "SET_LANGUAGE", payload: "En" });
+		// localStorage.setItem("language", "En")
 	};
 
 	return (

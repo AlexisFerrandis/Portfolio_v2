@@ -30,17 +30,35 @@ export const MomHouseFirstFloor = {
             ],
             talking : [
                 {
+                    required: ["MOM_WILL_HEAL_YOU"],
+                    events: [
+                        { type: "textMessage", text: "Maman: Tu devrais te reposer un petit peu.", facePlayer: "npcMom" },
+                        { type: "healing", position: "MomHouseFirstFloor"},
+                        { type: "textMessage", text: "Maman: Te voilà bien plus en forme!", facePlayer: "npcMom" },
+                    ]
+                },
+                {
+                    required: ["DEFEAT_RIVAL_WITH_MIMIKYU"],
+                    events: [
+                        { type: "textMessage", text: "Maman: Tu as retrouvé mon Mimiqui!", facePlayer: "npcMom" },
+                        { type: "textMessage", text: "Maman: Mais j'ai l'impression qu'il a trouvé un nouveau maître.", facePlayer: "npcMom" },
+                        { type: "textMessage", text: "Maman: Vous êtes trop mignons tous les deux.", facePlayer: "npcMom" },
+                        { type: "textMessage", text: "Maman: Vous pouvez partir à l'aventure à présent!", facePlayer: "npcMom" },
+                        { type: "addStoryFlag", flag: "MOM_WILL_HEAL_YOU"},
+                    ]
+                },
+                {
                     required: ["TALKED_TO_CHEN_FIRST_TIME"],
                     events: [
-                        { type: "textMessage", text: "Mom: You should rest a little bit.", facePlayer: "npcMom" },
+                        { type: "textMessage", text: "Maman: Tu devrais te reposer un petit peu.", facePlayer: "npcMom" },
                         { type: "healing", position: "MomHouseFirstFloor"},
-                        { type: "textMessage", text: "Mom: There you go!", facePlayer: "npcMom" },
+                        { type: "textMessage", text: "Maman: Te voilà bien plus en forme!", facePlayer: "npcMom" },
                     ]
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "Mom: I know you would have preferred to stay in Celadon City.", facePlayer: "npcMom"},
-                        { type: "textMessage", text: "Mom: But I'm sure Pallet Town has a lot to offer.", facePlayer: "npcMom"},
+                        { type: "textMessage", text: "Maman: Tu as réussi à trouver mon Mimiqui?", facePlayer: "npcMom"},
+                        { type: "textMessage", text: "Maman: Je suis sur qu'il n'est pas loin.", facePlayer: "npcMom"},
                     ]
                 },
             ]
@@ -53,8 +71,8 @@ export const MomHouseFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "The weather is weird in Viridian Forest."},
-                        { type: "textMessage", text: "We keep you informed."},
+                        { type: "textMessage", text: "Le temps est très spécial à la forêt de Jade."},
+                        { type: "textMessage", text: "Nous vous tiendrons informé."},
                     ]
                 },
             ]
@@ -67,7 +85,7 @@ export const MomHouseFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Too many dishes to do."},
+                        { type: "textMessage", text: "L'évier est tout propre."},
                     ]
                 },
             ]

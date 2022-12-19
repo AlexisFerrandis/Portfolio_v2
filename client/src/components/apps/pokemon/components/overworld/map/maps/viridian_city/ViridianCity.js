@@ -50,8 +50,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "This is the Pokémon League Reception Gate.", facePlayer: "npcA" },
-                        { type: "textMessage", text: "You need the 8 badges to continue.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Il s'agit de la porte de réception pour la ligue Pokémon.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Tu as besoin des 8 badges pour continuer.", facePlayer: "npcA" },
                     ]
                 }
             ]
@@ -70,8 +70,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian Forest is burning!", facePlayer: "npcB" },
-                        { type: "textMessage", text: "But i'm too afraid to go see.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "La forêt de Jade brûle !", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Mais j'ai trop peur d'aller voir.", facePlayer: "npcB" },
                     ]
                 }
             ]
@@ -87,15 +87,15 @@ export const ViridianCity = {
             ],
             talking : [
                 {
-                required: ["GET_RUNNING_SHOES"],
-                events: [
-                    { type: "textMessage", text: "These shoes look great on you.", facePlayer: "npcC"},
-                ]
+                    required: ["GET_RUNNING_SHOES"],
+                    events: [
+                        { type: "textMessage", text: "Ces chaussures te vont très bien.", facePlayer: "npcC"},
+                    ]
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "We live right here.", facePlayer: "npcC" },
-                        { type: "textMessage", text: "My father donates his old shoes.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Nous vivons juste ici.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Mon père fait don de ses vieilles chaussures.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -112,8 +112,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "This is the road for the pokemon league.", facePlayer: "npcD" },
-                        { type: "textMessage", text: "Unfortunately a trainer stripped me!", facePlayer: "npcD" },
+                        { type: "textMessage", text: "C'est la route de la ligue pokemon.", facePlayer: "npcD" },
+                        { type: "textMessage", text: "Malheureusement, un dresseur m'a dépouillé!", facePlayer: "npcD" },
                     ]
                 }
             ]
@@ -132,8 +132,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "The gym is closed.", facePlayer: "npcE" },
-                        { type: "textMessage", text: "It's been a long time since we've seen the leader.", facePlayer: "npcE" },
+                        { type: "textMessage", text: "L'arène est fermée.", facePlayer: "npcE" },
+                        { type: "textMessage", text: "Ça fait longtemps qu'on n'a pas vu le champion.", facePlayer: "npcE" },
                     ]
                 }
             ]
@@ -141,7 +141,7 @@ export const ViridianCity = {
         npcF: ({
             type: "Person",
             x: withGrid(69),
-            y: withGrid(56),
+            y: withGrid(57),
             src: npc2Img,
             behaviorLoop: [
                 { type: "stand", direction: "down", time: 2200},
@@ -157,8 +157,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "It's been a while since Team Rocket and Team Plasma are at war.", facePlayer: "npcF" },
-                        { type: "textMessage", text: "And disasters keep coming.", facePlayer: "npcF" },
+                        { type: "textMessage", text: "J'ai croisé un Mimiqui qui courait vers la fôret de Jade.", facePlayer: "npcF" },
+                        { type: "textMessage", text: "Il avait l'air tout effrayé.", facePlayer: "npcF" },
                     ]
                 }
             ]
@@ -175,7 +175,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "The smoke is coming so far.", facePlayer: "npcG" },
+                        { type: "textMessage", text: "On voit la fumée de si loin.", facePlayer: "npcG" },
                     ]
                 }
             ]
@@ -192,8 +192,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "It smells burnt.", facePlayer: "npcH" },
-                        { type: "textMessage", text: "I heard it was Team Rocket again.", facePlayer: "npcH" },
+                        { type: "textMessage", text: "Ça sent le brûlé.", facePlayer: "npcH" },
+                        { type: "textMessage", text: "J'ai entendu dire que c'était encore la Team Rocket.", facePlayer: "npcH" },
                     ]
                 }
             ]
@@ -210,8 +210,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "It is really impressive.", facePlayer: "npcI" },
-                        { type: "textMessage", text: "All this fire...", facePlayer: "npcI" },
+                        { type: "textMessage", text: "C'est vraiment impressionnant.", facePlayer: "npcI" },
+                        { type: "textMessage", text: "Toutes ces flammes...", facePlayer: "npcI" },
                     ]
                 }
             ]
@@ -229,7 +229,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "What are they doing...", facePlayer: "npcJ" },
+                        { type: "textMessage", text: "Que font-ils...", facePlayer: "npcJ" },
                     ]
                 }
             ]
@@ -247,7 +247,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I clearly don't have the level.", facePlayer: "npcK" },
+                        { type: "textMessage", text: "Je n'ai clairement pas le niveau.", facePlayer: "npcK" },
                     ]
                 }
             ]
@@ -264,8 +264,8 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "It didn't go as planned at all...", facePlayer: "npcTeamRocketB" },
-                        { type: "textMessage", text: "The beast is unleashed.", facePlayer: "npcTeamRocketB" },
+                        { type: "textMessage", text: "Tout ne s'est pas passé comme prévu...", facePlayer: "npcTeamRocketB" },
+                        { type: "textMessage", text: "La bête est déchaînée.", facePlayer: "npcTeamRocketB" },
                     ]
                 }
             ]
@@ -283,7 +283,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I try to rob the passersby.", facePlayer: "crazyLouis" },
+                        { type: "textMessage", text: "J'essaie de voler les passants.", facePlayer: "crazyLouis" },
                     ]
                 }
             ]
@@ -299,7 +299,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "We didn't want the fire to spread like this!", facePlayer: "teamRocketA" },
+                        { type: "textMessage", text: "Le feu a un petit peu dégénéré.", facePlayer: "teamRocketA" },
                     ]
                 }
             ]
@@ -314,7 +314,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "The gym is closed."},
+                        { type: "textMessage", text: "L'arène est fermée."},
                     ]
                 },
             ]
@@ -340,7 +340,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian City, the city of Evergreen."},
+                        { type: "textMessage", text: "Jadielle."},
                     ]
                 },
             ]
@@ -353,7 +353,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Pokemon museum under construction."},
+                        { type: "textMessage", text: "Musée Pokémon en construction."},
                     ]
                 },
             ]
@@ -366,7 +366,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian City Gym."},
+                        { type: "textMessage", text: "Arène de Jadielle."},
                     ]
                 },
             ]
@@ -392,7 +392,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Pokémon League Reception Gate."},
+                        { type: "textMessage", text: "Réception de la Ligue Pokémon."},
                     ]
                 },
             ]
@@ -405,7 +405,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian Forest to the north, Diglett's Cave to the east."},
+                        { type: "textMessage", text: "La forêt de Jade au nord, la grotte Taupiqueur à l'est."},
                     ]
                 },
             ]
@@ -418,7 +418,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian Forest."},
+                        { type: "textMessage", text: "Forêt de Jade."},
                     ]
                 },
             ]
@@ -431,7 +431,7 @@ export const ViridianCity = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Diglett's Cave."},
+                        { type: "textMessage", text: "Grotte Taupiqueur"},
                     ]
                 },
             ]
@@ -537,10 +537,10 @@ export const ViridianCity = {
                 events: [
                     { type: "battleTeasing", who: "crazyLouis" },
                     { who: "player",type: "stand", direction: "right"},
-                    { type: "textMessage", text: "You have way too much hope.", },
-                    { type: "battle", enemyId: "crazyLouis" },
+                    { type: "textMessage", text: "Tu as beaucoup trop d'espoir."},
+                    { type: "battle", enemyId: "crazyLouis"},
 
-                    { type: "textMessage", text: "I underestimated you.", },
+                    { type: "textMessage", text: "Je t'ai sous-estimé."},
                     { type: "addStoryFlag", flag: "DEFEAT_CRAZY_LOUIS"},
                 ]
             },
@@ -557,10 +557,10 @@ export const ViridianCity = {
                     { type: "battleTeasing", who: "crazyLouis" },
                     { who: "player",type: "stand", direction: "right"},
                     { who: "crazyLouis",type: "walk", direction: "left"},
-                    { type: "textMessage", text: "You have way too much hope.", },
+                    { type: "textMessage", text: "Tu as beaucoup trop d'espoir."},
                     { type: "battle", enemyId: "crazyLouis" },
 
-                    { type: "textMessage", text: "I underestimated you.", },
+                    { type: "textMessage", text: "Je t'ai sous-estimé." },
                     { type: "addStoryFlag", flag: "DEFEAT_CRAZY_LOUIS"},
                 ]
             },
@@ -577,10 +577,10 @@ export const ViridianCity = {
                 events: [
                     { type: "battleTeasing", who: "teamRocketA" },
                     { who: "player",type: "stand", direction: "left"},
-                    { type: "textMessage", text: "They told me not to let anyone pass.", },
+                    { type: "textMessage", text: "Ils m'ont dit de ne laisser passer personne.", },
                     { type: "battle", enemyId: "teamRocketA" },
 
-                    { type: "textMessage", text: "We can no longer control the fire!", },
+                    { type: "textMessage", text: "Nous ne pouvons plus contrôler le feu !", },
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_A"},
                 ]
             },
@@ -597,10 +597,10 @@ export const ViridianCity = {
                     { type: "battleTeasing", who: "teamRocketA" },
                     { who: "player",type: "stand", direction: "left"},
                     { who: "teamRocketA",type: "walk", direction: "right"},
-                    { type: "textMessage", text: "They told me not to let anyone pass.", },
+                    { type: "textMessage", text: "Ils m'ont dit de ne laisser passer personne." },
                     { type: "battle", enemyId: "teamRocketA" },
 
-                    { type: "textMessage", text: "We can no longer control the fire!", },
+                    { type: "textMessage", text: "Nous ne pouvons plus contrôler le feu !", },
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_A"},
                 ]
             },
@@ -618,10 +618,10 @@ export const ViridianCity = {
                     { who: "player",type: "stand", direction: "left"},
                     { who: "teamRocketA",type: "walk", direction: "right"},
                     { who: "teamRocketA",type: "walk", direction: "right"},
-                    { type: "textMessage", text: "They told me not to let anyone pass.", },
+                    { type: "textMessage", text: "Ils m'ont dit de ne laisser passer personne." },
                     { type: "battle", enemyId: "teamRocketA" },
 
-                    { type: "textMessage", text: "We can no longer control the fire!", },
+                    { type: "textMessage", text: "Nous ne pouvons plus contrôler le feu !", },
                     { type: "addStoryFlag", flag: "DEFEAT_TEAM_ROCKET_A"},
                 ]
             },

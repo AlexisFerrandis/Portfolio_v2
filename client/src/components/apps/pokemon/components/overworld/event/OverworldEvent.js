@@ -1,5 +1,5 @@
 import React from 'react';
-import { oppositeDirection } from '../../../Utils';
+import { emitEvent, oppositeDirection } from '../../../Utils';
 import Battle from '../../battle/Battle';
 
 import { enemies } from '../../content/Enemies';
@@ -86,28 +86,55 @@ export default class OverworldEvent extends React.Component {
 
     // get pokemon
     getPokemon(resolve) {
-      window.playerState.addPokemon(this.event.id, {
-            hp: 23,
-            maxHp: 23,
-            xp: 0,
-            maxXp: 35,
-            level: 5,
-            status: null,
-      });
 
-      const music = getPkmnSound;
-      const getPkmnSoundEffect = new BackgroundMusic({
-              music, 
-              isBattle: true,
-      });
-      getPkmnSoundEffect.init(document.querySelector(".game-container"));
-      setTimeout(() => {
-                const music = window.playerState.currentBackgroundMusic.music;
-                const backgroundMusic = new BackgroundMusic({
+      if (this.event.id === "vaporeon") {
+            window.playerState.addPokemon(this.event.id, {
+              hp: 42,
+              maxHp: 42,
+              xp: 0,
+              maxXp: 120,
+              level: 13,
+              status: null,
+            });
+
+            let eeveeId;
+            for (const [key, value] of Object.entries(window.playerState.pokemons)) {
+              if (value.pokemonId === "eevee") eeveeId = key;
+            }
+            for( let i = 0; i < window.playerState.lineup.length; i++){ 
+              if ( window.playerState.lineup[i] === eeveeId) {
+                window.playerState.lineup.splice(i, 1); 
+              };
+            };
+            delete window.playerState.pokemons[eeveeId];
+            emitEvent("LineupChanged")
+
+      } else {
+
+        window.playerState.addPokemon(this.event.id, {
+              hp: 23,
+              maxHp: 23,
+              xp: 0,
+              maxXp: 35,
+              level: 5,
+              status: null,
+        });
+
+        const music = getPkmnSound;
+        const getPkmnSoundEffect = new BackgroundMusic({
                 music, 
-                });
-                backgroundMusic.init(document.querySelector(".game-container"));
-      }, 3600)
+                isBattle: true,
+        });
+        getPkmnSoundEffect.init(document.querySelector(".game-container"));
+        setTimeout(() => {
+                  const music = window.playerState.currentBackgroundMusic.music;
+                  const backgroundMusic = new BackgroundMusic({
+                  music, 
+                  });
+                  backgroundMusic.init(document.querySelector(".game-container"));
+        }, 3600)
+
+      }
 
       resolve();
     }
@@ -165,6 +192,8 @@ export default class OverworldEvent extends React.Component {
         const backgroundFilter = new BackgroundFilter(this.event.setFilter)
         backgroundFilter.init(document.querySelector(".game-container"))
       }
+
+      window.playerState.backgroundFilter = this.event.setFilter;
 
   
 
@@ -274,7 +303,8 @@ export default class OverworldEvent extends React.Component {
     }
 
     battleTeasing(resolve) {
-      let who = this.map.gameObjects[this.event.who]
+      let who = this.map.gameObjects[this.event.who];
+      let initialY = who.y;
 
           // launch music 
           const music = battleTeasingMusic;
@@ -296,7 +326,7 @@ export default class OverworldEvent extends React.Component {
           setTimeout(() => {
               const objectbumpDown = setInterval(() => {
                   counter--
-                  who.y += 1;
+                  who.y  += 1;
                   if (counter  <= 0) {
                       clearInterval(objectbumpDown)
                   }
@@ -304,8 +334,9 @@ export default class OverworldEvent extends React.Component {
           }, 50)
 
       setTimeout(() => {
+        who.y = initialY;
         resolve()
-      }, 1000)
+      }, 1100)
     }
 
     cameraPosition(resolve) {

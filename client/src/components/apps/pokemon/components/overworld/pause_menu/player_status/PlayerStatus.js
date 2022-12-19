@@ -25,15 +25,15 @@ export default class PauseMenu extends React.Component {
         
         <div class="principal-information">
             <div class="left-part">
-                <p>NAME: RED</p>
+                <p>NOM: RED</p>
                 <br />
                 <br />
                 <br />
-                <p>MONEY: ${this.money}¥</p>
+                <p>ARGENT: ${this.money}¥</p>
                 <br />
-                <p>TEAM: TODO</p>
+                <p>VILLE: BOURG-PALETTE</p>
                 <br />
-                <p>KINDNESS: TODO</p>
+                <p></p>
             </div>
             
             <div class="right-part">
@@ -41,7 +41,7 @@ export default class PauseMenu extends React.Component {
             </div>
         </div>
         
-        <div class="badges">badge badge badge</div>
+        <div class="badges"></div>
         <img src=${card} alt="trainer-card" class="trainer-card" />
         
         `

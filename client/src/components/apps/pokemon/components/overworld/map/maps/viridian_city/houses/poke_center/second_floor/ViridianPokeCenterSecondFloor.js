@@ -32,7 +32,7 @@ export const ViridianPokeCenterSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "This service will be avaible soon.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Ce service sera bientôt disponible.", facePlayer: "npcA" },
                     ]
                 }
             ]
@@ -57,8 +57,8 @@ export const ViridianPokeCenterSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I don't think there is good or bad moment.", facePlayer: "npcB" },
-                        { type: "textMessage", text: "I think that above all, life is about encounters.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Je n'crois pas qu'il y ait de bonne ou de mauvaise situation.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Je dirais que c'est d'abord des rencontres.", facePlayer: "npcB" },
                     ]
                 }
             ]
@@ -83,7 +83,7 @@ export const ViridianPokeCenterSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I've seen the biggest Drowzee of my life yesterday.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "J'ai vu le plus gros Soporifik de ma vie hier.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -100,7 +100,7 @@ export const ViridianPokeCenterSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "There is no time!", facePlayer: "npcD" },
+                        { type: "textMessage", text: "Il n'y a pas de temps!", facePlayer: "npcD" },
                     ]
                 }
             ]
@@ -126,8 +126,8 @@ export const ViridianPokeCenterSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "We confirm that Viridian Forest is on fire.", facePlayer: "telA" },
-                        { type: "textMessage", text: "We keep you informed.", facePlayer: "telA" },
+                        { type: "textMessage", text: "Nous confirmons que la forêt de Jade est en feu.", facePlayer: "telA" },
+                        { type: "textMessage", text: "Nous vous tiendrons informé.", facePlayer: "telA" },
                     ]
                 }
             ]
@@ -140,8 +140,8 @@ export const ViridianPokeCenterSecondFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "We confirm that Viridian Forest is on fire.", facePlayer: "telA" },
-                        { type: "textMessage", text: "We keep you informed.", facePlayer: "telA" },
+                        { type: "textMessage", text: "Nous confirmons que la forêt de Jade est en feu.", facePlayer: "telA" },
+                        { type: "textMessage", text: "Nous vous tiendrons informé.", facePlayer: "telA" },
                     ]
                 }
             ]

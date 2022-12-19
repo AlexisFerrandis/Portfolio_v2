@@ -4,7 +4,7 @@ import OverworldEvent from '../event/OverworldEvent';
 import InteractiveObject from '../../objects/InteractiveObject';
 // import PlayerState from '../../state/PlayerState';
 
-import {  nextPosition, wait, withGrid } from '../../../Utils';
+import {  nextPosition, withGrid } from '../../../Utils';
 // import PlayerAnimation from "../../objects/player_animation/PlayerAnimation"
 
 import { NewGame } from "./maps/new_game/NewGame"
@@ -26,8 +26,21 @@ import { ViridianHouseTwo} from './maps/viridian_city/houses/house_two/ViridianH
 import { ViridianForest} from './maps/viridian_forest/ViridianForest';
 
 import { UmbrellaTown } from "./maps/umbrella_town/UmbrellaTown";
-
-
+import { UTHouseOne } from './maps/umbrella_town/houses/house_one/UTHouseOne';
+import { UTHouseTwo } from './maps/umbrella_town/houses/house_two/UTHouseTwo';
+import { UTHouseThree } from './maps/umbrella_town/houses/house_three/UTHouseThree';
+import { UTHouseFour } from './maps/umbrella_town/houses/house_four/UTHouseFour';
+import { UTHouseFive } from './maps/umbrella_town/houses/house_five/UTHouseFive';
+import { UTHouseSix } from './maps/umbrella_town/houses/house_six/UTHouseSix';
+import { UTHouseSeven } from './maps/umbrella_town/houses/house_seven/UTHouseSeven';
+import { UTHouseHeith } from './maps/umbrella_town/houses/house_height/UTHouseHeigth';
+import { UTHouseNine } from './maps/umbrella_town/houses/house_nine/UTHouseNine';
+import { UTPokeCenterFirstFloor } from './maps/umbrella_town/houses/poke_center/first_floor/UTPokeCenterFirstFloor';
+import { UTPokeCenterSecondFloor }from './maps/umbrella_town/houses/poke_center/second_floor/UTPokeCenterSecondFloor';
+import { TurtlePillowFirstFloor } from './maps/umbrella_town/turtle_pillow/first_floor/TurtlePillowFirstFloor';
+import { TurtlePillowSecondFloor } from './maps/umbrella_town/turtle_pillow/second_floor/TurtlePillowSecondFloor';
+import { UTMall } from './maps/umbrella_town/mall/UTMall';
+import { VladHouse } from './maps/umbrella_town/houses/vlad_house/VladHouse';
 
 
 export default class OverworldMap extends React.Component { 
@@ -202,7 +215,7 @@ export default class OverworldMap extends React.Component {
 
             // start random wild battle
             const combatStartProbability = Math.floor(Math.random() * 100) + 1;
-            if (combatStartProbability <= 0) { // 8 is nice, which is nice
+            if (combatStartProbability <= 8) { // 8 is nice, which is nice
                 this.startCutScene([{ type: "battle", enemyId: "wild" }]);
                 return
             }
@@ -239,6 +252,8 @@ export default class OverworldMap extends React.Component {
     // }
 };
 
+
+
 window.OverworldMaps = {
     NewGame,
 
@@ -258,4 +273,19 @@ window.OverworldMaps = {
     ViridianForest,
 
     UmbrellaTown,
-};
+    UTHouseOne,
+    UTHouseTwo,
+    UTHouseThree,
+    UTHouseFour,
+    UTHouseFive,
+    UTHouseSix,
+    UTHouseSeven,
+    UTHouseHeith,
+    UTHouseNine,
+    UTPokeCenterFirstFloor,
+    UTPokeCenterSecondFloor,
+    TurtlePillowFirstFloor,
+    TurtlePillowSecondFloor,
+    UTMall,
+    VladHouse,
+} 

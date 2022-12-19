@@ -21,7 +21,7 @@ const HelloWorld = () => {
 		<Rnd
 			default={{
 				x: document.documentElement.clientWidth / 2 - 345 / 2,
-				y: document.documentElement.clientHeight / 2 - 620 / 2,
+				y: document.documentElement.clientHeight / 2 - 620 / 2 + 10,
 				width: 345,
 				height: 550,
 			}}

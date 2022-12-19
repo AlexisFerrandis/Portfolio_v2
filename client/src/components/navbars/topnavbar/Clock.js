@@ -5,7 +5,7 @@ const Clock = () => {
 
 	useEffect(() => {
 		setInterval(() => {
-			let options = { hour: "2-digit", minute: "2-digit", month: "short", day: "numeric", weekday: "short" };
+			let options = { hour: "2-digit", minute: "2-digit", month: "short", day: "numeric" }; // weekday: "short" 
 			let timeStamp = new Date();
 			let date = new Date(timeStamp).toLocaleDateString(undefined, options).replace(/[,]/g, " - ");
 			setDateTodisplay(date);

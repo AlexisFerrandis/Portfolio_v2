@@ -47,7 +47,7 @@ export default class Combatant extends React.Component {
 		this.hudElement.innerHTML = `
             <p class="combatant_name">${this.Name}</p>
             <p class="combatant_status"></p>
-            <p class="combatant_level">Lv<span class="combatant-lvl"></span></p>
+            <p class="combatant_level">N.<span class="combatant-lvl"></span></p>
 
             <div class="life">
                 <div class="life-container">
@@ -116,6 +116,17 @@ export default class Combatant extends React.Component {
 		}
 		this.hpFills.forEach((fill) => (fill.style.width = `${this.hpPercent}%`));
 		this.xpFills.forEach((fill) => (fill.style.width = `${this.xpPercent}%`));
+
+		if (this.hpPercent < 50) {
+			this.hudElement.querySelector(".combatant_life-container").classList.add("half-life");
+		} 
+		if (this.hpPercent < 7) {
+			this.hudElement.querySelector(".combatant_life-container").classList.add("no-life");
+		} 
+		if (this.hpPercent >= 50) {
+			this.hudElement.querySelector(".combatant_life-container").classList.remove("half-life");
+			this.hudElement.querySelector(".combatant_life-container").classList.remove("no-life");
+		}
 
         // update lvl
 		this.hudElement.querySelector(".combatant-lvl").innerText = this.level;

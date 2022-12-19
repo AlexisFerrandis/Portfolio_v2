@@ -6,6 +6,7 @@ import LrdbReadMe from "../folderExplorer/home/projects/leRepaireDeBacchus/ReadM
 import HelloWorld from "../windows/HelloWorld";
 import Pokemon from "../windows/Pokemon";
 import Facedook from "../windows/Facedook";
+import Chatbot from "../windows/Chatbot";
 
 const Windows = () => {
 	const activesWindows = useSelector((state) => state.activesWindowsReducer);
@@ -18,6 +19,7 @@ const Windows = () => {
 
 			{activesWindows.pokemon && <Pokemon />}
 			{activesWindows.facedook && <Facedook />}
+			{activesWindows.chatbot && <Chatbot />}
 
 		</div>
 	)

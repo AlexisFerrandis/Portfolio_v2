@@ -68,7 +68,7 @@ export default class BattleEvent extends React.Component {
  
                         this.event.superEffective = true;
 
-                        initialDamage += Math.floor(initialDamage/4);
+                        initialDamage += Math.floor(initialDamage/4 + 3);
 
                         const music = criticialSound;
                         const criticialSoundEffect = new SoundEffect({

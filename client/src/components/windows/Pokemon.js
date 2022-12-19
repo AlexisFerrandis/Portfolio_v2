@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Rnd } from "react-rnd";
 
 import CloseWindow from "./../buttons/CloseWindow";
-
 import PokemonApp from "./../apps/pokemon/PokemonApp"
 
 // img
@@ -13,8 +12,6 @@ const Pokemon = () => {
 	const dispatch = useDispatch();
 	const nodeRef = useRef(null);
 
-	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
-
 	return (
 		<Rnd
 			default={{
@@ -23,8 +20,10 @@ const Pokemon = () => {
 				width: 660,
 				height: 375,
 			}}
-			minWidth={600}
-			minHeight={350}
+			minWidth={560}
+			minHeight={340}
+			maxWidth={650}
+			maxHeight={400}
 			disableDragging={false}
 			bounds={".app-delimitation"}
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
@@ -39,8 +38,7 @@ const Pokemon = () => {
 					</div>
 					<CloseWindow closeWindow={(e) => dispatch({ type: "SET_DESACTIVE_WINDOW", payload: "pokemon" })} />
 				</div>
-
-				<div className={darkMode ? "readme-template__body dark-mode pokemon-window" : "readme-template__body pokemon-window"}>
+				<div className="pokemon-window">
 					<div className="content">
                         <PokemonApp />
 					</div>

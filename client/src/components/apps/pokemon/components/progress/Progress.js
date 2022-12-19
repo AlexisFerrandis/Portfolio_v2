@@ -1,10 +1,11 @@
 import React from 'react';
 import BackgroundMusic from '../audio/background_music/BackgroundMusic';
+import BackgroundFilter from '../overworld/event/client_events/background_filter/BackgroundFilter';
 
 export default class Progress extends React.Component  { 
     constructor(config) {
         super(config);
-
+        
         // set initial map
         this.mapId = "NewGame";
         this.startingPlayerX = 0;
@@ -14,6 +15,8 @@ export default class Progress extends React.Component  {
     }
 
     save() {
+        let filter = window.playerState.backgroundFilter ? window.playerState.backgroundFilter : null;
+        
         window.localStorage.setItem(this.saveFilekey, JSON.stringify({
             mapId: this.mapId,
             startingPlayerX: this.startingPlayerX,
@@ -31,6 +34,8 @@ export default class Progress extends React.Component  {
                 money: window.playerState.money,
 
                 healing: window.playerState.healing,
+
+                backgroundFilter: filter,
             }
         }))
     }
@@ -56,6 +61,9 @@ export default class Progress extends React.Component  {
                 music, 
             });
             backgroundMusic.init(document.querySelector(".game-container"));
+
+            const backgroundFilter = new BackgroundFilter(file.playerState.backgroundFilter)
+            backgroundFilter.init(document.querySelector(".game-container"))
         }
     }
 };

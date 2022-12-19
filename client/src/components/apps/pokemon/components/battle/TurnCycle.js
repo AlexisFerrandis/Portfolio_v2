@@ -8,7 +8,8 @@ import BackgroundMusic from '../audio/background_music/BackgroundMusic';
 
 import wildVictory from "../../assets/audio/background_music/BattleWildVictory.ogg"
 import trainerVictory from "../../assets/audio/background_music/BattleTrainerVictory.ogg"
-import { wait, withGrid } from '../../Utils';
+import BackgroundFilter from '../overworld/event/client_events/background_filter/BackgroundFilter';
+// import { wait, withGrid } from '../../Utils';
 
 export default class TurnCycle extends React.Component { 
     constructor({battle, onNewEvent, onWinner}) {
@@ -17,7 +18,7 @@ export default class TurnCycle extends React.Component {
         this.battle = battle;
         this.onNewEvent = onNewEvent;
         this.onWinner = onWinner;
-        this.currentTeam = "player"
+        this.currentTeam = "player";
     };
 
     async turn() {
@@ -39,11 +40,11 @@ export default class TurnCycle extends React.Component {
             if (submission.enemyId === "e_wild") {
                 await this.onNewEvent({
                     type: "textMessage",
-                    text: `You try to run away.`
+                    text: `Vous tentez de fuire.`
                 })
 
                 let chanceToEscape = Math.floor(Math.random() * 10);
-                if (chanceToEscape < 8) {
+                if (chanceToEscape < 9) {
                     const music = runSound;
                     const runSoundEffect = new SoundEffect({
                     music, 
@@ -51,7 +52,7 @@ export default class TurnCycle extends React.Component {
                     runSoundEffect.init(document.querySelector(".game-container"));
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `You escape!`
+                        text: `Vous prenez la fuite!`
                     })
                     this.onWinner("runAway");
                     return;
@@ -59,7 +60,7 @@ export default class TurnCycle extends React.Component {
                 else {
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `But it fails!`
+                        text: `Mais cela échoue!`
                     })
                 }
             } 
@@ -67,7 +68,7 @@ export default class TurnCycle extends React.Component {
             else {
                 await this.onNewEvent({
                     type: "textMessage",
-                    text: `You cannot run away from a trainer!`
+                    text: `Vous ne pouvez pas fuire contre un dresseur!`
                 })
             }
 
@@ -83,7 +84,7 @@ export default class TurnCycle extends React.Component {
             })
             await this.onNewEvent({
                 type: "textMessage",
-                text: `${submission.replacement.Name}, i choose you !`
+                text: `${submission.replacement.Name}, je te choisis!`
             })
             this.nextTurn();
             return;
@@ -122,14 +123,14 @@ export default class TurnCycle extends React.Component {
                 // is super effective ? 
                 if (superEffective) {
                     await this.onNewEvent({
-                        type: "textMessage", text: `It's super effective!`
+                        type: "textMessage", text: `C'est super efficace!`
                     })
                 }
 
                 // is not effective ? 
                 if (notEffective) {
                     await this.onNewEvent({
-                        type: "textMessage", text: `Not very effective...`
+                        type: "textMessage", text: `Ce n'est pas très efficace...`
                     })
                 }
         }
@@ -137,7 +138,7 @@ export default class TurnCycle extends React.Component {
         // is damage critical ? 
         if (criticalStrike) {
             await this.onNewEvent({
-                type: "textMessage", text: `A critical hit!`
+                type: "textMessage", text: `Coup critique!`
             })
         }
 
@@ -147,7 +148,7 @@ export default class TurnCycle extends React.Component {
                 case "low-def":
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `${enemy.Name}'s defense fell!`
+                        text: `La défense de ${enemy.Name} diminue!`
                     })
                     enemy.BaseStats[2] -= 2;
                     break;
@@ -155,7 +156,7 @@ export default class TurnCycle extends React.Component {
                 case "low-atk":
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `${enemy.Name}'s attack fell!`
+                        text: `L'attaque de ${enemy.Name} diminue!`
                     })
                     enemy.BaseStats[1] -= 2;
                     break;
@@ -163,7 +164,15 @@ export default class TurnCycle extends React.Component {
                 case "low-spd":
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `${enemy.Name}'s speed fell!`
+                        text: `La vitesse de ${enemy.Name} diminue!`
+                    })
+                    enemy.BaseStats[3] -= 2;
+                    break;
+                
+                    case "low-acc":
+                    await this.onNewEvent({
+                        type: "textMessage",
+                        text: `La précision de ${enemy.Name} diminue!`
                     })
                     enemy.BaseStats[3] -= 2;
                     break;
@@ -177,7 +186,7 @@ export default class TurnCycle extends React.Component {
         const targetDead = submission.target.hp <= 0;
         if (targetDead) {
             await this.onNewEvent({
-                type: "textMessage", text: `${submission.target.Name} fainted!`
+                type: "textMessage", text: `${submission.target.Name} est KO!`
             })
 
             if (submission.target.team === "enemy") {
@@ -187,7 +196,7 @@ export default class TurnCycle extends React.Component {
                 const initialLevel = this.battle.combatants[playerActivePokemon].level;
 				await this.onNewEvent({
 					type: "textMessage",
-					text: `${caster.Name} gained ${xp} XP!`, 
+					text: `${caster.Name} a gagné ${xp} XP!`, 
 				});
                 
 				await this.onNewEvent({
@@ -204,7 +213,7 @@ export default class TurnCycle extends React.Component {
                     levelUpSoundEffect.init(document.querySelector(".game-container"));
                     await this.onNewEvent({
                         type: "textMessage",
-					    text: `${caster.Name} grew to level ${actualisedLevel}!`,
+					    text: `${caster.Name} monte au niveau ${actualisedLevel}!`,
                     });
                 }
                 
@@ -226,7 +235,7 @@ export default class TurnCycle extends React.Component {
 
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `You defeated the wild ${enemy.Name}.`
+                        text: `Vous avez vaincu le ${enemy.Name} sauvage.`
                     })
 
                 } else {
@@ -245,11 +254,11 @@ export default class TurnCycle extends React.Component {
 
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `You defeated ${this.battle.enemy.name}!`
+                        text: `Vous avez vaincu ${this.battle.enemy.name}!`
                     })
                     await this.onNewEvent({
                         type: "textMessage",
-                        text: `${this.battle.enemy.name} give you ${this.battle.enemy.giveMoney}¥.`
+                        text: `${this.battle.enemy.name} vous donne ${this.battle.enemy.giveMoney}¥.`
                     })
                     await this.onNewEvent({
                         type: "textMessage",
@@ -264,13 +273,22 @@ export default class TurnCycle extends React.Component {
             else {
                 await this.onNewEvent({
                     type: "textMessage",
-                    text: `All your Pokemomns are K.O.`
+                    text: `Tous vos Pokémons sont KO.`
                 })
                 await this.onNewEvent({
                     type: "textMessage",
-                    text: `You lose [AMOUNT OF MONEY] while escaping.`
+                    text: `Red perd 100¥ en s'échappant.`
+                })
+                await this.onNewEvent({
+                    type: "textMessage",
+                    text: `Vous vous hâtez vers le centre de soin le plus proche.`
                 })
                 this.onWinner(winner);
+
+                // remove fire background
+                const backgroundFilter = new BackgroundFilter(null)
+                backgroundFilter.init(document.querySelector(".game-container"))
+
                 return;
             }
         } 
@@ -341,12 +359,12 @@ export default class TurnCycle extends React.Component {
         if (this.battle.enemy.name === "Wild") {
             await this.onNewEvent({
                 type: "textMessage",
-                text: `A wild ${this.battle.combatants.e_wild.Name} appeared !`
+                text: `Un ${this.battle.combatants.e_wild.Name} sauvage apparait !`
             })
         } else {
             await this.onNewEvent({
                 type: "textMessage",
-                text: `${this.battle.enemy.name} would like to battle!`
+                text: `${this.battle.enemy.name} veut se battre!`
             })
             await this.onNewEvent({
                 type: "textMessage",

@@ -9,9 +9,7 @@ export default class PlayerState extends React.Component {
 
         this.lineup = [];
         this.items = [
-            { itemId: "POTION", instanceId: "item2", },
-            { itemId: "POTION", instanceId: "item3", },
-            { itemId: "FULLHEAL", instanceId: "item1", },
+            { itemId: "POTION", instanceId: "item1", },
         ];
         this.storyFlags = {};
         this.position = "";
@@ -23,6 +21,7 @@ export default class PlayerState extends React.Component {
 
         this.healing = "MomHouseFirstFloor";
         this.money = 100;
+        this.backgroundFilter = null;
     };
 
     addPokemon(pokemonId, stats) {
@@ -38,7 +37,7 @@ export default class PlayerState extends React.Component {
             status: stats.status,
         }
         if (this.lineup.length < 6) {
-            this.lineup.push(newId)
+            this.lineup.unshift(newId)
         }
         emitEvent("LineupChanged")
     }

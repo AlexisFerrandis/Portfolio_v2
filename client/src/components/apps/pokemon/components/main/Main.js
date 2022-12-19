@@ -1,38 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import init from "./Init"
 
 
 const Main = () => {
+  const [initialised, setInitialised] = useState(false);
 
     useEffect(() => {
-          init()
-
-          // const gameContainer = document.querySelector(".game-container");
-          // let value = window.innerWidth
-          //   gameContainer.style.transform = `scale(${value/700})`
-          //   if (value > 1100) {
-          //     value = 1100;
-          //     gameContainer.style.transform = `scale(${value/700})`
-          //   }
-          //   if (value < 512) {
-          //     value = 512;
-          //     gameContainer.style.transform = `scale(${value/800}) translateX(-21%)`
-          //   } 
-
-          // window.addEventListener("resize", () => {
-          //   let value = window.innerWidth
-          //   gameContainer.style.transform = `scale(${value/700})`
-          //     if (value > 1100) {
-          //       value = 1100;
-          //       gameContainer.style.transform = `scale(${value/700})`
-          //     }
-          //     if (value < 512) {
-          //       value = 512;
-          //       gameContainer.style.transform = `scale(${value/800}) translateX(-21%)`
-          //     } 
-          // })
-    })
-    
+          !initialised ? init() : setInitialised(true)
+    }, [initialised])
 
     return (
       <div className="App">

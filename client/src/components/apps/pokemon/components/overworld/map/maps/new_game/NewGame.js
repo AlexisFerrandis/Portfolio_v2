@@ -1,6 +1,6 @@
 import { collisions } from './MapCollision';
 
-import { asGridCoords, loadWall, nextPosition, withGrid } from '../../../../../Utils';
+import { asGridCoords, loadWall, withGrid } from '../../../../../Utils';
 
 import lowerImg from "../../../../../assets/graphics/maps/new_game/down.png";
 import upperImg from "../../../../../assets/graphics/maps/new_game/up.png";
@@ -38,21 +38,21 @@ export const NewGame = {
             {
                 events: [
                     { who: "npcMom", type: "stand", direction: "up", time: 1100},
-                    { type: "textMessage", text:"Hello Red,"},
-                    { type: "textMessage", text:"Don't be afraid."},
+                    { type: "textMessage", text:"Bonjour Red,"},
+                    { type: "textMessage", text:"Je vais avoir besoin de ton aide."},
                     { who: "npcMom", type: "stand", direction: "down", time: 1000},
-                    { type: "textMessage", text:"A great journey awaits you."},
-                    { type: "textMessage", text:"I hope you find the way..."},
+                    { type: "textMessage", text:"Mon Mimiqui a disparu."},
+                    { type: "textMessage", text:"Je ne sais pas ce qu'il lui est arrivé..."},
                     { who: "npcMom", type: "stand", direction: "down", time: 1000},
-                    { type: "textMessage", text:"The Pokemon world is going through a big change."},
+                    { type: "textMessage", text:"Pourrais tu partir a sa recherche ?"},
                     { who: "npcMom", type: "walk", direction: "down"},
                     { who: "npcMom", type: "stand", direction: "down", time: 1100},
-                    { type: "textMessage", text:"I think you will make the right choices."},
-                    { type: "textMessage", text:"For you and your Pokemons."},
+                    { type: "textMessage", text:"Je te remercie du fond du cœur."},
+                    { type: "textMessage", text:"Tu devrais passer voir le Prof Chen."},
                     { who: "npcMom", type: "stand", direction: "down", time: 700},
-                    { type: "textMessage", text:"Be careful in this peaceful lands."},
-                    { type: "textMessage", text:"The rules are not the same as usual."},
+                    { type: "textMessage", text:"Il te remettra un Pokémon pour t'épauler."},
                     { who: "npcMom", type: "stand", direction: "down", time: 1100},
+                    { type: "textMessage", text:"Bonne chance."},
                     
                     { type: "addStoryFlag", flag: "GAME_INITIALISED"},
 
@@ -115,111 +115,3 @@ export const NewGame = {
         
     }
 }
-
-
-
-// set up 
-// import { collisions } from './MapCollision';
-
-
-// import lowerImg from "../../../../../assets/graphics/maps/demo/map.png";
-// import upperImg from "../../../../../assets/graphics/maps/demo/mapupper.png";
-
-// import momImg from "../../../../../assets/graphics/characters/mother.png";
-// import npcAImg from "../../../../../assets/graphics/characters/npcA.png";
-
-
-// import { asGridCoords, loadWall, nextPosition, withGrid } from '../../../../../Utils';
-
-// export const DemoRoom = {
-//     id: "DemoRoom",
-//     lowerSrc: lowerImg,
-//     upperSrc: upperImg,
-//     gameObjects: {},
-//     configObjects: {
-//         player: ({
-//             type: "Person",
-//             isPlayerControlled: true,
-//             x: withGrid(4),
-//             y: withGrid(4)
-//         }),
-//         npcMom: ({
-//             type: "Person",
-//             x: withGrid(6),
-//             y: withGrid(3),
-//             src: momImg,
-//             behaviorLoop: [
-//                 { type: "stand", direction: "down", time: 1},
-//                 { type: "walk", direction: "up", },
-//                 { type: "walk", direction: "right", },
-//                 { type: "walk", direction: "down", },
-//                 { type: "walk", direction: "left", },
-//             ],
-//             talking : [
-//                 {
-//                     events: [
-//                         { type: "textMessage", text: "Hello world", facePlayer: "npcA" },
-//                         { type: "addStoryFlag", flag:"TALKD_TO_MOM"},
-//                     ]
-//                 }
-//             ]
-//         }),
-//         npcA: ({
-//             type: "Person",
-//             x: withGrid(10),
-//             y: withGrid(5),
-//             src: npcAImg,
-//             behaviorLoop: [
-//                 { type: "stand", direction: "right", time: 2000 },
-//                 { type: "stand", direction: "down", time: 3000},
-//             ],
-//             talking : [
-//                 {
-//                     required: ["TALKD_TO_MOM"],
-//                     events: [
-//                         { type: "textMessage", text: "Well well well", facePlayer: "npcA"},
-//                     ]
-//                 },
-//                 {
-//                     events: [
-//                         { type: "textMessage", text: "My pokemons are the best !", facePlayer: "npcA"},
-//                         { type: "battle", enemyId: "beth" },
-//                         { type: "addStoryFlag", flag: "DEFEATED_BETH"},
-//                         { type: "textMessage", text: "You're the king bro", facePlayer: "npcA"},
-//                     ]
-//                 }
-//             ]
-//         }),
-//         interactiveObject: ({
-//             type: "InteractiveObject",
-//             x: withGrid(2),
-//             y: withGrid(8),
-//             storyFlag: "USED_INTERACTIVE_OBJECT",
-//             pokemons: ["pikachu"]
-//         })
-//     },
-//     walls: loadWall(collisions),
-//     cutsceneSpaces: {
-//         [asGridCoords(1,1)]: [
-//             {
-//                 events: [
-//                     { who: "player", type: "walk", direction: "right"},
-//                     { type: "textMessage", text:"Sionop rg r ger eg erzger ezrgz ethezth zeth zth eth zerh ze"},
-//                 ]
-//             }
-//         ],
-//         [asGridCoords(7, 7)]: [
-//             {
-//                 events: [
-//                     { 
-//                         type: "changeMap", 
-//                         map: "DemoMo",
-//                         x: withGrid(2),
-//                         y: withGrid(0),
-//                         direction: 'up',
-//                     },
-//                 ]
-//             }
-//         ]
-//     }
-// }

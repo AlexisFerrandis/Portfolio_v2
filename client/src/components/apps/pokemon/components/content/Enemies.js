@@ -6,12 +6,12 @@ export const enemies = {
     rivalA: {
 		name: "Green",
 		src: "rivalA",
-		firstLineOfDialog : "Let me show you!",
-		lastLineOfDialog: "What? Unbelievable!",
+		firstLineOfDialog : "Je vais te montrer!",
+		lastLineOfDialog: "Quoi? Impensable!",
 		pokemons: {
 			a: {
 				pokemonId: "pikachu",
-				maxHp: 27,
+				maxHp: 29,
 				level: 5,
 				// more...
 			},
@@ -21,8 +21,8 @@ export const enemies = {
 	crazyLouis: {
 		name: "Crazy Louis",
 		src: "SUPERNERD",
-		firstLineOfDialog : "I choose people who pass here.",
-		lastLineOfDialog: "Ok you can pass...",
+		firstLineOfDialog : "C'est moi qui choisit qui passe!",
+		lastLineOfDialog: "Ok tu peux passer...",
 		pokemons: {
 			a: {
 				hp: 25,
@@ -42,14 +42,14 @@ export const enemies = {
 	teamRocketA: {
 		name: "Sbire Matthew",
 		src: "TEAMROCKET_M",
-		firstLineOfDialog : "You should not pass!",
-		lastLineOfDialog: "My boss will kill me.",
+		firstLineOfDialog : "Je ne dois pas te laisser passer!",
+		lastLineOfDialog: "Mon patron va me tuer.",
 		pokemons: {
 			a: {
 				hp: 23,
 				pokemonId: "spearow",
 				maxHp: 23,
-				level: 4,
+				level: 5,
 			},
             b: {
 				hp: 25,
@@ -63,8 +63,8 @@ export const enemies = {
 	teamRocketB: {
 		name: "Sbire Ursulla",
 		src: "TEAMROCKET_F",
-		firstLineOfDialog : "This forest is dangerous!",
-		lastLineOfDialog: "You look strong enough to continue.",
+		firstLineOfDialog : "La forêt est dangereuse!",
+		lastLineOfDialog: "Tu à l'air assez fort pour continuer.",
 		pokemons: {
 			a: {
 				hp: 30,
@@ -82,10 +82,10 @@ export const enemies = {
 		giveMoney: 390,
 	},
 	npcEcoA: {
-		name: "Picnicker Eva",
+		name: "Picnic Eva",
 		src: "PICNICKER",
-		firstLineOfDialog : "This one is fine.",
-		lastLineOfDialog: "I'm gonna have to redo my whole collection!",
+		firstLineOfDialog : "J'aime les insectes!",
+		lastLineOfDialog: "Je dois continuer ma collection!",
 		pokemons: {
 			a: {
 				hp: 32,
@@ -105,8 +105,8 @@ export const enemies = {
 	teamRocketC: {
 		name: "Sbire A. Daniel",
 		src: "TEAMROCKET_M",
-		firstLineOfDialog : "You can't go further!",
-		lastLineOfDialog: "You can go further!",
+		firstLineOfDialog : "Tu n'iras pas plus loin!",
+		lastLineOfDialog: "Hmmm...",
 		pokemons: {
 			a: {
 				hp: 32,
@@ -124,10 +124,10 @@ export const enemies = {
 		giveMoney: 390,
 	},
 	teamRocketD: {
-		name: "Sbire A. Daniel",
-		src: "TEAMROCKET_M",
-		firstLineOfDialog : "You are in a dead end!",
-		lastLineOfDialog: "You might be able to find your way.",
+		name: "Sbire Elodie",
+		src: "TEAMROCKET_F",
+		firstLineOfDialog : "C'est un cul de sac!",
+		lastLineOfDialog: "Tu sembles pouvoir trouver ton chemin.",
 		pokemons: {
 			a: {
 				hp: 33,
@@ -137,5 +137,62 @@ export const enemies = {
 			},
 		},
 		giveMoney: 390,
-	}
+	},
+	rivalB: {
+		name: "Green",
+		src: "RIVAL1",
+		firstLineOfDialog : "Tu ne t'en sortiras pas cette fois!",
+		lastLineOfDialog: "Impossible! Je suis meilleur que toi!",
+		pokemons: {
+			a: {
+				pokemonId: "gastly",
+				maxHp: 25,
+				level: 6,
+			},
+			b: {
+				pokemonId: "pikachu",
+				maxHp: 34,
+				level: 7,
+			},
+		},
+		giveMoney: 307,
+	},
+	npcBard: {
+		name: "Bard le Barde",
+		src: "ROCKER",
+		firstLineOfDialog : "Par la puissance de ma Harpe!",
+		lastLineOfDialog: "J'ai fait des fausses notes.",
+		pokemons: {
+			a: {
+				pokemonId: "charmander",
+				maxHp: 25,
+				level: 9,
+			},
+			b: {
+				pokemonId: "bulbasaur",
+				maxHp: 34,
+				level: 9,
+			},
+		},
+		giveMoney: 69,
+	},
+	rivalC: {
+		name: "Green",
+		src: "RIVAL2",
+		firstLineOfDialog : "On va en finir!",
+		lastLineOfDialog: "Nooooon!!!",
+		pokemons: {
+			a: {
+				pokemonId: "haunter",
+				maxHp: 55,
+				level: 12,
+			},
+			b: {
+				pokemonId: "pikachad",
+				maxHp: 50,
+				level: 11,
+			},
+		},
+		giveMoney: 999,
+	},
 }

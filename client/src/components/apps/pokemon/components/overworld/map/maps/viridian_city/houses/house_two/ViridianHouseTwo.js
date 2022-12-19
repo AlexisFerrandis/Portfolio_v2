@@ -9,7 +9,7 @@ import npcJImg from "../../../../../../../assets/graphics/characters/npcJ.png";
 import npcUImg from "../../../../../../../assets/graphics/characters/npcU.png";
 import npcVImg from "../../../../../../../assets/graphics/characters/npcV.png";
 
-import musicBg from "../../../../../../../assets/audio/background_music/ViridianCity.ogg"
+// import musicBg from "../../../../../../../assets/audio/background_music/ViridianCity.ogg"
 
 export const ViridianHouseTwo = {
     id: "ViridianHouseTwo",
@@ -34,16 +34,16 @@ export const ViridianHouseTwo = {
                 {
                     required: ["GET_RUNNING_SHOES"],
                     events: [
-                        { type: "textMessage", text: "Enjoy your new shoes!", facePlayer: "npcA"},
+                        { type: "textMessage", text: "Profite de tes nouvelles chaussures!", facePlayer: "npcA"},
                     ]
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "I can't walk anymore.", facePlayer: "npcA" },
-                        { type: "textMessage", text: "You should take my running shoes.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Je ne peux plus marcher.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Tu devrais prendre mes baskets.", facePlayer: "npcA" },
                         { type: "getEssentialItem", id:"runningShoes"},
-                        { type: "textMessage", text: "You can now run outside.", facePlayer: "npcA" },
-                        // { type: "stand", who: "player", time:1900, },
+                        { type: "stand", who: "npcA",  direction: "down", time: 1900, },
+                        { type: "textMessage", text: "Vous pouvez désormais courir dehors.", facePlayer: "npcA" },
 
                         
                         { type: "addStoryFlag", flag: "GET_RUNNING_SHOES"},
@@ -63,8 +63,8 @@ export const ViridianHouseTwo = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "He lost his legs in an accident.", facePlayer: "npcB" },
-                        { type: "textMessage", text: "But he doesn't want to talk about it.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "Du coup c'est toujours moi qui fait la vaisselle.", facePlayer: "npcB" },
+                        { type: "textMessage", text: "C'est vraiment nul", facePlayer: "npcB" },
                     ]
                 }
             ]
@@ -82,13 +82,13 @@ export const ViridianHouseTwo = {
                 {
                     required: ["GET_RUNNING_SHOES"],
                     events: [
-                        { type: "textMessage", text: "You will run faster now!", facePlayer: "npcC"},
+                        { type: "textMessage", text: "Tu vas courir plus vite maintenant !", facePlayer: "npcC"},
                     ]
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "Go see my husband.", facePlayer: "npcC" },
-                        { type: "textMessage", text: "He will give you nice shoes.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Tu peux aller voir mon mari.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Il te donnera de belles chaussures.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -104,8 +104,8 @@ export const ViridianHouseTwo = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Will Stella go out with John again?", facePlayer: "tv" },
-                        { type: "textMessage", text: "You will find out in the next episode!", facePlayer: "tv" },
+                        { type: "textMessage", text: "Est-ce que Stella sortira encore avec John ?", facePlayer: "tv" },
+                        { type: "textMessage", text: "Vous le saurez dans le prochain épisode !", facePlayer: "tv" },
                     ]
                 }
             ]

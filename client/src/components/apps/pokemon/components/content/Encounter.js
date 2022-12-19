@@ -1,6 +1,6 @@
 export const encounter = {
     PalletTown: {
-        level : 2,
+        level : 3,
         pokemons : [
             "rattata",
             "pidgey",
@@ -19,13 +19,20 @@ export const encounter = {
     ViridianForest: {
         level : 4,
         pokemons : [
-            // "rattata",
-            // "pidgey",
             "caterpie",
             "weedle",
-            // "spearow",
             "nidoranfe",
             "nidoranma",
+        ]
+    },
+    UmbrellaTown: {
+        level : 8,
+        pokemons : [
+            "metapod",
+            "meowth",
+            "mankey",
+            "machop",
+            "geodude",
         ]
     },
 }

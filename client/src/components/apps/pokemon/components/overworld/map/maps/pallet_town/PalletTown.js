@@ -10,7 +10,7 @@ import blank from "../../../../../assets/graphics/characters/blank.png"
 import npcAImg from "../../../../../assets/graphics/characters/npcA.png";
 import npcCImg from "../../../../../assets/graphics/characters/npcC.png";
 import npcDImg from "../../../../../assets/graphics/characters/npcD.png";
-import npcGImg from "../../../../../assets/graphics/characters/npcG.png";
+// import npcGImg from "../../../../../assets/graphics/characters/npcG.png";
 
 import npcHImg from "../../../../../assets/graphics/characters/npcH.png";
 import npcIImg from "../../../../../assets/graphics/characters/npcI.png";
@@ -51,8 +51,8 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Team Plasma are the worst.", facePlayer: "npcA" },
-                        { type: "textMessage", text: "I do what I want with my Pokemon.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "La Team Rocket est la pire.", facePlayer: "npcA" },
+                        { type: "textMessage", text: "Ils ont volé mon pokémon!", facePlayer: "npcA" },
                     ]
                 }
             ]
@@ -70,8 +70,8 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I really like this town!", facePlayer: "npcC" },
-                        // { type: "battle", enemyId: "beth" },
+                        { type: "textMessage", text: "J'aime beaucoup ce village.", facePlayer: "npcC" },
+                        { type: "textMessage", text: "C'est si paisible.", facePlayer: "npcC" },
                     ]
                 }
             ]
@@ -87,7 +87,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Walking in tall grass is dangerous.", facePlayer: "npcD" },
+                        { type: "textMessage", text: "C'est dangereux de marcher dans les hautes herbes.", facePlayer: "npcD" },
                     ]
                 }
             ],
@@ -101,7 +101,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Home of Martha and Red." },
+                        { type: "textMessage", text: "Maison de Martha et Red." },
                     ]
                 },
             ]
@@ -114,7 +114,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Cherry and Green's house."},
+                        { type: "textMessage", text: "Maison de Laura et Green."},
                     ]
                 },
             ]
@@ -127,7 +127,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Pallet Town."},
+                        { type: "textMessage", text: "Bourg Palette."},
                     ]
                 },
             ]
@@ -140,7 +140,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Mimosa garden."},
+                        { type: "textMessage", text: "Jardin Mimosa."},
                     ]
                 },
             ]
@@ -153,7 +153,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Plowland looking for landscaper."},
+                        { type: "textMessage", text: "Plaine cherche paysagiste."},
                     ]
                 },
             ]
@@ -166,7 +166,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Viridian City."},
+                        { type: "textMessage", text: "Jadielle."},
                     ]
                 },
             ]
@@ -199,7 +199,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Mimikyu...", facePlayer: "mimikyuA" },
+                        { type: "textMessage", text: "Mimiqui...", facePlayer: "mimikyuA" },
                     ]
                 },
             ],
@@ -225,8 +225,8 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "People are way meaner to pokemon now.", facePlayer: "npcH"},
-                        { type: "textMessage", text: "I don't hunderstand why...", facePlayer: "npcH"},
+                        { type: "textMessage", text: "Un Mimiqui ?", facePlayer: "npcH"},
+                        { type: "textMessage", text: "Non je ne l'ai pas vu.", facePlayer: "npcH"},
                     ]
                 },
             ]
@@ -245,7 +245,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "I heard Team Rocket was setting the Viridian Forest on fire.", facePlayer: "npcI"},
+                        { type: "textMessage", text: "Mon Rattata c'est le plus fort!", facePlayer: "npcI"},
                     ]
                 },
             ]
@@ -318,7 +318,7 @@ export const PalletTown = {
                     { who: "npcD", type: "walk", direction: "left"},
                     { who: "npcD", type: "stand", direction: "down"},
                     { who: "player", type: "stand", direction: "up"},
-                    { type: "textMessage", text:"You should not go there without a Pokemon!"},
+                    { type: "textMessage", text:"Tu ne peux pas y aller sans Pokémon!"},
                     { who: "player", type: "walk", direction: "down"},
                     { who: "npcD", type: "walk", direction: "down"},
                     { who: "npcD", type: "walk", direction: "right"},
@@ -328,29 +328,28 @@ export const PalletTown = {
             {
                 required: ["TALKED_TO_CHEN_FIRST_TIME"],
                 events: [
-                    { type: "textMessage", text: "Green: You really are an ugly Pokemon." },
-                    { type: "textMessage", text: "Green: Pikachu use thunder-shock!" },
+                    { type: "textMessage", text: "Green: Tu es vraiment un Pokémon très laid." },
+                    { type: "textMessage", text: "Green: Pikachu utilise éclair!" },
                     { who: "mimikyu", type: "stand", direction: "right", time: 1100},
 
                     
                     { who: "mimikyu", type: "stand", direction: "down", time: 1200},
                     { who: "mimikyu", type: "stand", direction: "left"},
-                    { type: "textMessage", text: "Mimikyu..." },
-                    { type: "textMessage", text: "Green: Pokemon like you doesn't deserve to live." },
-                    { type: "textMessage", text: "Green: Haha sad little shit." },
+                    { type: "textMessage", text: "Mimiqui..." },
+                    { type: "textMessage", text: "Green: Je ne sais vraiment pas qui voudrait de toi." },
                     
                     { who: "player", type: "walk", direction: "up"},
                     { who: "bully", type: "stand", direction: "down", time: 400},
-                    { type: "textMessage", text: "Green: What do you want?" },
+                    { type: "textMessage", text: "Green: Qu'est ce que tu veux?" },
                     { who: "bully", type: "stand", direction: "down", time: 600},
-                    { type: "textMessage", text: "Green: Save this Pokemon?" },
+                    { type: "textMessage", text: "Green: Sauver ce Pokémon?" },
                     { who: "bully", type: "stand", direction: "down", time: 800},
-                    { type: "textMessage", text: "Green: You don't scare me!" },
-                     { type: "battle", enemyId: "rivalA" },
+                    { type: "textMessage", text: "Green: Haha essaye donc pour voir!" },
+                    { type: "battle", enemyId: "rivalA" },
 
 
 
-                    { type: "textMessage", text: "Mimikyu..." },
+                    { type: "textMessage", text: "Mimiqui..." },
                     { who: "mimikyu", type: "walk", direction: "up"},
                     { who: "mimikyu", type: "walk", direction: "up"},
                     { who: "mimikyu", type: "walk", direction: "up"},
@@ -359,8 +358,8 @@ export const PalletTown = {
                     { who: "mimikyu", type: "walk", direction: "up"},
 
                     
-                    { type: "textMessage", text: "Green: Look at it! He get away like a coward!", },
-                    { type: "textMessage", text: "Green: You won't be so lucky next time.", },
+                    { type: "textMessage", text: "Green: Regarde ça! Il s'enfuit comme une poule mouillée!", },
+                    { type: "textMessage", text: "Green: Tu n'auras pas autant de chance la prochaine fois.", },
                     
                     { type: "addStoryFlag", flag: "MIMIKYU_FIRST_DISPARITION"},
                     { 
@@ -376,7 +375,6 @@ export const PalletTown = {
             {
                 nothing: "MIMIKYU_FIRST_DISPARITION",
             },
-            
         ],
         [asGridCoords(41, 48)]: [
             {
@@ -386,7 +384,7 @@ export const PalletTown = {
                     { who: "npcD", type: "walk", direction: "left"},
                     { who: "npcD", type: "stand", direction: "down"},
                     { who: "player", type: "stand", direction: "up"},
-                    { type: "textMessage", text:"You should not go there without a Pokemon!"},
+                    { type: "textMessage", text:"Tu ne peux pas y aller sans Pokémon!"},
                     { who: "player", type: "walk", direction: "down"},
                     { who: "npcD", type: "walk", direction: "down"},
                     { who: "npcD", type: "walk", direction: "right"},
@@ -396,30 +394,29 @@ export const PalletTown = {
             {
                 required: ["TALKED_TO_CHEN_FIRST_TIME"],
                 events: [
-                    { type: "textMessage", text: "Green: You really are an ugly Pokemon." },
-                    { type: "textMessage", text: "Green: Pikachu use thunder-shock!" },
+                    { type: "textMessage", text: "Green: Tu es vraiment un Pokémon très laid." },
+                    { type: "textMessage", text: "Green: Pikachu utilise éclair!" },
                     { who: "mimikyu", type: "stand", direction: "right", time: 1100},
 
                     
                     { who: "mimikyu", type: "stand", direction: "down", time: 1200},
                     { who: "mimikyu", type: "stand", direction: "left"},
-                    { type: "textMessage", text: "Green: Pokemon like you doesn't deserve to live." },
-                    { type: "textMessage", text: "Green: Haha sad little shit." },
+                    { type: "textMessage", text: "Mimiqui..." },
+                    { type: "textMessage", text: "Green: Je ne sais vraiment pas qui voudrait de toi." },
                     
                     { who: "player", type: "walk", direction: "up"},
                     { who: "player", type: "walk", direction: "left"},
                     { who: "player", type: "stand", direction: "up", time: 400},
                     { who: "bully", type: "stand", direction: "down", time: 400},
-                    { type: "textMessage", text: "Green: What do you want?" },
+                    { type: "textMessage", text: "Green: Qu'est ce que tu veux?" },
                     { who: "bully", type: "stand", direction: "down", time: 600},
-                    { type: "textMessage", text: "Green: Save this Pokemon?" },
+                    { type: "textMessage", text: "Green: Sauver ce Pokémon?" },
                     { who: "bully", type: "stand", direction: "down", time: 800},
-                    { type: "textMessage", text: "Green: You don't scare me!" },
-                     { type: "battle", enemyId: "rivalA" },
+                    { type: "textMessage", text: "Green: Haha essaye donc pour voir!" },
+                    { type: "battle", enemyId: "rivalA" },
 
 
-
-                    { type: "textMessage", text: "Mimikyu..." },
+                    { type: "textMessage", text: "Mimiqui..." },
                     { who: "mimikyu", type: "walk", direction: "up"},
                     { who: "mimikyu", type: "walk", direction: "up"},
                     { who: "mimikyu", type: "walk", direction: "up"},
@@ -428,8 +425,8 @@ export const PalletTown = {
                     { who: "mimikyu", type: "walk", direction: "up"},
 
                     
-                    { type: "textMessage", text: "Green: Look at it! He get away like a coward!", },
-                    { type: "textMessage", text: "Green: You won't be so lucky next time.", },
+                    { type: "textMessage", text: "Green: Regarde ça! Il s'enfuit comme une poule mouillée!", },
+                    { type: "textMessage", text: "Green: Tu n'auras pas autant de chance la prochaine fois.", },
                     
                     { type: "addStoryFlag", flag: "MIMIKYU_FIRST_DISPARITION"},
                     { 

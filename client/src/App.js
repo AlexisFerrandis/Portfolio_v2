@@ -1,9 +1,9 @@
-import Routes from "./components/routes";
+import Desktop from "./components/desktop/Desktop";
 
 const App = () => {
 	return (
 		<div className="App">
-			<Routes />
+			<Desktop />
 		</div>
 	);
 };

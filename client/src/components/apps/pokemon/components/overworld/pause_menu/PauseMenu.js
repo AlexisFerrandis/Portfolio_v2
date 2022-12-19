@@ -14,6 +14,7 @@ import savedSound from "../../../assets/audio/sound_effect/overworld/savegame.og
 import openMenuSound from "../../../assets/audio/sound_effect/overworld/menuopen.ogg"
 import closeMenuSound from "../../../assets/audio/sound_effect/overworld/menuclose.ogg"
 
+// DONT TAKE OFF THIS !!! SEEMS NEEDED SOMEWHERE ELSE 
 import PlayerState from '../../state/PlayerState';
 import { pokemon } from '../../content/Pokemon';
 
@@ -45,7 +46,7 @@ export default class PauseMenu extends React.Component {
 				// ...lineupPokemons,
 				{
 					label: "Profil",
-					description: "Display your status.",
+					description: "Affiche votre carte de dresseur.",
 					handler: () => {
 						this.keyboardMenu.end()
 						document.querySelector(".hud").style.display = "none";
@@ -57,20 +58,20 @@ export default class PauseMenu extends React.Component {
 						playerStatus.init(document.querySelector(".game-container"))
 					},
 				},
-                {
-					label: "Items",
-					description: "Use items.",
-					handler: () => {
-						//
-					},
-				},
+                // {
+				// 	label: "Sac",
+				// 	description: "Utiliser des objets.",
+				// 	handler: () => {
+				// 		//
+				// 	},
+				// },
 				{
-					label: "Save",
-					description: "Save your progress.",
+					label: "Sauvegarder",
+					description: "Sauvegarder votre progression.",
 					handler: () => {
 						this.progress.save();
 						const message = new TextMessage({
-							text: "Saving... Please don't turn off your device...",
+							text: "Sauvegarde... Ne pas éteindre l'appareil...",
 							onComplete: () => {
 								this.close()
 								const music = savedSound;
@@ -84,23 +85,23 @@ export default class PauseMenu extends React.Component {
 						message.done()
 					},
 				},
+				// {
+				// 	label: "Carte",
+				// 	description: "Affiche la carte.",
+				// 	handler: () => {
+				// 		//
+				// 	},
+				// },
+				// {
+				// 	label: "Options",
+				// 	description: "Modifier les paramètres du jeu.",
+				// 	handler: () => {
+				// 		//
+				// 	},
+				// },
 				{
-					label: "Map",
-					description: "Display the map.",
-					handler: () => {
-						//
-					},
-				},
-				{
-					label: "Options",
-					description: "Change game configuration",
-					handler: () => {
-						//
-					},
-				},
-				{
-					label: "Close",
-					description: "Close the menu.",
+					label: "Retour",
+					description: "Ferme le menu.",
 					handler: () => {
 						this.close();
 					},

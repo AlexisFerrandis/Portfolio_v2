@@ -12,7 +12,6 @@ const PokemonApp = () => {
 
 
     const launchTheGame = (e) => {
-    
       setLauncher(true)
       setTitle(false)
       setTimeout(() => {

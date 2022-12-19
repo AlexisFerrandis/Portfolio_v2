@@ -36,7 +36,7 @@ export default class Battle extends React.Component {
         };
 
         // dynamically add player team
-        window.playerState.lineup.forEach(id => {
+        window.playerState.lineup.reverse().forEach(id => {
             this.addCombatant(id, "player", window.playerState.pokemons[id])
         })
 
