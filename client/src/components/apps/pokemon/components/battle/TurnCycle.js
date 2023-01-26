@@ -277,7 +277,7 @@ export default class TurnCycle extends React.Component {
                 })
                 await this.onNewEvent({
                     type: "textMessage",
-                    text: `Red perd 100¥ en s'échappant.`
+                    text: `Sacha perd 100¥ en s'échappant.`
                 })
                 await this.onNewEvent({
                     type: "textMessage",

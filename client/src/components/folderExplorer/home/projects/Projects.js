@@ -18,6 +18,18 @@ const Projects = () => {
 				<img src={documentsFolder} alt="projects" className="folder-pic" />
 				<p>Le Repaire de Bacchus</p>
 			</div>
+			<div className="folder" onClick={(e) => handleProjectsPath(e)} id="elodiePascal">
+				<img src={documentsFolder} alt="projects" className="folder-pic" />
+				<p>Elodie Pascal</p>
+			</div>
+			<div className="folder" onClick={(e) => handleProjectsPath(e)} id="benjaminLaigret">
+				<img src={documentsFolder} alt="projects" className="folder-pic" />
+				<p>Benjamin Laigret</p>
+			</div>
+			<div className="folder" onClick={(e) => handleProjectsPath(e)} id="syrahgence">
+				<img src={documentsFolder} alt="projects" className="folder-pic" />
+				<p>Syrahgence</p>
+			</div>
 		</div>
 	);
 };

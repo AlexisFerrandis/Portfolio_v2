@@ -115,10 +115,11 @@
 			.container {
 				display: flex;
 				flex-wrap: wrap;
-				padding: 8px 2px;
+				padding: 12px 2px;
 				max-height: 90%;
 				overflow-y: scroll;
 				.folder {
+					position: relative;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -142,27 +143,70 @@
 						object-fit: cover;
 						user-select: none;
 						pointer-events: none;
+						border-radius: 4px;
 					}
 					p {
 						user-select: none;
 						font-size: 14px;
 						pointer-events: none;
 					}
+					span {
+						font-weight: 900;
+					}
+					.github {
+						filter: invert(64%) sepia(50%) saturate(473%) hue-rotate(158deg) brightness(91%) contrast(88%);
+					}
+					.linkedin {
+						filter: invert(15%) sepia(75%) saturate(1694%) hue-rotate(204deg) brightness(94%) contrast(90%)
+					}
+					.dark-linkedin {
+						filter: invert(76%) sepia(27%) saturate(439%) hue-rotate(170deg) brightness(95%) contrast(93%);
+					}
+					.redirection {
+						position: absolute;
+						right: 8px;
+						bottom: 34px;
+						img {
+							width: 15px;
+							height: 15px;
+							object-fit: contain;
+						}
+					}
+					.redirection.lrdb img {
+						filter: brightness(0) saturate(100%) invert(21%) sepia(44%) saturate(659%) hue-rotate(119deg) brightness(92%) contrast(88%);
+					}
+					.redirection.ep img {
+						filter: brightness(0) saturate(100%) invert(63%) sepia(9%) saturate(1057%) hue-rotate(347deg) brightness(97%) contrast(86%);
+					}
+					.redirection.bl img {
+						filter: brightness(0) saturate(100%) invert(8%) sepia(84%) saturate(4288%) hue-rotate(314deg) brightness(100%) contrast(115%);
+					}
+					.redirection.syrah img {
+						filter: brightness(0) saturate(100%) invert(11%) sepia(29%) saturate(4309%) hue-rotate(327deg) brightness(135%) contrast(129%);
+					}
+					.redirection.github img {
+						filter: brightness(0) saturate(100%);
+					}
+					.redirection.linkedin img {
+						filter: brightness(0) saturate(100%);
+					}
 				}
 				.video-preview-container {
 					position: absolute;
 					top: 110px;
-					left: 70px;
+					left: -110px;
 					width: 320px;
-					height: 200px;
+					height: 190px;
 					overflow: hidden;
 					pointer-events: none;
 					opacity: 0.9;
+					animation: video-fade-in 330ms forwards ;
+					z-index: 999;
 					video {
 						width: 100%;
 						height: 100%;
 						object-fit: cover;
-						transform: scale(1.15);
+						transform: scale(1.13);
 					}
 				}
 			}
@@ -176,4 +220,9 @@
 			}
 		}
 	}
+}
+
+@keyframes video-fade-in {
+	from {opacity: 0;}
+	to {opacity: 1;}
 }

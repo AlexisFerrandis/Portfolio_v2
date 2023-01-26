@@ -12,6 +12,15 @@ const Pokemon = () => {
 	const dispatch = useDispatch();
 	const nodeRef = useRef(null);
 
+	
+	const handleZindex = (e) => {
+		const windows = document.querySelectorAll(".draggable-z-index");
+		for (let i = 0; i < windows.length; i++) {
+			windows[i].style.zIndex = 99;
+		}
+		e.target.closest(".draggable-z-index").style.zIndex = 100;
+	}
+
 	return (
 		<Rnd
 			default={{
@@ -29,8 +38,10 @@ const Pokemon = () => {
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
 			dragHandleClassName={"readme-template__header"}
 			cancel={".close-window-btn-container, p"}
+			className={"draggable-z-index"}
+
 		>
-			<div ref={nodeRef} className="window-template readme-template app-pokemon">
+			<div ref={nodeRef} className="window-template readme-template app-pokemon" onClick={(e) => {handleZindex(e)}} >
 				<div className="readme-template__header">
 					<div className="readme-template__header--title">
 						<img src={logo} alt="logo" className="icon" />

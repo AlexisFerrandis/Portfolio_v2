@@ -12,7 +12,7 @@ const GameLauncher = () => {
     const [gameLauncher, setGameLauncher] = useState(true);
     setTimeout(() => {
         setGameLauncher(false);
-    }, 590) // 5900
+    }, 5900) // 5900
 
 
     useEffect(() => {

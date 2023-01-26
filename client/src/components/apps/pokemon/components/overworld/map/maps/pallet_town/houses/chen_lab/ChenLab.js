@@ -7,7 +7,7 @@ import { asGridCoords, loadWall, withGrid } from './../../../../../../../Utils';
 
 import blank from "./../../../../../../../assets/graphics/characters/blank.png";
 
-import npcE from "./../../../../../../../assets/graphics/characters/npcE.png"; // green girl
+import npcE from "./../../../../../../../assets/graphics/characters/npcE.png"; // Régis girl
 import npcF from "./../../../../../../../assets/graphics/characters/npcF.png"; // scientist
 import profChen from "./../../../../../../../assets/graphics/characters/profChen.png";
 import rival from "./../../../../../../../assets/graphics/characters/rival.png";
@@ -96,18 +96,18 @@ export const ChenLab = {
                 },
                 {
                     events: [
-                        { type: "textMessage", text: "Chen: Que veux tu encore Green?",  },
-                        { type: "textMessage", text: "Green: Je veux un Pokémon." },
+                        { type: "textMessage", text: "Chen: Que veux tu encore Régis?",  },
+                        { type: "textMessage", text: "Régis: Je veux un Pokémon." },
                         { type: "textMessage", text: "Chen: Mais il ne m'en reste qu'un seul!" },
                         { type: "textMessage", text: "Chen: Seras-tu gentil avec lui?" },
-                        { type: "textMessage", text: "Green: Oui oui bien sûr." },
+                        { type: "textMessage", text: "Régis: Oui oui bien sûr." },
                         { who: "profChen", type: "stand", direction: "right", time: 700},
                         { who: "profChen", type: "stand", direction: "left", time: 700},
                         { type: "textMessage", text: "Chen: D'accord, tu peux le prendre.", facePlayer: "profChen" },
-                        { type: "textMessage", text: "Green: Super Papi." },
-                        { type: "textMessage", text: "Green: J'espère qu'il est fort." },
+                        { type: "textMessage", text: "Régis: Super Papi." },
+                        { type: "textMessage", text: "Régis: J'espère qu'il est fort." },
                         { who: "rival", type: "stand", direction: "right", time: 500},
-                        { type: "textMessage", text: "Green: Haha, plus de Pokémon pour toi!" },
+                        { type: "textMessage", text: "Régis: Haha, plus de Pokémon pour toi!" },
                         { who: "rival", type: "walk", direction: "down"},
                         { who: "rival", type: "walk", direction: "right"},
                         { who: "rival", type: "walk", direction: "right"},
@@ -186,8 +186,8 @@ export const ChenLab = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Green: Chen!" },
-                        { type: "textMessage", text: "Green: Donne moi un Pokémon!" },
+                        { type: "textMessage", text: "Régis: Chen!" },
+                        { type: "textMessage", text: "Régis: Donne moi un Pokémon!" },
                     ]
                 }
             ],

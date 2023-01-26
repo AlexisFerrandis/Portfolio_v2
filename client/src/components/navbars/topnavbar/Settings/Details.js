@@ -36,7 +36,7 @@ const Details = ({ closeWindow }) => {
 
 	const handleContactDisplay = (e) => {
 		e.preventDefault();
-		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "contactPage" });
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "contactForm" });
 	};
 
 	return (

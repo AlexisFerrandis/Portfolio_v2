@@ -25,7 +25,7 @@ export default class PauseMenu extends React.Component {
         
         <div class="principal-information">
             <div class="left-part">
-                <p>NOM: RED</p>
+                <p>NOM: SACHA</p>
                 <br />
                 <br />
                 <br />

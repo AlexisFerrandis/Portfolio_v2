@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 // img
 import lrdbLogo from "../../../../../assets/folder/projects/lerepairedebacchus/bacchus.jpg";
 import readMe from "../../../../../assets/folder/projects/text-x-po.svg";
+import externalLink from "../../../../../assets/components/icons/export.png"
 
 // video
 import lrdbPreview from "../../../../../assets/folder/projects/lerepairedebacchus/bacchus-preview.mp4";
@@ -30,14 +31,16 @@ const LeRepaireDeBacchus = () => {
 					<video src={lrdbPreview} autoPlay loop onEnded={endPreview} className="video-preview" />
 				</div>
 			)}
-
 			<div className="folder" onClick={() => window.open("https://www.lerepairedebacchus.com/", "_blank")} onMouseEnter={startPreview} onMouseLeave={endPreview}>
 				<img src={lrdbLogo} alt="Le Repaire de bacchus" className="folder-pic" />
 				<p>Le Repaire de Bacchus</p>
+				<div className="redirection lrdb">
+					<img src={externalLink} alt="Redirige vers le site Le Repaire de Bacchus" />
+				</div>
 			</div>
 			<div className="folder" onClick={(e) => openText(e)}>
 				<img src={readMe} alt="projects" className="folder-pic" />
-				<p>Info.html</p>
+				<p>Info.txt</p>
 			</div>
 
 			

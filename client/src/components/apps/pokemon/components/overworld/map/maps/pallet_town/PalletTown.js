@@ -101,7 +101,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Maison de Martha et Red." },
+                        { type: "textMessage", text: "Maison de Martha et Sacha." },
                     ]
                 },
             ]
@@ -114,7 +114,7 @@ export const PalletTown = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Maison de Laura et Green."},
+                        { type: "textMessage", text: "Maison de Laura et Régis."},
                     ]
                 },
             ]
@@ -328,23 +328,23 @@ export const PalletTown = {
             {
                 required: ["TALKED_TO_CHEN_FIRST_TIME"],
                 events: [
-                    { type: "textMessage", text: "Green: Tu es vraiment un Pokémon très laid." },
-                    { type: "textMessage", text: "Green: Pikachu utilise éclair!" },
+                    { type: "textMessage", text: "Régis: Tu es vraiment un Pokémon très laid." },
+                    { type: "textMessage", text: "Régis: Pikachu utilise éclair!" },
                     { who: "mimikyu", type: "stand", direction: "right", time: 1100},
 
                     
                     { who: "mimikyu", type: "stand", direction: "down", time: 1200},
                     { who: "mimikyu", type: "stand", direction: "left"},
                     { type: "textMessage", text: "Mimiqui..." },
-                    { type: "textMessage", text: "Green: Je ne sais vraiment pas qui voudrait de toi." },
+                    { type: "textMessage", text: "Régis: Je ne sais vraiment pas qui voudrait de toi." },
                     
                     { who: "player", type: "walk", direction: "up"},
                     { who: "bully", type: "stand", direction: "down", time: 400},
-                    { type: "textMessage", text: "Green: Qu'est ce que tu veux?" },
+                    { type: "textMessage", text: "Régis: Qu'est ce que tu veux?" },
                     { who: "bully", type: "stand", direction: "down", time: 600},
-                    { type: "textMessage", text: "Green: Sauver ce Pokémon?" },
+                    { type: "textMessage", text: "Régis: Sauver ce Pokémon?" },
                     { who: "bully", type: "stand", direction: "down", time: 800},
-                    { type: "textMessage", text: "Green: Haha essaye donc pour voir!" },
+                    { type: "textMessage", text: "Régis: Haha essaye donc pour voir!" },
                     { type: "battle", enemyId: "rivalA" },
 
 
@@ -358,8 +358,8 @@ export const PalletTown = {
                     { who: "mimikyu", type: "walk", direction: "up"},
 
                     
-                    { type: "textMessage", text: "Green: Regarde ça! Il s'enfuit comme une poule mouillée!", },
-                    { type: "textMessage", text: "Green: Tu n'auras pas autant de chance la prochaine fois.", },
+                    { type: "textMessage", text: "Régis: Regarde ça! Il s'enfuit comme une poule mouillée!", },
+                    { type: "textMessage", text: "Régis: Tu n'auras pas autant de chance la prochaine fois.", },
                     
                     { type: "addStoryFlag", flag: "MIMIKYU_FIRST_DISPARITION"},
                     { 
@@ -394,25 +394,25 @@ export const PalletTown = {
             {
                 required: ["TALKED_TO_CHEN_FIRST_TIME"],
                 events: [
-                    { type: "textMessage", text: "Green: Tu es vraiment un Pokémon très laid." },
-                    { type: "textMessage", text: "Green: Pikachu utilise éclair!" },
+                    { type: "textMessage", text: "Régis: Tu es vraiment un Pokémon très laid." },
+                    { type: "textMessage", text: "Régis: Pikachu utilise éclair!" },
                     { who: "mimikyu", type: "stand", direction: "right", time: 1100},
 
                     
                     { who: "mimikyu", type: "stand", direction: "down", time: 1200},
                     { who: "mimikyu", type: "stand", direction: "left"},
                     { type: "textMessage", text: "Mimiqui..." },
-                    { type: "textMessage", text: "Green: Je ne sais vraiment pas qui voudrait de toi." },
+                    { type: "textMessage", text: "Régis: Je ne sais vraiment pas qui voudrait de toi." },
                     
                     { who: "player", type: "walk", direction: "up"},
                     { who: "player", type: "walk", direction: "left"},
                     { who: "player", type: "stand", direction: "up", time: 400},
                     { who: "bully", type: "stand", direction: "down", time: 400},
-                    { type: "textMessage", text: "Green: Qu'est ce que tu veux?" },
+                    { type: "textMessage", text: "Régis: Qu'est ce que tu veux?" },
                     { who: "bully", type: "stand", direction: "down", time: 600},
-                    { type: "textMessage", text: "Green: Sauver ce Pokémon?" },
+                    { type: "textMessage", text: "Régis: Sauver ce Pokémon?" },
                     { who: "bully", type: "stand", direction: "down", time: 800},
-                    { type: "textMessage", text: "Green: Haha essaye donc pour voir!" },
+                    { type: "textMessage", text: "Régis: Haha essaye donc pour voir!" },
                     { type: "battle", enemyId: "rivalA" },
 
 
@@ -425,8 +425,8 @@ export const PalletTown = {
                     { who: "mimikyu", type: "walk", direction: "up"},
 
                     
-                    { type: "textMessage", text: "Green: Regarde ça! Il s'enfuit comme une poule mouillée!", },
-                    { type: "textMessage", text: "Green: Tu n'auras pas autant de chance la prochaine fois.", },
+                    { type: "textMessage", text: "Régis: Regarde ça! Il s'enfuit comme une poule mouillée!", },
+                    { type: "textMessage", text: "Régis: Tu n'auras pas autant de chance la prochaine fois.", },
                     
                     { type: "addStoryFlag", flag: "MIMIKYU_FIRST_DISPARITION"},
                     { 

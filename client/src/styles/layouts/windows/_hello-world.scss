@@ -52,10 +52,10 @@
 		}
 		.info {
 			text-align: justify;
-			margin-top: 3em;
+			margin: 3em 0 1.6em;
 			h3 {
 				font-size: 1.3em;
-			    color: $desk-50;
+				color: $desk-50;
 				margin-bottom: 1em;
 				user-select: none;
                 text-align: left;
@@ -73,8 +73,7 @@
 			}
         }
         .cta-container {
-            margin-top: 40px;
-			padding-bottom: 40px;
+            margin-top: 15px;
         }
     }
     .dark-mode .content  {

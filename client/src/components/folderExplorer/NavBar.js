@@ -29,11 +29,11 @@ const NavBar = () => {
 				<p>Home</p>
 			</div>
 
-			<div className={folderPath === "projects" || folderPath === "leRepaireDeBacchus" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="projects">
+			<div className={folderPath === "projects" || folderPath === "leRepaireDeBacchus" || folderPath === "elodiePascal" || folderPath === "benjaminLaigret" || folderPath === "syrahgence" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="projects">
 				<img src={documentsIco} alt="projects" className="navbar-ico" />
 				<p>{lang === "Fr" ? "Projets" : "Projects"}</p>
 			</div>
-			<div className={folderPath === "apps" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="apps">
+			<div className={folderPath === "apps" || folderPath === "facedook" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="apps">
 				<img src={appsIco} alt="applications" className="navbar-ico" />
 				<p>Applications</p>
 			</div>
@@ -51,7 +51,7 @@ const NavBar = () => {
 				<p>{lang === "Fr" ? "Vidéos" : "Videos"}</p>
 			</div> */}
 
-			<div className={folderPath === "games" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="games">
+			<div className={folderPath === "games" || folderPath === "pokemon" ? "folder-explorer__body--navbar--item active" : "folder-explorer__body--navbar--item"} onClick={(e) => handleNavSelection(e)} id="games">
 				<img src={gamesIco} alt="games" className="navbar-ico" />
 				<p>{lang === "Fr" ? "Jeux" : "Games"}</p>
 			</div>

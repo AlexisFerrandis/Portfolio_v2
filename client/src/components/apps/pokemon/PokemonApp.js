@@ -16,7 +16,7 @@ const PokemonApp = () => {
       setTitle(false)
       setTimeout(() => {
         setMain(true)
-      }, 600) // 6000
+      }, 6000) // 6000
     }
   
   return (

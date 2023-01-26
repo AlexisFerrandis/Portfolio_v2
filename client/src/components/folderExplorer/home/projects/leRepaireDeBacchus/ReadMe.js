@@ -19,13 +19,21 @@ const ReadMe = () => {
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
 	const lang = useSelector((state) => state.globalVariablesReducer.language);
 
+	const handleZindex = (e) => {
+		const windows = document.querySelectorAll(".draggable-z-index");
+		for (let i = 0; i < windows.length; i++) {
+			windows[i].style.zIndex = 99;
+		}
+		e.target.closest(".draggable-z-index").style.zIndex = 100;
+	}
+
 	return (
 		<Rnd
 			default={{
 				x: document.documentElement.clientWidth / 2 - 345 / 2,
 				y: document.documentElement.clientHeight / 2 - 620 / 2,
 				width: 345,
-				height: 660,
+				height: 670,
 			}}
 			minWidth={300}
 			minHeight={300}
@@ -35,17 +43,19 @@ const ReadMe = () => {
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
 			dragHandleClassName={"readme-template__header"}
 			cancel={".close-window-btn-container, p"}
+			className={"draggable-z-index"}
+
 		>
-			<div ref={nodeRef} className="window-template readme-template">
+			<div ref={nodeRef} className="window-template readme-template" onClick={(e) => {handleZindex(e)}} >
 				<div className="readme-template__header">
 					<div className="readme-template__header--title">
 						<img src={lrdbIco} alt="logo" className="icon" />
-						<p>Info.html</p>
+						<p>Info.txt</p>
 					</div>
 					<CloseWindow closeWindow={(e) => dispatch({ type: "SET_DESACTIVE_WINDOW", payload: "lrdbReadMe" })} />
 				</div>
 
-				<div className={darkMode ? "readme-template__body dark-mode" : "readme-template__body"}>
+				<div className={darkMode ? "readme-template__body dark-mode info-html" : "readme-template__body info-html"}>
 					<div className="container">
 						<h1>Le Repaire de Bacchus</h1>
 						<h2>{lang === "Fr" ? "Site vitrine et interface d'administration" : "Showcase site and its administration interface"}</h2>
@@ -57,6 +67,8 @@ const ReadMe = () => {
 						<p>{lang === "Fr" ? "Mise en place d'une carte interactive en échange avec l'API de Google Maps pour localiser les différents établissements." : "Implementation of an interactive map in exchange with the Google Maps API to locate the different establishments."}</p>
 						<br />
 						<p>{lang === "Fr" ? "Création d'une interface d'administration pour ajouter, modifier ou supprimer les textes et images du site." : "Creation of an administration interface to add, modify or delete the texts and images of the site."}</p>
+						<br />
+						<p>{lang === "Fr" ? "Génération de QR Codes pointant vers la page avis des établissements disposés en boutique." : "Generation of QR Codes pointing to the reviews page of establishments in the shop."}</p>
 						<br />
 						<div className="gray-separator"></div>
 

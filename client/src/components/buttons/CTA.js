@@ -1,11 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-const CTA = ({ ctaAction, ctaValue }) => {
+const CTA = ({ ctaValue }) => {
+	const dispatch = useDispatch();
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
 
+	const openText = (e) => {
+		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "contactForm" });
+	};
+
 	return (
-		<div className="cta-container" onClick={ctaAction}>
+		<div className="cta-container" onClick={(e) => openText(e)}>
 			<button className={darkMode ? "cta-btn-dark-mode" : "cta-btn"}>
 				{ctaValue}
 			</button>

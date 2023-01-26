@@ -77,3 +77,9 @@ $long-animation: 500ms;
 		@content;
 	}
 }
+
+.readme-template__body {
+	::-webkit-scrollbar {
+		display: none;
+	}
+}

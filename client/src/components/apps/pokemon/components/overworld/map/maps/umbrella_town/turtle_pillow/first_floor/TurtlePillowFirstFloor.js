@@ -70,7 +70,7 @@ export const TurtlePillowFirstFloor = {
             talking : [
                 {
                     events: [
-                        { type: "textMessage", text: "Ha Red!", facePlayer: "npcC" },
+                        { type: "textMessage", text: "Ha Sacha!", facePlayer: "npcC" },
                         { type: "textMessage", text: "Comment se passe ton aventure?", facePlayer: "npcC" },
                     ]
                 }

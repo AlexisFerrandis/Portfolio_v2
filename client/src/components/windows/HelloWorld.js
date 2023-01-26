@@ -17,6 +17,14 @@ const HelloWorld = () => {
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
 	const lang = useSelector((state) => state.globalVariablesReducer.language);
 
+	const handleZindex = (e) => {
+		const windows = document.querySelectorAll(".draggable-z-index");
+		for (let i = 0; i < windows.length; i++) {
+			windows[i].style.zIndex = 99;
+		}
+		e.target.closest(".draggable-z-index").style.zIndex = 100;
+	}
+
 	return (
 		<Rnd
 			default={{
@@ -32,8 +40,9 @@ const HelloWorld = () => {
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
 			dragHandleClassName={"readme-template__header"}
 			cancel={".close-window-btn-container, p"}
+			className={"draggable-z-index"}
 		>
-			<div ref={nodeRef} className="window-template readme-template hello-world">
+			<div ref={nodeRef} className="window-template readme-template hello-world" onClick={(e) => {handleZindex(e)}} >
 				<div className="readme-template__header">
 					<div className="readme-template__header--title">
 						<img src={logoLetter} alt="logo" className="icon" />
@@ -60,14 +69,15 @@ const HelloWorld = () => {
 								<br />
 								{lang === "Fr" ? "N'hésitez pas à m'envoyer un " : "Feel free to send me an "}
 								<a href="mailto:alexisferrandis@protonmail.com">email</a>
-								{lang === "Fr" ? ", ou visiter la page de contact pour discuter de votre projet." : ", or visit the contact page to discuss your project."}
+								{lang === "Fr" ? ", ou visiter la page de contact pour discuter de votre projet." : ", or visit the contact page to discuss about your project."}
 								<br />
 								<br />
 								{lang === "Fr" ? "Merci pour votre visite 🙂" : "Thank you for your visit 🙂"}
 								
 							</p>
 						</div>
-						<CTA ctaAction={console.log("tt")} ctaValue={"contact"} />
+						<CTA ctaValue={"contact"} />
+						{/* <CTA ctaAction={console.log("ii")} ctaValue={"cv"} /> */}
 					</div>
 				</div>
 			</div>

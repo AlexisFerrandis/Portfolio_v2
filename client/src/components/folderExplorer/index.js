@@ -11,6 +11,14 @@ const FolderExplorer = ({ closeWindow }) => {
 	const nodeRef = useRef(null);
 	const darkMode = useSelector((state) => state.globalVariablesReducer.darkMode);
 
+	const handleZindex = (e) => {
+		const windows = document.querySelectorAll(".draggable-z-index");
+		for (let i = 0; i < windows.length; i++) {
+			windows[i].style.zIndex = 99;
+		}
+		e.target.closest(".draggable-z-index").style.zIndex = 100;
+	}
+
 	return (
 		<Rnd
 			default={{
@@ -19,7 +27,7 @@ const FolderExplorer = ({ closeWindow }) => {
 				width: document.documentElement.clientWidth / 2,
 				height: 350,
 			}}
-			minWidth={360}
+			minWidth={365}
 			minHeight={300}
 			maxWidth={600}
 			disableDragging={false}
@@ -27,8 +35,9 @@ const FolderExplorer = ({ closeWindow }) => {
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
 			dragHandleClassName={"folder-explorer__header"}
 			cancel={"img, btn, .close-window-btn-container"}
+			className={"draggable-z-index"}
 		>
-			<div ref={nodeRef} className="window-template folder-explorer">
+			<div ref={nodeRef} className="window-template folder-explorer" onClick={(e) => {handleZindex(e)}} >
 				<div className="folder-explorer__header">
 					<Header />
 					<CloseWindow closeWindow={closeWindow} />

@@ -15,7 +15,7 @@ export default function globalVariablesReducer(state = initialState, action) {
 
 		case SET_DARK_MODE:
 			return { ...state, darkMode: action.payload };
-
+		
 		default:
 			return state;
 	}

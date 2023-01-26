@@ -4,7 +4,7 @@ export const enemies = {
 		pokemons: {},
 	},
     rivalA: {
-		name: "Green",
+		name: "Régis",
 		src: "rivalA",
 		firstLineOfDialog : "Je vais te montrer!",
 		lastLineOfDialog: "Quoi? Impensable!",
@@ -139,7 +139,7 @@ export const enemies = {
 		giveMoney: 390,
 	},
 	rivalB: {
-		name: "Green",
+		name: "Régis",
 		src: "RIVAL1",
 		firstLineOfDialog : "Tu ne t'en sortiras pas cette fois!",
 		lastLineOfDialog: "Impossible! Je suis meilleur que toi!",
@@ -177,7 +177,7 @@ export const enemies = {
 		giveMoney: 69,
 	},
 	rivalC: {
-		name: "Green",
+		name: "Régis",
 		src: "RIVAL2",
 		firstLineOfDialog : "On va en finir!",
 		lastLineOfDialog: "Nooooon!!!",

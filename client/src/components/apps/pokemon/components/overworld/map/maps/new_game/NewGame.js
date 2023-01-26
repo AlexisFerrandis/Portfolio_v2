@@ -38,7 +38,7 @@ export const NewGame = {
             {
                 events: [
                     { who: "npcMom", type: "stand", direction: "up", time: 1100},
-                    { type: "textMessage", text:"Bonjour Red,"},
+                    { type: "textMessage", text:"Bonjour Sacha,"},
                     { type: "textMessage", text:"Je vais avoir besoin de ton aide."},
                     { who: "npcMom", type: "stand", direction: "down", time: 1000},
                     { type: "textMessage", text:"Mon Mimiqui a disparu."},

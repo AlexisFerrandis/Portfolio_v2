@@ -7,8 +7,8 @@ import appsFolder from "../../../assets/folder/folder-adwaita-projects.svg";
 // import picturesfolder from "../../../assets/folder/folder-adwaita-pictures.svg";
 // import musicFolder from "../../../assets/folder/folder-adwaita-music.svg";
 // import videoFolder from "../../../assets/folder/folder-adwaita-video.svg";
-import gamesVolder from "../../../assets/folder/folder-adwaita-games.svg";
-import presentationFile from "../../../assets/folder/text-x-authors.svg";
+import gamesFolder from "../../../assets/folder/folder-adwaita-games.svg";
+import contactFolder from "../../../assets/folder/folder-adwaita-image-people.svg"
 
 const Home = ({ path }) => {
 	const dispatch = useDispatch();
@@ -18,9 +18,7 @@ const Home = ({ path }) => {
 		dispatch({ type: "FOLDER_PATH", payload: e.target.id });
 	};
 
-	const openText = (e) => {
-		dispatch({ type: "SET_ACTIVE_WINDOW", payload: "helloWorld" });
-	};
+
 
 	return (
 		<div className="container">
@@ -50,14 +48,14 @@ const Home = ({ path }) => {
 			</div> */}
 
 			<div className="folder" onClick={(e) => handleProjectsPath(e)} id="games">
-				<img src={gamesVolder} alt="projects" className="folder-pic" />
+				<img src={gamesFolder} alt="projects" className="folder-pic" />
 				<p>{lang === "Fr" ? "Jeux" : "Games"}</p>
 			</div>
-
-			<div className="folder" onClick={(e) => openText(e)}>
-				<img src={presentationFile} alt="presentation" className="folder-pic" />
-				<p>Alexis.html</p>
+			<div className="folder" onClick={(e) => handleProjectsPath(e)} id="contact">
+				<img src={contactFolder} alt="contact" className="folder-pic" />
+				<p>{lang === "Fr" ? "Contact" : "Contact"}</p>
 			</div>
+
 		</div>
 	);
 };

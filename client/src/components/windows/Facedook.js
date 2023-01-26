@@ -20,6 +20,14 @@ const Facedook = () => {
 		windowX = 10; 
 		windowWidth = document.documentElement.clientWidth - 20;
 	}
+	
+	const handleZindex = (e) => {
+		const windows = document.querySelectorAll(".draggable-z-index");
+		for (let i = 0; i < windows.length; i++) {
+			windows[i].style.zIndex = 99;
+		}
+		e.target.closest(".draggable-z-index").style.zIndex = 100;
+	}
 
 	return (
 		<Rnd
@@ -36,8 +44,10 @@ const Facedook = () => {
 			enableResizing={{ bottomRight: true, bottomLeft: true }}
 			dragHandleClassName={"readme-template__header"}
 			cancel={".close-window-btn-container, p"}
+			className={"draggable-z-index"}
+
 		>
-			<div ref={nodeRef} className="window-template readme-template app-facebook">
+			<div ref={nodeRef} className="window-template readme-template app-facebook" onClick={(e) => {handleZindex(e)}} >
 				<div className="readme-template__header">
 					<div className="readme-template__header--title">
 						<img src={logo} alt="logo" className="icon" />
