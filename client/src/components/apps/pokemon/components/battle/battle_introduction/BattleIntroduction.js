@@ -15,7 +15,6 @@ export default class BattleIntroduction extends React.Component {
     }
 
     createElement() {
-        
         // get images transition
         function importAll(r) {
             let images = {};

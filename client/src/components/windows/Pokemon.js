@@ -11,7 +11,12 @@ import logo from "./../../assets/logos/pokemon.ico"
 const Pokemon = () => {
 	const dispatch = useDispatch();
 	const nodeRef = useRef(null);
+	let windowX = document.documentElement.clientWidth / 8;
 
+
+	if (window.innerWidth < 420) {
+		windowX = 10; 
+	}
 	
 	const handleZindex = (e) => {
 		const windows = document.querySelectorAll(".draggable-z-index");
@@ -24,14 +29,14 @@ const Pokemon = () => {
 	return (
 		<Rnd
 			default={{
-				x: document.documentElement.clientWidth / 4 ,
+				x: windowX,
 				y: document.documentElement.clientHeight / 2 - 620 / 2,
 				width: 660,
 				height: 375,
 			}}
 			minWidth={560}
-			minHeight={340}
 			maxWidth={650}
+			minHeight={340}
 			maxHeight={400}
 			disableDragging={false}
 			bounds={".app-delimitation"}

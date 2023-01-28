@@ -16,11 +16,11 @@ const Desktop = () => {
 
 	return (
 		<div id="desktopInterface">
-			<div className="app-delimitation"></div>
+			<div className="app-delimitation" id="appDelimitation"></div>
 			<Windows />
 			<Brightness />
 			<div>
-				<img className="desktop-wpp" src={darkMode ? desktopWppDark : desktopWpp} alt="desktop wallpaper" />
+				<img className="desktop-wpp" src={darkMode ? desktopWppDark : desktopWpp} alt="desktop wallpaper" id="desktopWpp"/>
 				{/* {darkMode ? <img className="desktop-wpp dark-wpp" src={desktopWppDark} alt="desktop wallpaper" />: <img className="desktop-wpp light-wpp" src={desktopWpp} alt="desktop wallpaper" />} */}
 			</div>
 			<img className={darkMode ? "desktop-logo dark-logo" : "desktop-logo"} src={desktopLogo} alt="desktop logo" />

@@ -20,7 +20,7 @@ export default class TextMessage extends React.Component {
         this.element.innerHTML = (`
             <div class="text-message-border">
                 <p class="text-message-p"></p>
-                <button class="text-message-btn">⯆</button>
+                <button class="text-message-btn">&#11206;</button>
             </div>
         `);
 

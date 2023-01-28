@@ -9,7 +9,7 @@ import externalLink from "../../../../../assets/components/icons/export.png"
 
 
 // video
-import fdPreview from "../../../../../assets/folder/applications/facedook/facedook-preview.mp4";
+import pkPreview from "../../../../../assets/folder/games/pokemon/preview.mp4";
 
 const Pokemon = () => {
 	const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const Pokemon = () => {
 		<div className="container">
 			{videoPlaying && (
 				<div className="video-preview-container">
-					<video src={fdPreview} autoPlay loop onEnded={endPreview} className="video-preview" />
+					<video src={pkPreview} autoPlay loop onEnded={endPreview} className="video-preview" />
 				</div>
 			)}
 			<div className="folder" onClick={() => dispatch({ type: "SET_ACTIVE_WINDOW", payload: "pokemon" })} onMouseEnter={startPreview} onMouseLeave={endPreview}>

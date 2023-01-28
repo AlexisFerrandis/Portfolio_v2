@@ -33,7 +33,7 @@
 	cursor: pointer;
 }
 .keyboard-menu button:focus::before {
-	content: "⯈";
+	content:"\2BC8";
 	position: absolute;
 	top: -6px;
 	left: -16px;

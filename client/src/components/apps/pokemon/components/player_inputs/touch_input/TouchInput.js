@@ -36,17 +36,17 @@ export default class TouchInput extends React.Component {
             <div class="controller">
                 <div class="princpipal-buttons">
                     <div class="joystick">
-                        <button class="arrow up" data="ArrowUp">△</button> 
+                        <div class="arrow up controller-btn" data="ArrowUp">△</div> 
                         <div class="left-right">
-                            <button class="arrow left"  data="ArrowLeft">◁</button>
-                            <button class="arrow right"  data="ArrowRight">▷</button>
+                            <div class="arrow left controller-btn"  data="ArrowLeft">◁</div>
+                            <div class="arrow right controller-btn"  data="ArrowRight">▷</div>
                         </div> 
-                        <button class="arrow down"  data="ArrowDown">▽</button> 
+                        <div class="arrow down controller-btn"  data="ArrowDown">▽</div> 
 
                     </div>
                     <div class="buttons">
-                        <button class="button button-b" data="button-b">B</button>
-                        <button class="button button-a" data="Space">A</button>
+                        <button class="button button-b controller-btn" data="button-b">B</button>
+                        <button class="button button-a controller-btn" data="Space">A</button>
                     </div>
                 </div>
                 <div class="secondary-buttons">
@@ -72,9 +72,10 @@ export default class TouchInput extends React.Component {
         })
 
         // touch listener 
-        const buttons = document.querySelectorAll("button")
+        const buttons = document.querySelectorAll(".controller-btn")
         for (let i = 0; i < buttons.length; i ++) {
-            buttons[i].addEventListener("click", () => {
+            buttons[i].addEventListener("mousedown", () => {
+                console.log("focus");
                 const dir = this.map[buttons[i].getAttribute("data")];
                 if (dir && this.heldDirections.indexOf(dir)) {
                     document.dispatchEvent(new KeyboardEvent('keydown', {'code': buttons[i].getAttribute("data")}));

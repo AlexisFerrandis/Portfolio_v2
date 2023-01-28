@@ -11,9 +11,7 @@ export default class KeyboardMenu extends React.Component {
         this.prevFocus = null;
 
     };
-
     setOptions(options) {
-
 
 		function importAll(r) {
             let images = {};
@@ -21,7 +19,6 @@ export default class KeyboardMenu extends React.Component {
             return images;
         }
         const itemsImg = importAll(require.context('./../../assets/graphics/items', false, /\.(png|jpe?g|svg)$/));
-
 
 		this.options = options;
         this.element.innerHTML = this.options.map((option, index) => {

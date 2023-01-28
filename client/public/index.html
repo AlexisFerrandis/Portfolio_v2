@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 	<head>
-    <!-- analytics -->
+		<!-- analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DTB9CJZFEY"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
@@ -15,19 +16,19 @@
 
 		<meta charset="utf-8" />
 
-		<link rel="icon" href="%PUBLIC_URL%/favico.svg" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, user-scalable=no">
 		<meta name="url" content="https://alexisferrandis.com/" />
 		<meta name="theme-color" content="#1565c0" />
 		<meta name="author" content="Alexis FERRANDIS" />
-		<meta name="description" content="🖥️ Créateur d'applications web et mobile innovantes, spécialisé en frontend, UI et UX. 🎨 Développeur React, Node et Python." />
+		<meta name="description" content="Créateur d'applications web et mobile innovantes, spécialisé en frontend, UI et UX. Développeur React, Node et PHP." />
 
 		<!-- twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Alexis Ferrandis - Développeur Web" />
-		<meta name="twitter:description" content="🖥️ Créateur d'applications web et mobile innovantes, spécialisé en frontend, UI et UX. 🎨 Développeur React, Node et Python." />
+		<meta name="twitter:description" content="Créateur d'applications web et mobile innovantes, spécialisé en frontend, UI et UX. Développeur React, Node et PHP." />
 		<meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
 
 		<!-- facebook -->
@@ -35,13 +36,206 @@
 		<meta property="og:type" content="siteweb" />
 		<meta property="og:site_name" content="https://alexisferrandis.com/" />
 		<meta property="og:title" content="Alexis Ferrandis - Développeur Web" />
-		<meta property="og:description" content="🖥️ Créateur d'applications web et mobile innovantes, spécialisé en frontend, UI et UX. 🎨 Développeur React, Node et Python." />
+		<meta property="og:description" content="Créateur d'applications web et mobile innovantes, spécialisé en frontend, UI et UX. Développeur React, Node et PHP." />
 		<meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
 
 		<title>Alexis Ferrandis - Développeur Web</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html {
+				overflow-x: hidden;
+				height: 100%;
+				max-height: 115%;
+			}
+			html body .desktop-wpp ::-webkit-scrollbar {
+				display: none;
+			}
+			.loader-container {
+				position: absolute;
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background-color: white;
+				opacity: 1;
+				z-index: 105;
+				overflow: hidden;
+				font-family: "Ubuntu", sans-serif;
+			}
+			.loader-container h1 {
+				color: #286ba1;
+				margin-bottom: 24px;
+				position: relative;
+			}
+			.loader-container__bar {
+				position: absolute;
+				top: 27%;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				max-width: 666px;
+				min-width: 335px;
+				height: 100px;
+				z-index: 2;
+			}
+			.loader-container__bar--load {
+				transition: all 1100ms ease;
+				height: 100%;
+				width: 100%;
+				background-color: white;
+				position: absolute;
+				display: inline-block;
+				transform-origin: right;
+			}
+			.snippet {
+				position: absolute;
+				bottom: 7px;
+				left: 5px;
+			}
+			.dot-falling {
+				position: relative;
+				left: -9999px;
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				background-color: #286ba1;
+				color: #286ba1;
+				box-shadow: 9999px 0 0 0 #286ba1;
+				animation: dot-falling 1s infinite linear;
+				animation-delay: 0.1s;
+			}
+			.dot-falling::before,
+			.dot-falling::after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: 0;
+			}
+			.dot-falling::before {
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				background-color: #286ba1;
+				color: #286ba1;
+				animation: dot-falling-before 1s infinite linear;
+				animation-delay: 0s;
+			}
+			.dot-falling::after {
+				width: 10px;
+				height: 10px;
+				border-radius: 5px;
+				background-color: #286ba1;
+				color: #286ba1;
+				animation: dot-falling-after 1s infinite linear;
+				animation-delay: 0.2s;
+			}
+			.fade-away {
+				animation: fade-away 1.5s 1s forwards;
+			}
+			@keyframes dot-falling {
+				0% {
+					box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
+				}
+				25%,
+				50%,
+				75% {
+					box-shadow: 9999px 0 0 0 #286ba1;
+				}
+				100% {
+					box-shadow: 9999px 15px 0 0 rgba(255, 255, 255, 0);
+				}
+			}
+			@keyframes dot-falling-before {
+				0% {
+					box-shadow: 9984px -15px 0 0 rgba(255, 255, 255, 0);
+				}
+				25%,
+				50%,
+				75% {
+					box-shadow: 9984px 0 0 0 #286ba1;
+				}
+				100% {
+					box-shadow: 9984px 15px 0 0 rgba(255, 255, 255, 0);
+				}
+			}
+			@keyframes dot-falling-after {
+				0% {
+					box-shadow: 10014px -15px 0 0 rgba(255, 255, 255, 0);
+				}
+				25%,
+				50%,
+				75% {
+					box-shadow: 10014px 0 0 0 #286ba1;
+				}
+				100% {
+					box-shadow: 10014px 15px 0 0 rgba(253, 253, 253, 0);
+				}
+			}
+			@keyframes fade-away {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			.loading-logo {
+				position: absolute;
+				top: 27%;
+				left: 50%;
+				transform-origin: center;
+				transform: translateX(-50%);
+				width: 30%;
+				max-width: 666px;
+				min-width: 335px;
+				object-fit: cover;
+			}
+		</style>
 	</head>
+
 	<body>
+		<div class="loader-container" id="loaderContainer">
+			<h1>
+				<div class="snippet" data-title="dot-falling">
+					<div class="stage">
+						<div class="dot-falling"></div>
+					</div>
+				</div>
+			</h1>
+			<div class="loader-container__bar">
+				<div class="loader-container__bar--load" id="load">
+
+				</div>
+			</div> 
+			<img class="loading-logo" src="%PUBLIC_URL%/logo-name.png" alt="Logo d'Alexis" />
+		</div>
+		<div id="root">
+		</div>
+		<script>
+			const load = document.getElementById("load");
+			document.addEventListener('readystatechange', () => 'readyState:' + document.readyState === 'readyState:interactive' ? load.style.transform = 'scaleX(1)' : load.style.transform = 'scaleX(0.23)');
+			document.addEventListener('DOMContentLoaded', () => load.style.transform = 'scaleX(0.48)');
+			window.onload = () => {
+				setTimeout(() => {
+					loadercontainer.remove();
+				}, 2500)
+				load.style.transform = 'scaleX(0)'
+				const loadercontainer = document.getElementById('loaderContainer');
+				loadercontainer.classList.add('fade-away');
+				if (window.innerWidth < 444) {
+						document.getElementById("desktopWpp").style.height = '125%'
+						document.getElementById("appDelimitation").style.height = '114%'
+				}
+				
+			};
+		</script>
 		<noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
-		<div id="root"></div>
 	</body>
 </html>

@@ -71,7 +71,6 @@ export default class TurnCycle extends React.Component {
                     text: `Vous ne pouvez pas fuire contre un dresseur!`
                 })
             }
-
             this.nextTurn();
             return;
         }
