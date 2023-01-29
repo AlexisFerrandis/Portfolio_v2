@@ -19,7 +19,7 @@
 		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 
-		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
 		<meta name="url" content="https://alexisferrandis.com/" />
 		<meta name="theme-color" content="#1565c0" />
 		<meta name="author" content="Alexis FERRANDIS" />
@@ -137,7 +137,7 @@
 				animation-delay: 0.2s;
 			}
 			.fade-away {
-				animation: fade-away 1.5s 1s forwards;
+				animation: fade-away 1s 1s forwards;
 			}
 			@keyframes dot-falling {
 				0% {
@@ -225,13 +225,13 @@
 			window.onload = () => {
 				setTimeout(() => {
 					loadercontainer.remove();
-				}, 2500)
+				}, 2000)
 				load.style.transform = 'scaleX(0)'
 				const loadercontainer = document.getElementById('loaderContainer');
 				loadercontainer.classList.add('fade-away');
-				if (window.innerWidth < 444) {
+				if (window.innerWidth < 400) {
 						document.getElementById("desktopWpp").style.height = '125%'
-						document.getElementById("appDelimitation").style.height = '114%'
+						document.getElementById("appDelimitation").style.height = '122%'
 				}
 				
 			};
@@ -239,3 +239,6 @@
 		<noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
 	</body>
 </html>
+
+<!-- async to main.js -->
+<!-- media="print" onload="this.media='all'" main.css -->

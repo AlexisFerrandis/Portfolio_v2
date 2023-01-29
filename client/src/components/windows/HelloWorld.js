@@ -6,7 +6,8 @@ import CloseWindow from "./../buttons/CloseWindow";
 // img
 import logoLetter from "./../../assets/logos/logo-letter.png"
 import locIco from "./../../assets/components/icons/location-dot-solid.svg"
-import logo from "./../../assets/logos/logo-name.png"
+// import logo from "./../../assets/logos/logo-name.png"
+import logo from "./../../assets/logos/logo-name.webp"
 import logo20 from "./../../assets/logos/logo-name-20.png"
 import CTA from "../buttons/CTA";
 
